@@ -22,7 +22,7 @@
 #pragma mark - Helper Methods
 
 + (AppDelegate*)instance {
-    
+    NSLog(@"");
     return [[UIApplication sharedApplication] delegate];
 }
 
