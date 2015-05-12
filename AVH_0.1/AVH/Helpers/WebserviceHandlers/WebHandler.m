@@ -17,6 +17,58 @@
 
 @implementation WebHandler
 
++ (void)getWeatherInfoWithCallback:(ResponseCallback)callback{
+    
+    NSString *url = [NSString stringWithFormat:@"%@/%@/%@/%@?appId=%@&appKey=%@", FLIGHTSTAT_URL_BASE, @"weather/rest/v1/json", WEATHER_PRODUCT, WEATHER_AIRPORT,APP_ID,APP_API_KEY];
+
+    [RequestHandler getRequestWithURL:url withCallback:^(id result, NSError *error) {
+        
+        if (result != nil) {
+            BOOL isCached = [HelperClass cacheJsonForData:result withName:CACHE_ID_CATEGORY];
+            
+            if (isCached) NSLog(@"Category Successfully Cached");
+            else NSLog(@"Failed Category Caching");
+        }
+        else if (result == nil || error) {
+            result = [HelperClass getCachedJsonFor:CACHE_ID_CATEGORY];
+            
+            NSLog(@"Cached Result: %@", result);
+        }
+        
+       // NSMutableArray *weatherInformations = [self parseWeatherInformation:result];
+        
+        callback(result, error);
+    }];
+    
+}
+
+
+
++ (NSMutableArray *)parseWeatherInformation:(id)weatherResult {
+    
+    NSMutableArray *parsedCategories = [[NSMutableArray alloc] init];
+    
+//    [categoryResult enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+//        NSDictionary    *categoryDict = obj;
+//        
+//        ProductCategory *category = [[ProductCategory alloc] init];
+//        category.Id         = categoryDict[@"category_id"];
+//        category.name       = categoryDict[@"name"];
+//        category.imageURL   = [self checkForNSNULL:categoryDict[@"image"]];
+//        category.children   = [categoryDict[@"children"] integerValue];
+//        category.sortOrder  = categoryDict[@"sort_order"];
+//        
+//        [parsedCategories addObject:category];
+//        
+//        category = nil;
+//    }];
+    
+    return parsedCategories;
+}
+
+
+
+
 + (void)getCategoriesWithCallback:(ResponseCallback)callback {
     
     /////////////////////////////Handling Offline Mode////////////////////////////////////////////

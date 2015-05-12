@@ -95,6 +95,8 @@
 		2EB698A91AF9077600843341 /* NotificationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB698501AF9077600843341 /* NotificationCell.m */; };
 		2EB698AA1AF9077600843341 /* SubMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB698521AF9077600843341 /* SubMenuCell.m */; };
 		2EB698AB1AF9077600843341 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB698541AF9077600843341 /* ViewController.m */; };
+		688003B31B0265E20033891A /* WeatherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 688003B21B0265E20033891A /* WeatherTableViewCell.m */; };
+		68850F3D1B0111F300F2BD40 /* AVHWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68850F3C1B0111F300F2BD40 /* AVHWeatherViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -241,8 +243,12 @@
 		2EB698521AF9077600843341 /* SubMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubMenuCell.m; sourceTree = "<group>"; };
 		2EB698531AF9077600843341 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2EB698541AF9077600843341 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		688003B11B0265E20033891A /* WeatherTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherTableViewCell.h; sourceTree = "<group>"; };
+		688003B21B0265E20033891A /* WeatherTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherTableViewCell.m; sourceTree = "<group>"; };
 		68847F6F1A349DB200942FA5 /* AVH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68847F881A349DB200942FA5 /* AVHTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AVHTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		68850F3B1B0111F300F2BD40 /* AVHWeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHWeatherViewController.h; sourceTree = "<group>"; };
+		68850F3C1B0111F300F2BD40 /* AVHWeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHWeatherViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -486,6 +492,8 @@
 				2EB698501AF9077600843341 /* NotificationCell.m */,
 				2EB698511AF9077600843341 /* SubMenuCell.h */,
 				2EB698521AF9077600843341 /* SubMenuCell.m */,
+				688003B11B0265E20033891A /* WeatherTableViewCell.h */,
+				688003B21B0265E20033891A /* WeatherTableViewCell.m */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -533,6 +541,8 @@
 				2EB697DE1AF9077600843341 /* DGHProductViewController.m */,
 				2EB697DF1AF9077600843341 /* DGHWebViewController.h */,
 				2EB697E01AF9077600843341 /* DGHWebViewController.m */,
+				68850F3B1B0111F300F2BD40 /* AVHWeatherViewController.h */,
+				68850F3C1B0111F300F2BD40 /* AVHWeatherViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -723,9 +733,11 @@
 				2EB6989E1AF9077600843341 /* main.m in Sources */,
 				2EB698771AF9077600843341 /* RequestHandler.m in Sources */,
 				2EB698621AF9077600843341 /* DGhNotificationViewController.m in Sources */,
+				68850F3D1B0111F300F2BD40 /* AVHWeatherViewController.m in Sources */,
 				2EB698681AF9077600843341 /* HelperClass.m in Sources */,
 				2EB698611AF9077600843341 /* DGHMenuViewController.m in Sources */,
 				2EB698701AF9077600843341 /* AOScrollerView.m in Sources */,
+				688003B31B0265E20033891A /* WeatherTableViewCell.m in Sources */,
 				2EB698A31AF9077600843341 /* ProductInfo.m in Sources */,
 				2EB6986B1AF9077600843341 /* Reachability.m in Sources */,
 				2EB6986E1AF9077600843341 /* UIViewController+RESideMenu.m in Sources */,

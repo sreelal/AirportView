@@ -201,27 +201,29 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    UINavigationController *navController;
+//    UINavigationController *navController;
+//    
+//    ProductCategory *selectedCategory = self.homeCategories[indexPath.row];
+//    
+//    if (selectedCategory.children > 0) {
+//        UINavigationController *categoryVCNav = [self.storyboard instantiateViewControllerWithIdentifier:@"ContentViewNavigation"];
+//        DGHContentViewController *contentView = [[categoryVCNav viewControllers] firstObject];
+//        
+//        contentView.category = selectedCategory;
+//        navController = categoryVCNav;
+//    }
+//    else if (selectedCategory.children == 0) {
+////        UINavigationController *productVCNav = [self.storyboard instantiateViewControllerWithIdentifier:@"weatherNavController"];
+//////        DGHProductViewController *productView = [[productVCNav viewControllers] firstObject];
+//////        
+//////        productView.category = selectedCategory;
+////        navController = productVCNav;
+//    }
+//
+//    [self.sideMenuViewController setContentViewController:navController];
+//    [self.sideMenuViewController hideMenuViewController];
     
-    ProductCategory *selectedCategory = self.homeCategories[indexPath.row];
-    
-    if (selectedCategory.children > 0) {
-        UINavigationController *categoryVCNav = [self.storyboard instantiateViewControllerWithIdentifier:@"ContentViewNavigation"];
-        DGHContentViewController *contentView = [[categoryVCNav viewControllers] firstObject];
-        
-        contentView.category = selectedCategory;
-        navController = categoryVCNav;
-    }
-    else if (selectedCategory.children == 0) {
-        UINavigationController *productVCNav = [self.storyboard instantiateViewControllerWithIdentifier:@"ProductViewNavigation"];
-        DGHProductViewController *productView = [[productVCNav viewControllers] firstObject];
-        
-        productView.category = selectedCategory;
-        navController = productVCNav;
-    }
-    
-    [self.sideMenuViewController setContentViewController:navController];
-    [self.sideMenuViewController hideMenuViewController];
+    [self performSegueWithIdentifier:@"weatherSeague" sender:self];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {

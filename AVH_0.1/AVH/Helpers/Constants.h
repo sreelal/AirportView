@@ -13,6 +13,13 @@
 #endif
 
 //------------------Webservice----------------------
+#define FLIGHTSTAT_URL_BASE     @"https://api.flightstats.com/flex"
+#define APP_ID  @"19d03dee"
+#define APP_API_KEY  @"747373f943be6a95583ea75765ca8d92"
+#define WEATHER_PRODUCT @"metar"
+#define WEATHER_AIRPORT @"CLT"
+
+
 #define SERVICE_URL_ROOT     @"http://www.devicegh.com/index.php?route=service/"
 #define SERVICE_CATEGORY     @"category"
 #define SERVICE_SUB_CATEGORY @"category&parent="
