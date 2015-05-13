@@ -16,7 +16,7 @@ typedef void (^ResponseCallback) (id object, NSError *error);
 }
 
 + (void)getWeatherInfoWithCallback:(ResponseCallback)callback;
-
++ (void)getFlightDepInfoWithCallback:(ResponseCallback)callback;
 
 + (void)getCategoriesWithCallback:(ResponseCallback)callback;
 + (void)getBannerImagesWithCallback:(ResponseCallback)bannerImagesCallback;

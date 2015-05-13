@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "RESideMenu.h"
 #import "MarqueeLabel.h"
+#import "AVHWeatherViewController.h"
+#import "AVHFlightInfoViewController.h"
 
 @interface AVHHomeViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout> {    
     

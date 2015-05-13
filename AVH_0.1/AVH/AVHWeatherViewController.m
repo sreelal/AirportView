@@ -9,6 +9,7 @@
 #import "AVHWeatherViewController.h"
 #import "WebHandler.h"
 #import "WeatherTableViewCell.h"
+#import "AppDelegate.h"
 
 @interface AVHWeatherViewController ()
 
@@ -20,9 +21,15 @@
 @implementation AVHWeatherViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
+    
+    [[self navigationController] setNavigationBarHidden:NO animated:YES];
+
     _weatherData = nil;
-    // Do any additional setup after loading the view.
+    
+    [[AppDelegate instance] showBusyView:@"Loading weather ..."];
+    
     [WebHandler getWeatherInfoWithCallback:^(id object, NSError *error) {
         
         if (object) {
@@ -30,11 +37,31 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 
                 _weatherData = object;
-                [_weatherReportTable reloadData];
+                
+                NSString *temp = [[_weatherData valueForKey:@"metar"] valueForKey:@"temperatureCelsius"];
+                NSString *dewPt = [[_weatherData valueForKey:@"metar"] valueForKey:@"dewPointCelsius"];
+                
+                tempLbl.text   = [NSString stringWithFormat:@"%@ %@ C", temp, @"\u00B0"];
+                dewPtLbl.text  = [NSString stringWithFormat:@"%@ %@ C", dewPt, @"\u00B0"];
+                reportLbl.text = [[_weatherData valueForKey:@"metar"] valueForKey:@"reportTime"];
+                windLbl.text   = _weatherData[@"metar"][@"conditions"][@"wind"][@"speedKnots"];
+                
+                NSArray *skyConditions = _weatherData[@"metar"][@"conditions"][@"skyConditions"];
+                [skyConditions enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                    skyLbl.text = obj[@"coverage"];
+                }];
+                
+                [[AppDelegate instance] hideBusyView];
             });
-  
-        }
+          }
     }];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    
+    [[self navigationController] setNavigationBarHidden:YES animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

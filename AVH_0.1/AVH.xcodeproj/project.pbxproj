@@ -87,16 +87,16 @@
 		2EB698A11AF9077600843341 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB698431AF9077600843341 /* Product.m */; };
 		2EB698A21AF9077600843341 /* ProductCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB698451AF9077600843341 /* ProductCategory.m */; };
 		2EB698A31AF9077600843341 /* ProductInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB698471AF9077600843341 /* ProductInfo.m */; };
-		2EB698A41AF9077600843341 /* NavigationBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EB698481AF9077600843341 /* NavigationBg.png */; };
-		2EB698A51AF9077600843341 /* navigationBg_320x44.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EB698491AF9077600843341 /* navigationBg_320x44.png */; };
-		2EB698A61AF9077600843341 /* navigationBg_375x44.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EB6984A1AF9077600843341 /* navigationBg_375x44.png */; };
-		2EB698A71AF9077600843341 /* navigationBg_414x44.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EB6984B1AF9077600843341 /* navigationBg_414x44.png */; };
 		2EB698A81AF9077600843341 /* MenuHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB6984E1AF9077600843341 /* MenuHeaderCell.m */; };
 		2EB698A91AF9077600843341 /* NotificationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB698501AF9077600843341 /* NotificationCell.m */; };
 		2EB698AA1AF9077600843341 /* SubMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB698521AF9077600843341 /* SubMenuCell.m */; };
 		2EB698AB1AF9077600843341 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB698541AF9077600843341 /* ViewController.m */; };
 		688003B31B0265E20033891A /* WeatherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 688003B21B0265E20033891A /* WeatherTableViewCell.m */; };
 		68850F3D1B0111F300F2BD40 /* AVHWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68850F3C1B0111F300F2BD40 /* AVHWeatherViewController.m */; };
+		E92BE4B11B036AAC00AE6B2E /* Weather_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E92BE4B01B036AAC00AE6B2E /* Weather_Icon.png */; };
+		E92BE4B31B03875F00AE6B2E /* NavigationBg.png in Resources */ = {isa = PBXBuildFile; fileRef = E92BE4B21B03875F00AE6B2E /* NavigationBg.png */; };
+		E92BE4B61B0389C700AE6B2E /* AVHFlightInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92BE4B51B0389C700AE6B2E /* AVHFlightInfoViewController.m */; };
+		E92BE4B91B038A0300AE6B2E /* FlightInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E92BE4B81B038A0300AE6B2E /* FlightInfoTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -231,10 +231,6 @@
 		2EB698451AF9077600843341 /* ProductCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCategory.m; sourceTree = "<group>"; };
 		2EB698461AF9077600843341 /* ProductInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductInfo.h; sourceTree = "<group>"; };
 		2EB698471AF9077600843341 /* ProductInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductInfo.m; sourceTree = "<group>"; };
-		2EB698481AF9077600843341 /* NavigationBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NavigationBg.png; path = ../NavigationBg.png; sourceTree = "<group>"; };
-		2EB698491AF9077600843341 /* navigationBg_320x44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = navigationBg_320x44.png; path = ../navigationBg_320x44.png; sourceTree = "<group>"; };
-		2EB6984A1AF9077600843341 /* navigationBg_375x44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = navigationBg_375x44.png; path = ../navigationBg_375x44.png; sourceTree = "<group>"; };
-		2EB6984B1AF9077600843341 /* navigationBg_414x44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = navigationBg_414x44.png; path = ../navigationBg_414x44.png; sourceTree = "<group>"; };
 		2EB6984D1AF9077600843341 /* MenuHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuHeaderCell.h; sourceTree = "<group>"; };
 		2EB6984E1AF9077600843341 /* MenuHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuHeaderCell.m; sourceTree = "<group>"; };
 		2EB6984F1AF9077600843341 /* NotificationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationCell.h; sourceTree = "<group>"; };
@@ -249,6 +245,12 @@
 		68847F881A349DB200942FA5 /* AVHTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AVHTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68850F3B1B0111F300F2BD40 /* AVHWeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHWeatherViewController.h; sourceTree = "<group>"; };
 		68850F3C1B0111F300F2BD40 /* AVHWeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHWeatherViewController.m; sourceTree = "<group>"; };
+		E92BE4B01B036AAC00AE6B2E /* Weather_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Weather_Icon.png; sourceTree = "<group>"; };
+		E92BE4B21B03875F00AE6B2E /* NavigationBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationBg.png; sourceTree = "<group>"; };
+		E92BE4B41B0389C700AE6B2E /* AVHFlightInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHFlightInfoViewController.h; sourceTree = "<group>"; };
+		E92BE4B51B0389C700AE6B2E /* AVHFlightInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHFlightInfoViewController.m; sourceTree = "<group>"; };
+		E92BE4B71B038A0300AE6B2E /* FlightInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightInfoTableViewCell.h; sourceTree = "<group>"; };
+		E92BE4B81B038A0300AE6B2E /* FlightInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightInfoTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -403,6 +405,8 @@
 		2EB698141AF9077600843341 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E92BE4B21B03875F00AE6B2E /* NavigationBg.png */,
+				E92BE4B01B036AAC00AE6B2E /* Weather_Icon.png */,
 				2EB698151AF9077600843341 /* App Icon */,
 				2EB698241AF9077600843341 /* Menu_Icons */,
 				2EB697C71AF9077600843341 /* bg-textbox.png */,
@@ -415,10 +419,6 @@
 				2EB698371AF9077600843341 /* row_bg.jpg */,
 				2EB6983A1AF9077600843341 /* info.png */,
 				2EB6983B1AF9077600843341 /* leftMenu.png */,
-				2EB698481AF9077600843341 /* NavigationBg.png */,
-				2EB698491AF9077600843341 /* navigationBg_320x44.png */,
-				2EB6984A1AF9077600843341 /* navigationBg_375x44.png */,
-				2EB6984B1AF9077600843341 /* navigationBg_414x44.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -494,6 +494,8 @@
 				2EB698521AF9077600843341 /* SubMenuCell.m */,
 				688003B11B0265E20033891A /* WeatherTableViewCell.h */,
 				688003B21B0265E20033891A /* WeatherTableViewCell.m */,
+				E92BE4B71B038A0300AE6B2E /* FlightInfoTableViewCell.h */,
+				E92BE4B81B038A0300AE6B2E /* FlightInfoTableViewCell.m */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -527,6 +529,10 @@
 				2EB698541AF9077600843341 /* ViewController.m */,
 				2EB697D31AF9077600843341 /* AVHHomeViewController.h */,
 				2EB697D41AF9077600843341 /* AVHHomeViewController.m */,
+				68850F3B1B0111F300F2BD40 /* AVHWeatherViewController.h */,
+				68850F3C1B0111F300F2BD40 /* AVHWeatherViewController.m */,
+				E92BE4B41B0389C700AE6B2E /* AVHFlightInfoViewController.h */,
+				E92BE4B51B0389C700AE6B2E /* AVHFlightInfoViewController.m */,
 				2EB697CD1AF9077600843341 /* DGHContentViewController.h */,
 				2EB697CE1AF9077600843341 /* DGHContentViewController.m */,
 				2EB697CF1AF9077600843341 /* DGHEnquireViewController.h */,
@@ -541,8 +547,6 @@
 				2EB697DE1AF9077600843341 /* DGHProductViewController.m */,
 				2EB697DF1AF9077600843341 /* DGHWebViewController.h */,
 				2EB697E01AF9077600843341 /* DGHWebViewController.m */,
-				68850F3B1B0111F300F2BD40 /* AVHWeatherViewController.h */,
-				68850F3C1B0111F300F2BD40 /* AVHWeatherViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -666,17 +670,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EB698961AF9077600843341 /* menu_7_icon.png in Resources */,
+				E92BE4B31B03875F00AE6B2E /* NavigationBg.png in Resources */,
 				2EB6988D1AF9077600843341 /* menu_3_bg.png in Resources */,
 				2EB6989A1AF9077600843341 /* Images.xcassets in Resources */,
 				2EB698951AF9077600843341 /* menu_7_bg.png in Resources */,
-				2EB698A61AF9077600843341 /* navigationBg_375x44.png in Resources */,
 				2EB698581AF9077600843341 /* bg-textbox.png in Resources */,
 				2EB698981AF9077600843341 /* no_image.png in Resources */,
-				2EB698A71AF9077600843341 /* navigationBg_414x44.png in Resources */,
 				2EB698991AF9077600843341 /* row_bg.jpg in Resources */,
 				2EB6989B1AF9077600843341 /* Info.plist in Resources */,
 				2EB6988F1AF9077600843341 /* menu_4_bg.png in Resources */,
-				2EB698A51AF9077600843341 /* navigationBg_320x44.png in Resources */,
 				2EB698571AF9077600843341 /* Main.storyboard in Resources */,
 				2EB698821AF9077600843341 /* logo_44x44.jpg in Resources */,
 				2EB6988C1AF9077600843341 /* menu_2_icon.png in Resources */,
@@ -692,6 +694,7 @@
 				2EB6988B1AF9077600843341 /* menu_2_bg.png in Resources */,
 				2EB6989D1AF9077600843341 /* leftMenu.png in Resources */,
 				2EB698921AF9077600843341 /* menu_5_icon.png in Resources */,
+				E92BE4B11B036AAC00AE6B2E /* Weather_Icon.png in Resources */,
 				2EB698901AF9077600843341 /* menu_4_icon.png in Resources */,
 				2EB698561AF9077600843341 /* LaunchScreen.xib in Resources */,
 				2EB6987C1AF9077600843341 /* Icon-29@3x.jpg in Resources */,
@@ -705,7 +708,6 @@
 				2EB6987A1AF9077600843341 /* Icon-29@2x.jpg in Resources */,
 				2EB6987F1AF9077600843341 /* Icon-40@3x.png in Resources */,
 				2EB698791AF9077600843341 /* Enquiry.png in Resources */,
-				2EB698A41AF9077600843341 /* NavigationBg.png in Resources */,
 				2EB6988E1AF9077600843341 /* menu_3_icon.png in Resources */,
 				2EB6989C1AF9077600843341 /* info.png in Resources */,
 				2EB6985B1AF9077600843341 /* device_nav_logo.png in Resources */,
@@ -735,6 +737,7 @@
 				2EB698621AF9077600843341 /* DGhNotificationViewController.m in Sources */,
 				68850F3D1B0111F300F2BD40 /* AVHWeatherViewController.m in Sources */,
 				2EB698681AF9077600843341 /* HelperClass.m in Sources */,
+				E92BE4B61B0389C700AE6B2E /* AVHFlightInfoViewController.m in Sources */,
 				2EB698611AF9077600843341 /* DGHMenuViewController.m in Sources */,
 				2EB698701AF9077600843341 /* AOScrollerView.m in Sources */,
 				688003B31B0265E20033891A /* WeatherTableViewCell.m in Sources */,
@@ -745,6 +748,7 @@
 				2EB698711AF9077600843341 /* NSURLAdditions.m in Sources */,
 				2EB6986A1AF9077600843341 /* MarqueeLabel.m in Sources */,
 				2EB698A21AF9077600843341 /* ProductCategory.m in Sources */,
+				E92BE4B91B038A0300AE6B2E /* FlightInfoTableViewCell.m in Sources */,
 				2EB6989F1AF9077600843341 /* Banner.m in Sources */,
 				2EB698601AF9077600843341 /* AVHHomeViewController.m in Sources */,
 				2EB6985C1AF9077600843341 /* DGHCategoryCollectionViewCell.m in Sources */,

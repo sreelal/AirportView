@@ -24,25 +24,51 @@
     [RequestHandler getRequestWithURL:url withCallback:^(id result, NSError *error) {
         
         if (result != nil) {
-            BOOL isCached = [HelperClass cacheJsonForData:result withName:CACHE_ID_CATEGORY];
+            BOOL isCached = [HelperClass cacheJsonForData:result withName:CACHE_ID_WEATHER];
             
             if (isCached) NSLog(@"Category Successfully Cached");
             else NSLog(@"Failed Category Caching");
         }
         else if (result == nil || error) {
-            result = [HelperClass getCachedJsonFor:CACHE_ID_CATEGORY];
+            result = [HelperClass getCachedJsonFor:CACHE_ID_WEATHER];
             
             NSLog(@"Cached Result: %@", result);
         }
         
-       // NSMutableArray *weatherInformations = [self parseWeatherInformation:result];
-        
         callback(result, error);
     }];
-    
 }
 
-
++ (void)getFlightDepInfoWithCallback:(ResponseCallback)callback {
+    
+    //https://api.flightstats.com/flex/flightstatus/rest/v2/json/airport/status/ACC/dep/2015/05/13/16?appId=19d03dee&appKey=747373f943be6a95583ea75765ca8d92&utc=false&numHours=6
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear | NSCalendarUnitHour fromDate:[NSDate date]];
+    NSInteger day = [components day];
+    NSInteger month = [components month];
+    NSInteger year = [components year];
+    NSInteger hour = [components hour];
+    
+    NSString *url = [NSString stringWithFormat:@"%@/%@/%@/%@/%ld/%ld/%ld/%ld?appId=%@&appKey=%@&utc=false&numHours=6", FLIGHTSTAT_URL_BASE, @"flightstatus/rest/v2/json", FLIGHT_INFO_API, @"dep", year, month, day, hour, APP_ID,APP_API_KEY];
+    
+    NSLog(@"Url : %@", url);
+    
+    [RequestHandler getRequestWithURL:url withCallback:^(id result, NSError *error) {
+        
+        if (result != nil) {
+            BOOL isCached = [HelperClass cacheJsonForData:result withName:CACHE_ID_FLIGHT_DEP];
+            
+            if (isCached) NSLog(@"Dep Successfully Cached");
+            else NSLog(@"Failed Dep Caching");
+        }
+        else if (result == nil || error) {
+            result = [HelperClass getCachedJsonFor:CACHE_ID_FLIGHT_DEP];
+            
+            NSLog(@"Cached Result: %@", result);
+        }
+                
+        callback(result, error);
+    }];
+}
 
 + (NSMutableArray *)parseWeatherInformation:(id)weatherResult {
     

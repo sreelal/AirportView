@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AVHWeatherViewController : UIViewController
+@interface AVHWeatherViewController : UIViewController {
+    
+    IBOutlet UILabel *tempLbl;
+    IBOutlet UILabel *dewPtLbl;
+    IBOutlet UILabel *windLbl;
+    IBOutlet UILabel *skyLbl;
+    IBOutlet UILabel *reportLbl;
+}
 
 @end

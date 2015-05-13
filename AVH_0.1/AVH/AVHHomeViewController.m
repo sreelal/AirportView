@@ -21,7 +21,7 @@
 
 #import <QuartzCore/QuartzCore.h>
 
-@interface AVHHomeViewController ()<ValueClickDelegate>{
+@interface AVHHomeViewController ()<ValueClickDelegate, RESideMenuDelegate>{
    
 
 }
@@ -42,7 +42,7 @@
     [categoiesCollectionView setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
     
-    self.menuItems = [[NSMutableArray alloc] initWithObjects:@"BOOKING", @"MY ACCOUNT", @"CONTACT", @"HOTEL INFO", @"RECOMMENDATIONS", @"FLIGHT INFO", @"WEATHER", @"HOTEL DIRECTIONS", nil];
+    self.menuItems = [[NSMutableArray alloc] initWithObjects:@"BOOKING", @"MY ACCOUNT", @"CONTACT", @"HOTEL INFO", @"RECOMMENDATIONS", @"FLIGHT INFO", @"HOTEL DIRECTIONS", @"WEATHER", nil];
     
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     
@@ -52,6 +52,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
+    
     
     //[self loadCategories];
     //[self loadBannerImages];
@@ -223,7 +224,24 @@
 //    [self.sideMenuViewController setContentViewController:navController];
 //    [self.sideMenuViewController hideMenuViewController];
     
-    [self performSegueWithIdentifier:@"weatherSeague" sender:self];
+    
+    switch (indexPath.row) {
+        case 5:{
+            AVHFlightInfoViewController *flightInfoVC = [self.storyboard instantiateViewControllerWithIdentifier:@"FlightInfoVC"];
+            [self.navigationController pushViewController:flightInfoVC animated:YES];
+        }
+        break;
+        case 7:{
+            AVHWeatherViewController *weatherVC = [self.storyboard instantiateViewControllerWithIdentifier:@"WeatherVC"];
+            [self.navigationController pushViewController:weatherVC animated:YES];
+        }
+        break;
+            
+        default:
+        break;
+    }
+    
+    //[self performSegueWithIdentifier:@"weatherSeague" sender:self];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
