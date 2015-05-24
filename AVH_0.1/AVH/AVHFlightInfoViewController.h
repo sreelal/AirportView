@@ -11,6 +11,7 @@
 @interface AVHFlightInfoViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {
     IBOutlet UITableView *flightTableView;
+    IBOutlet UISegmentedControl *segmentControl;
 }
 
 @end

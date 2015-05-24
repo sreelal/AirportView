@@ -15,7 +15,8 @@
 //------------------Webservice----------------------
 #define FLIGHTSTAT_URL_BASE     @"https://api.flightstats.com/flex"
 #define APP_ID  @"19d03dee"
-#define APP_API_KEY  @"747373f943be6a95583ea75765ca8d92"
+//#define APP_API_KEY  @"747373f943be6a95583ea75765ca8d92"
+#define APP_API_KEY @"02ce533ec3c3ab03bdc0518f4d06ddf9"
 #define FLIGHT_INFO_API   @"airport/status/ACC"
 #define WEATHER_PRODUCT @"metar"
 #define WEATHER_AIRPORT @"ACC"

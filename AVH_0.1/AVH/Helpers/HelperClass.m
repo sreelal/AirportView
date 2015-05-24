@@ -164,4 +164,19 @@
     [alert show];
 }
 
++ (id)getFilteredObjectValueFromArrOfDictForKey:(NSString *)key andForValue:(NSString *)value fromDictArr:(NSArray *)dictArr forFilterObjKey:(NSString *)filtObjKey {
+    
+    id returnObj = nil;
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K == %@", key, value];
+    NSArray *filteredResults = [dictArr filteredArrayUsingPredicate:predicate];
+    
+    if (filteredResults.count) {
+        NSDictionary *filteredObj = [filteredResults firstObject];
+        returnObj = filteredObj[filtObjKey];
+    }
+    
+    return returnObj;
+}
+
 @end

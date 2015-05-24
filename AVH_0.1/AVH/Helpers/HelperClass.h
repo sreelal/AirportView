@@ -36,4 +36,6 @@
 
 + (void)showAlertWithMessage:(NSString *)message;
 
++ (id)getFilteredObjectValueFromArrOfDictForKey:(NSString *)key andForValue:(NSString *)value fromDictArr:(NSArray *)dictArr forFilterObjKey:(NSString *)filtObjKey;
+
 @end

@@ -97,6 +97,7 @@
 		E92BE4B31B03875F00AE6B2E /* NavigationBg.png in Resources */ = {isa = PBXBuildFile; fileRef = E92BE4B21B03875F00AE6B2E /* NavigationBg.png */; };
 		E92BE4B61B0389C700AE6B2E /* AVHFlightInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92BE4B51B0389C700AE6B2E /* AVHFlightInfoViewController.m */; };
 		E92BE4B91B038A0300AE6B2E /* FlightInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E92BE4B81B038A0300AE6B2E /* FlightInfoTableViewCell.m */; };
+		E94D79561B0B608500A29EB6 /* Flight.m in Sources */ = {isa = PBXBuildFile; fileRef = E94D79551B0B608500A29EB6 /* Flight.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -251,6 +252,8 @@
 		E92BE4B51B0389C700AE6B2E /* AVHFlightInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHFlightInfoViewController.m; sourceTree = "<group>"; };
 		E92BE4B71B038A0300AE6B2E /* FlightInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightInfoTableViewCell.h; sourceTree = "<group>"; };
 		E92BE4B81B038A0300AE6B2E /* FlightInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightInfoTableViewCell.m; sourceTree = "<group>"; };
+		E94D79541B0B608500A29EB6 /* Flight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Flight.h; path = FlightInfo/Flight.h; sourceTree = "<group>"; };
+		E94D79551B0B608500A29EB6 /* Flight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Flight.m; path = FlightInfo/Flight.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -469,6 +472,7 @@
 		2EB6983D1AF9077600843341 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E94D794D1B0B2EBC00A29EB6 /* FlightInfo */,
 				2EB6983E1AF9077600843341 /* Banner.h */,
 				2EB6983F1AF9077600843341 /* Banner.m */,
 				2EB698401AF9077600843341 /* Notification.h */,
@@ -585,6 +589,15 @@
 				68847F881A349DB200942FA5 /* AVHTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E94D794D1B0B2EBC00A29EB6 /* FlightInfo */ = {
+			isa = PBXGroup;
+			children = (
+				E94D79541B0B608500A29EB6 /* Flight.h */,
+				E94D79551B0B608500A29EB6 /* Flight.m */,
+			);
+			name = FlightInfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -769,6 +782,7 @@
 				2EB698781AF9077600843341 /* WebHandler.m in Sources */,
 				2EB698761AF9077600843341 /* UrlImageView.m in Sources */,
 				2EB698661AF9077600843341 /* DGHWebViewController.m in Sources */,
+				E94D79561B0B608500A29EB6 /* Flight.m in Sources */,
 				2EB6985F1AF9077600843341 /* DGHHomeCollectionViewCell.m in Sources */,
 				2EB698721AF9077600843341 /* SDImageCache.m in Sources */,
 				2EB6985E1AF9077600843341 /* DGHEnquireViewController.m in Sources */,

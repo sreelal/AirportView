@@ -12,8 +12,9 @@
 
 @property (nonatomic, strong) IBOutlet UILabel *flightNameLbl;
 @property (nonatomic, strong) IBOutlet UILabel *flighNumberLbl;
-@property (nonatomic, strong) IBOutlet UILabel *flightStatusLbl;
-@property (nonatomic, strong) IBOutlet UILabel *arrivalLbl;
-@property (nonatomic, strong) IBOutlet UILabel *departureLbl;
+@property (nonatomic, strong) IBOutlet UILabel *arrDepLbl;
+@property (nonatomic, strong) IBOutlet UILabel *arrdepTimeLbl;
+@property (nonatomic, strong) IBOutlet UILabel *arrDepLeftLbl;
+@property (nonatomic, strong) IBOutlet UILabel *arrDepTimeLeftLbl;
 
 @end

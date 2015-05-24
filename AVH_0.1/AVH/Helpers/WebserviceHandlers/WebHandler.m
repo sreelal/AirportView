@@ -14,6 +14,7 @@
 #import "Banner.h"
 #import "ProductInfo.h"
 #import "Notification.h"
+#import "Flight.h"
 
 @implementation WebHandler
 
@@ -41,6 +42,14 @@
 
 + (void)getFlightDepInfoWithCallback:(ResponseCallback)callback {
     
+    if (![HelperClass hasNetwork]) {
+        [self showAlertWithMessage:ALERT_INTERNET_FAILURE];
+        
+        callback(nil, nil);
+        
+        return;
+    }
+    
     //https://api.flightstats.com/flex/flightstatus/rest/v2/json/airport/status/ACC/dep/2015/05/13/16?appId=19d03dee&appKey=747373f943be6a95583ea75765ca8d92&utc=false&numHours=6
     NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear | NSCalendarUnitHour fromDate:[NSDate date]];
     NSInteger day = [components day];
@@ -55,19 +64,38 @@
     [RequestHandler getRequestWithURL:url withCallback:^(id result, NSError *error) {
         
         if (result != nil) {
-            BOOL isCached = [HelperClass cacheJsonForData:result withName:CACHE_ID_FLIGHT_DEP];
-            
-            if (isCached) NSLog(@"Dep Successfully Cached");
-            else NSLog(@"Failed Dep Caching");
+            id flights = [self parseFlightInfoWithResult:result andIsArrival:NO];
+            callback(flights, error);
         }
-        else if (result == nil || error) {
-            result = [HelperClass getCachedJsonFor:CACHE_ID_FLIGHT_DEP];
-            
-            NSLog(@"Cached Result: %@", result);
-        }
-                
-        callback(result, error);
+        else
+            callback(result, error);
     }];
+}
+
++ (id)parseFlightInfoWithResult:(NSDictionary *)result andIsArrival:(BOOL)isArrival {
+    
+    __block NSMutableArray *flights  = [[NSMutableArray alloc] init];
+    
+    __block NSArray *parsedAirlines = result[@"appendix"][@"airlines"];
+    __block NSArray *parsedAirports  = result[@"appendix"][@"airports"];
+    NSArray *parsedFlights  = result[@"flightStatuses"];
+    
+    [parsedFlights enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSDictionary *flightDict = (NSDictionary *)obj;
+        Flight *flight = [[Flight alloc] init];
+        
+        flight.flightCode   = flightDict[@"carrierFsCode"];
+        flight.flightNumber = flightDict[@"flightNumber"];
+        flight.flightName   = [HelperClass getFilteredObjectValueFromArrOfDictForKey:@"fs" andForValue:flightDict[@"carrierFsCode"] fromDictArr:parsedAirlines forFilterObjKey:@"name"];
+        flight.departureAirport  = [HelperClass getFilteredObjectValueFromArrOfDictForKey:@"fs" andForValue:flightDict[@"departureAirportFsCode"] fromDictArr:parsedAirports forFilterObjKey:@"name"];
+        flight.arrivalAirport  = [HelperClass getFilteredObjectValueFromArrOfDictForKey:@"fs" andForValue:flightDict[@"arrivalAirportFsCode"] fromDictArr:parsedAirports forFilterObjKey:@"name"];
+        flight.departureTime = flightDict[@"departureDate"][@"dateLocal"];
+        flight.arrivalTime   = flightDict[@"arrivalDate"][@"dateLocal"];
+        
+        [flights addObject:flight];
+    }];
+    
+    return flights;
 }
 
 + (NSMutableArray *)parseWeatherInformation:(id)weatherResult {
