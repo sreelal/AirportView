@@ -38,4 +38,8 @@
 
 + (id)getFilteredObjectValueFromArrOfDictForKey:(NSString *)key andForValue:(NSString *)value fromDictArr:(NSArray *)dictArr forFilterObjKey:(NSString *)filtObjKey;
 
++ (UIBarButtonItem *)getBackButtonItemWithTarget:(id)target andAction:(SEL)action;
+
++ (UIBarButtonItem *)getNextButtonItemWithTarget:(id)target andAction:(SEL)action;
+
 @end

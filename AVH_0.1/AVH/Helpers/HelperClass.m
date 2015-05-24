@@ -179,4 +179,29 @@
     return returnObj;
 }
 
++ (UIBarButtonItem *)getBackButtonItemWithTarget:(id)target andAction:(SEL)action {
+    
+    UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"img_btn_back"] style:UIBarButtonItemStylePlain target:target action:action];
+    
+    leftBarButtonItem.imageInsets = UIEdgeInsetsMake(0, -19, 1, 0);
+    [leftBarButtonItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                               [UIColor blackColor], NSForegroundColorAttributeName,nil]
+                                     forState:UIControlStateNormal];
+    
+    return leftBarButtonItem;
+}
+
++ (UIBarButtonItem *)getNextButtonItemWithTarget:(id)target andAction:(SEL)action {
+    
+    UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"img_btn_next"] style:UIBarButtonItemStylePlain target:target action:action];
+    
+    leftBarButtonItem.imageInsets = UIEdgeInsetsMake(0, -15, 0, 19);
+    [leftBarButtonItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                               [UIColor blackColor], NSForegroundColorAttributeName,nil]
+                                     forState:UIControlStateNormal];
+    
+    return leftBarButtonItem;
+}
+
+
 @end
