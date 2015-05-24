@@ -18,6 +18,7 @@
 #import "DGHHomeCollectionViewCell.h"
 #import "DGHProductViewController.h"
 #import "DGHEnquireViewController.h"
+#import "AVHBookingViewController.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -237,6 +238,11 @@
         }
         break;
             
+        case 0:{
+            AVHBookingViewController *bookingVC = [self.storyboard instantiateViewControllerWithIdentifier:@"BookingVC"];
+            [self.navigationController pushViewController:bookingVC animated:YES];
+        }
+            break;
         default:
         break;
     }
