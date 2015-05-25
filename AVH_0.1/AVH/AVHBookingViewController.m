@@ -14,7 +14,6 @@
 #import "AVHGuestDetails.h"
 #import "AVHReviewView.h"
 #import "AVHConfirmationView.h"
-#import "AVHRoomsRatesView.h"
 #import "HelperClass.h"
 
 @interface AVHBookingViewController ()/*<SwipeViewDataSource, SwipeViewDelegate>*/
@@ -94,6 +93,7 @@
 
 - (void)navgationNextClicked:(id)sender {
     
+    [_swipeView scrollToPage:1 duration:0.5];
 }
 
 #pragma mark -ß

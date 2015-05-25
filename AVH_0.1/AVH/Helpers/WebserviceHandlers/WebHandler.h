@@ -14,7 +14,7 @@ typedef void (^ResponseCallback) (id object, NSError *error);
 @interface WebHandler : NSObject {
     
 }
-
++ (void)getHotelsList:(ResponseCallback)callback;
 + (void)getWeatherInfoWithCallback:(ResponseCallback)callback;
 + (void)getFlightDepInfoWithCallback:(ResponseCallback)callback;
 

@@ -20,6 +20,8 @@
 #define FLIGHT_INFO_API   @"airport/status/ACC"
 #define WEATHER_PRODUCT @"metar"
 #define WEATHER_AIRPORT @"ACC"
+#define HOTELS_LIST @"http://demo.airportviewhotel.net/package.json"
+#define HOTELS_DETAILS @"http://demo.airportviewhotel.net/package/view/"
 
 
 #define SERVICE_URL_ROOT     @"http://www.devicegh.com/index.php?route=service/"
@@ -62,6 +64,7 @@
 //----------------------------------------------------
 
 //-----------------Helper Class Constants-------------
+#define CACHE_ID_PACKAGE      @"package.json"
 #define CACHE_ID_SUB_CATEGORY @"Category_"
 #define CACHE_ID_CATEGORY_PRO @"Category_Product_"
 #define CACHE_ID_PRODUCT      @"Product_"

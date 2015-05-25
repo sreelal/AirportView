@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>00D2C471-6E24-4141-AAE7-75F51E55AE8D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>154AD9A49D09096C05DB4AFD7B7C93916C8D469C</key>
+		<string>https://github.com/sreelal/AirportView.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>AVH_0.1/AVH.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>154AD9A49D09096C05DB4AFD7B7C93916C8D469C</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/sreelal/AirportView.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>154AD9A49D09096C05DB4AFD7B7C93916C8D469C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>154AD9A49D09096C05DB4AFD7B7C93916C8D469C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AirportView</string>
+		</dict>
+	</array>
+</dict>
+</plist>

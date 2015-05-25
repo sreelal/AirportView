@@ -19,6 +19,7 @@
 #import "DGHProductViewController.h"
 #import "DGHEnquireViewController.h"
 #import "AVHBookingViewController.h"
+#import "AVHRoomsRatesViewController.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -239,8 +240,8 @@
         break;
             
         case 0:{
-            AVHBookingViewController *bookingVC = [self.storyboard instantiateViewControllerWithIdentifier:@"BookingVC"];
-            [self.navigationController pushViewController:bookingVC animated:YES];
+            AVHRoomsRatesViewController *roomRatesVC = [self.storyboard instantiateViewControllerWithIdentifier:@"RoomRatesVC"];
+            [self.navigationController pushViewController:roomRatesVC animated:YES];
         }
             break;
         default:

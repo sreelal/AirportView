@@ -18,6 +18,30 @@
 
 @implementation WebHandler
 
++ (void)getHotelsList:(ResponseCallback)callback{
+    
+    [RequestHandler getRequestWithURL:HOTELS_LIST withCallback:^(id result, NSError *error) {
+        
+        if (result != nil) {
+            BOOL isCached = [HelperClass cacheJsonForData:result withName:CACHE_ID_PACKAGE];
+            
+            if (isCached) NSLog(@"Hotels Successfully Cached");
+        }
+        else if (result == nil || error) {
+            result = [HelperClass getCachedJsonFor:CACHE_ID_PACKAGE];
+            
+            NSLog(@"Cached Result: %@", result);
+        }
+        
+        callback(result, error);
+    }];
+}
+
++(void)getImageWithURL:(NSString*)imageURL andCallback:(ResponseCallback)callback{
+    
+    
+}
+
 + (void)getWeatherInfoWithCallback:(ResponseCallback)callback{
     
     NSString *url = [NSString stringWithFormat:@"%@/%@/%@/%@?appId=%@&appKey=%@", FLIGHTSTAT_URL_BASE, @"weather/rest/v1/json", WEATHER_PRODUCT, WEATHER_AIRPORT,APP_ID,APP_API_KEY];
