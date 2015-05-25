@@ -16,15 +16,15 @@
 + (BOOL)hasNetwork;
 
 + (BOOL)cacheJsonForData:(id)data withName:(NSString *)fileName;
+
 + (id)getCachedJsonFor:(NSString *)fileName;
 
 + (BOOL)cacheImageWithData:(NSData *)imageData withName:(NSString *)imageName;
+
 + (void)loadImageWithURL:(NSString *)imageURL andCompletionBlock:(void(^)(UIImage *img, NSData *imgData))block;
 + (void)getCachedImageWithName:(NSString *)imageName withCompletionBlock:(void(^)(UIImage *img))block;
 
 + (NSDictionary *)getRightBarButtonItemTextAttributes;
-
-+ (NSString *)getStringDateFromTimeStamp:(NSString *)timeStamp;
 
 + (BOOL)is4thGeneration;
 
@@ -41,5 +41,17 @@
 + (UIBarButtonItem *)getBackButtonItemWithTarget:(id)target andAction:(SEL)action;
 
 + (UIBarButtonItem *)getNextButtonItemWithTarget:(id)target andAction:(SEL)action;
+
+//NSDate Helper Mehtods
+
++ (NSString *)getStringDateFromTimeStamp:(NSString *)timeStamp;
+
++ (NSString *)getCurrentDateWithFormat:(NSString *)format;
+
++ (NSString *)getNextDayDateWithFormat:(NSString *)format;
+
++ (NSString *)getStringDateFromNSDate:(NSDate *)date withFormat:(NSString *)format;
+
++ (NSDate *)getNSDateFromString:(NSString *)strDate withFormat:(NSString *)format;
 
 @end

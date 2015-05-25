@@ -633,6 +633,7 @@
                         <viewControllerLayoutGuide type="bottom" id="crv-08-twR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="wZG-a3-wlU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VZd-dO-QR3" customClass="SwipeView">

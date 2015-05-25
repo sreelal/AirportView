@@ -49,6 +49,8 @@
     
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
     
+    [HelperClass getCurrentDateWithFormat:@"dd/MM/yyyy"];
+    
     [self prepareViews];
 }
 
@@ -91,7 +93,7 @@
 }
 
 - (void)navgationNextClicked:(id)sender {
-    //[self.navigationController popViewControllerAnimated:YES];
+    
 }
 
 #pragma mark -ß

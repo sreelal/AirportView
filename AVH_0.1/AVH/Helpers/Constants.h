@@ -86,5 +86,8 @@
 #define VIEW_TITLE_MONTHLY @"Monthly Promotions"
 //----------------------------------------------------
 
+#define SELECT_DATE @"Select Date"
+#define DATE_FORMAT_MM_DD_YYYY @"dd/MM/yyyy"
+
 #define CacheDirectory     [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0]
 #define DocumentsDirectory [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]

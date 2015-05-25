@@ -98,30 +98,6 @@
     return rightBarButtonTextAttributes;
 }
 
-+ (NSString *)getStringDateFromTimeStamp:(NSString *)timeStamp {
-    
-    NSString *strDate;
-    
-    NSDate *date = [NSDate dateWithTimeIntervalSince1970:[timeStamp doubleValue]];
-    
-    strDate = [self getStringDateFromNSDate:date];
-    
-    return strDate;
-}
-
-+ (NSString *)getStringDateFromNSDate:(NSDate *)date {
-    
-    NSString *strDate;
-    
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    
-    [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    
-    strDate = [formatter stringFromDate:date];
-    
-    return strDate;
-}
-
 + (BOOL)is4thGeneration {
     
     BOOL status = NO;
@@ -203,5 +179,74 @@
     return leftBarButtonItem;
 }
 
+#pragma mark - NSDate Helpers
+
++ (NSString *)getStringDateFromTimeStamp:(NSString *)timeStamp {
+    
+    NSString *strDate;
+    
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:[timeStamp doubleValue]];
+    
+    strDate = [self getStringDateFromNSDate:date];
+    
+    return strDate;
+}
+
++ (NSString *)getStringDateFromNSDate:(NSDate *)date {
+    
+    NSString *strDate;
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    
+    strDate = [formatter stringFromDate:date];
+    
+    return strDate;
+}
+
++ (NSString *)getStringDateFromNSDate:(NSDate *)date withFormat:(NSString *)format {
+    
+    NSString *strDate;
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    
+    [formatter setDateFormat:format];
+    
+    strDate = [formatter stringFromDate:date];
+    
+    return strDate;
+}
+
++ (NSDate *)getNSDateFromString:(NSString *)strDate withFormat:(NSString *)format {
+    
+    NSDate *date;
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    
+    [formatter setDateFormat:format];
+    
+    date = [formatter dateFromString:strDate];
+    
+    return date;
+}
+
++ (NSString *)getCurrentDateWithFormat:(NSString *)format {
+    
+    NSDate *currentDate  = [NSDate date];
+    NSString *stringDate = [HelperClass getStringDateFromNSDate:currentDate withFormat:format];
+    
+    return stringDate;
+}
+
++ (NSString *)getNextDayDateWithFormat:(NSString *)format {
+    
+    NSDate *now = [NSDate date];
+    int daysToAdd = 1;
+    NSDate *nextDayDate = [now dateByAddingTimeInterval:60*60*24*daysToAdd];
+    NSString *stringDate = [HelperClass getStringDateFromNSDate:nextDayDate withFormat:format];
+    
+    return stringDate;
+}
 
 @end
