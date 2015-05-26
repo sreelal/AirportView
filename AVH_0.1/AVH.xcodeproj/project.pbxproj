@@ -125,6 +125,8 @@
 		E94781DF1B12179E00FDD1FC /* img_btn_next.png in Resources */ = {isa = PBXBuildFile; fileRef = E94781DD1B12179E00FDD1FC /* img_btn_next.png */; };
 		E94781E01B12179E00FDD1FC /* img_btn_next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E94781DE1B12179E00FDD1FC /* img_btn_next@2x.png */; };
 		E94D79561B0B608500A29EB6 /* Flight.m in Sources */ = {isa = PBXBuildFile; fileRef = E94D79551B0B608500A29EB6 /* Flight.m */; };
+		E998CF131B14899B00969553 /* AVHYourStayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E998CF121B14899B00969553 /* AVHYourStayViewController.m */; };
+		E998CF161B14A45C00969553 /* AVHRoomInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E998CF151B14A45C00969553 /* AVHRoomInfoViewController.m */; };
 		E9B194721B133E6D00F59171 /* PickerComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B194711B133E6D00F59171 /* PickerComponent.m */; };
 		E9B194751B13595100F59171 /* Stay.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B194741B13595100F59171 /* Stay.m */; };
 /* End PBXBuildFile section */
@@ -275,8 +277,8 @@
 		68847F881A349DB200942FA5 /* AVHTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AVHTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68850F3B1B0111F300F2BD40 /* AVHWeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHWeatherViewController.h; sourceTree = "<group>"; };
 		68850F3C1B0111F300F2BD40 /* AVHWeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHWeatherViewController.m; sourceTree = "<group>"; };
-		68A737461B13867C00E0C100 /* AVHHotelCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AVHHotelCellTableViewCell.h; path = TableViewCells/AVHHotelCellTableViewCell.h; sourceTree = "<group>"; };
-		68A737471B13867C00E0C100 /* AVHHotelCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AVHHotelCellTableViewCell.m; path = TableViewCells/AVHHotelCellTableViewCell.m; sourceTree = "<group>"; };
+		68A737461B13867C00E0C100 /* AVHHotelCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHHotelCellTableViewCell.h; sourceTree = "<group>"; };
+		68A737471B13867C00E0C100 /* AVHHotelCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHHotelCellTableViewCell.m; sourceTree = "<group>"; };
 		68A7374B1B13929000E0C100 /* AVHRoomsRatesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHRoomsRatesViewController.h; sourceTree = "<group>"; };
 		68A7374C1B13929000E0C100 /* AVHRoomsRatesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHRoomsRatesViewController.m; sourceTree = "<group>"; };
 		68C03C491B11A209002BAC6C /* AVHBookingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHBookingViewController.h; sourceTree = "<group>"; };
@@ -320,6 +322,10 @@
 		E94781DE1B12179E00FDD1FC /* img_btn_next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img_btn_next@2x.png"; sourceTree = "<group>"; };
 		E94D79541B0B608500A29EB6 /* Flight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Flight.h; path = FlightInfo/Flight.h; sourceTree = "<group>"; };
 		E94D79551B0B608500A29EB6 /* Flight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Flight.m; path = FlightInfo/Flight.m; sourceTree = "<group>"; };
+		E998CF111B14899B00969553 /* AVHYourStayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHYourStayViewController.h; sourceTree = "<group>"; };
+		E998CF121B14899B00969553 /* AVHYourStayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHYourStayViewController.m; sourceTree = "<group>"; };
+		E998CF141B14A45C00969553 /* AVHRoomInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHRoomInfoViewController.h; sourceTree = "<group>"; };
+		E998CF151B14A45C00969553 /* AVHRoomInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHRoomInfoViewController.m; sourceTree = "<group>"; };
 		E9B194701B133E6D00F59171 /* PickerComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerComponent.h; sourceTree = "<group>"; };
 		E9B194711B133E6D00F59171 /* PickerComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerComponent.m; sourceTree = "<group>"; };
 		E9B194731B13595100F59171 /* Stay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stay.h; sourceTree = "<group>"; };
@@ -590,6 +596,8 @@
 				688003B21B0265E20033891A /* WeatherTableViewCell.m */,
 				E92BE4B71B038A0300AE6B2E /* FlightInfoTableViewCell.h */,
 				E92BE4B81B038A0300AE6B2E /* FlightInfoTableViewCell.m */,
+				68A737461B13867C00E0C100 /* AVHHotelCellTableViewCell.h */,
+				68A737471B13867C00E0C100 /* AVHHotelCellTableViewCell.m */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -597,8 +605,6 @@
 		2EB698AD1AF907C200843341 /* CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				68A737461B13867C00E0C100 /* AVHHotelCellTableViewCell.h */,
-				68A737471B13867C00E0C100 /* AVHHotelCellTableViewCell.m */,
 				2EB697D11AF9077600843341 /* DGHHomeCollectionViewCell.h */,
 				2EB697D21AF9077600843341 /* DGHHomeCollectionViewCell.m */,
 				2EB697CB1AF9077600843341 /* DGHCategoryCollectionViewCell.h */,
@@ -647,6 +653,10 @@
 				68C03C4A1B11A209002BAC6C /* AVHBookingViewController.m */,
 				68A7374B1B13929000E0C100 /* AVHRoomsRatesViewController.h */,
 				68A7374C1B13929000E0C100 /* AVHRoomsRatesViewController.m */,
+				E998CF141B14A45C00969553 /* AVHRoomInfoViewController.h */,
+				E998CF151B14A45C00969553 /* AVHRoomInfoViewController.m */,
+				E998CF111B14899B00969553 /* AVHYourStayViewController.h */,
+				E998CF121B14899B00969553 /* AVHYourStayViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -897,6 +907,7 @@
 				E94781CA1B11D81200FDD1FC /* AVHReviewView.m in Sources */,
 				68850F3D1B0111F300F2BD40 /* AVHWeatherViewController.m in Sources */,
 				2EB698681AF9077600843341 /* HelperClass.m in Sources */,
+				E998CF131B14899B00969553 /* AVHYourStayViewController.m in Sources */,
 				E92BE4B61B0389C700AE6B2E /* AVHFlightInfoViewController.m in Sources */,
 				2EB698611AF9077600843341 /* DGHMenuViewController.m in Sources */,
 				68A7374D1B13929000E0C100 /* AVHRoomsRatesViewController.m in Sources */,
@@ -941,6 +952,7 @@
 				2EB698721AF9077600843341 /* SDImageCache.m in Sources */,
 				2EB6985E1AF9077600843341 /* DGHEnquireViewController.m in Sources */,
 				E9B194751B13595100F59171 /* Stay.m in Sources */,
+				E998CF161B14A45C00969553 /* AVHRoomInfoViewController.m in Sources */,
 				2EB698731AF9077600843341 /* SDWebImageDownloader.m in Sources */,
 				68A737491B13867C00E0C100 /* AVHHotelCellTableViewCell.m in Sources */,
 				2EB698AB1AF9077600843341 /* ViewController.m in Sources */,

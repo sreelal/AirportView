@@ -228,22 +228,24 @@
     
     
     switch (indexPath.row) {
+        case 0:{
+            AVHRoomsRatesViewController *roomRatesVC = [self.storyboard instantiateViewControllerWithIdentifier:@"RoomRatesVC"];
+            [self.navigationController pushViewController:roomRatesVC animated:YES];
+        }
+        break;
+            
         case 5:{
             AVHFlightInfoViewController *flightInfoVC = [self.storyboard instantiateViewControllerWithIdentifier:@"FlightInfoVC"];
             [self.navigationController pushViewController:flightInfoVC animated:YES];
         }
         break;
+            
         case 7:{
             AVHWeatherViewController *weatherVC = [self.storyboard instantiateViewControllerWithIdentifier:@"WeatherVC"];
             [self.navigationController pushViewController:weatherVC animated:YES];
         }
         break;
             
-        case 0:{
-            AVHRoomsRatesViewController *roomRatesVC = [self.storyboard instantiateViewControllerWithIdentifier:@"RoomRatesVC"];
-            [self.navigationController pushViewController:roomRatesVC animated:YES];
-        }
-            break;
         default:
         break;
     }
