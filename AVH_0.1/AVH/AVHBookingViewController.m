@@ -93,7 +93,7 @@
 
 - (void)navgationNextClicked:(id)sender {
     
-    [_swipeView scrollToPage:1 duration:0.5];
+    //[_swipeView scrollToPage:1 duration:0.5];
 }
 
 #pragma mark -ß

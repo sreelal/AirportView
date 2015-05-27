@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PickerComponent.h"
 
-@interface AVHYourStayViewController : UIViewController
+@interface AVHYourStayViewController : UIViewController {
+    
+    IBOutlet UITextField *checkInTxt;
+    IBOutlet UITextField *checkOutTxt;
+    IBOutlet UITextField *adultsTxt;
+    IBOutlet UITextField *childrenTxt;
+    IBOutlet UITextField *roomsTxt;
+    
+    PickerComponent *pickerComponent;
+    NSMutableArray *pickerNumberData;
+}
 
 @end

@@ -11,11 +11,14 @@
 #import "AVHHotelCellTableViewCell.h"
 #import "HelperClass.h"
 #import "AppDelegate.h"
+#import "AVHGuestDetailsViewController.h"
 
 @interface AVHRoomsRatesViewController ()
 
 @property (nonatomic, weak) IBOutlet UITableView *hotelsTable;
 @property (nonatomic, strong) NSDictionary *hotelDetails;
+@property (nonatomic, strong) AVHGuestDetailsViewController *guestDetailsVC;
+@property (nonatomic, assign) BOOL isViewPopped;
 
 @end
 
@@ -59,7 +62,8 @@
     
     [super viewWillDisappear:animated];
     
-    [[self navigationController] setNavigationBarHidden:YES animated:YES];
+    if (_isViewPopped)
+        [[self navigationController] setNavigationBarHidden:YES animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,11 +74,18 @@
 #pragma mark - Button Actions
 
 - (void)navgationBackClicked:(id)sender {
+    
+    _isViewPopped = YES;
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)navgationNextClicked:(id)sender {
     
+    _guestDetailsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"GuestDetailsVC"];
+    
+    [self.navigationController pushViewController:_guestDetailsVC animated:YES];
+    
+    _guestDetailsVC = nil;
     //[_swipeView scrollToPage:1 duration:0.5];
 }
 

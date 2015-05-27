@@ -20,6 +20,7 @@
 #import "DGHEnquireViewController.h"
 #import "AVHBookingViewController.h"
 #import "AVHRoomsRatesViewController.h"
+#import "AVHYourStayViewController.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -229,6 +230,9 @@
     
     switch (indexPath.row) {
         case 0:{
+//            AVHYourStayViewController *yourStayVC = [self.storyboard instantiateViewControllerWithIdentifier:@"YourStayVC"];
+//            [self.navigationController pushViewController:yourStayVC animated:YES];
+            
             AVHRoomsRatesViewController *roomRatesVC = [self.storyboard instantiateViewControllerWithIdentifier:@"RoomRatesVC"];
             [self.navigationController pushViewController:roomRatesVC animated:YES];
         }
