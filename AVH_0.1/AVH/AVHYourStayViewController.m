@@ -7,10 +7,13 @@
 //
 
 #import "AVHYourStayViewController.h"
+#import "AVHRoomsRatesViewController.h"
 #import "Constants.h"
 #import "HelperClass.h"
 
 @interface AVHYourStayViewController ()
+
+@property (nonatomic, assign) BOOL isViewPopped;
 
 @end
 
@@ -44,6 +47,14 @@
     }
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    
+    if (_isViewPopped)
+        [[self navigationController] setNavigationBarHidden:YES animated:YES];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -73,11 +84,15 @@
 
 - (void)navgationBackClicked:(id)sender {
     
-    //_isViewPopped = YES;
+    _isViewPopped = YES;
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)navgationNextClicked:(id)sender {
+    
+    AVHRoomsRatesViewController *roomRatesVC = [self.storyboard instantiateViewControllerWithIdentifier:@"RoomRatesVC"];
+    [self.navigationController pushViewController:roomRatesVC animated:YES];
     
     //_guestDetailsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"GuestDetailsVC"];
     

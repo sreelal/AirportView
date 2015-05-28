@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AVHGuestDetailsViewController : UIViewController
+@interface AVHGuestDetailsViewController : UIViewController {
+    
+    IBOutlet NSLayoutConstraint *pinHeightConstraint;
+    IBOutlet UIScrollView *scrollView;
+}
+
 
 @end

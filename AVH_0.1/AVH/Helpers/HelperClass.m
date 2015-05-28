@@ -9,7 +9,23 @@
 #import "HelperClass.h"
 #import "Constants.h"
 
+
 @implementation HelperClass
+@synthesize bookingInfoDict;
+
++ (id)sharedInstance {
+    
+    static HelperClass *sharedMyInstance = nil;
+    static dispatch_once_t onceToken;
+    
+    dispatch_once(&onceToken, ^{
+        sharedMyInstance = [[self alloc] init];
+        
+        sharedMyInstance.bookingInfoDict = [[NSMutableDictionary alloc] init];
+    });
+    
+    return sharedMyInstance;
+}
 
 + (BOOL)hasNetwork {
     

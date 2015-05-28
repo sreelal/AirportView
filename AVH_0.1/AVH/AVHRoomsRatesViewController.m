@@ -18,7 +18,7 @@
 @property (nonatomic, weak) IBOutlet UITableView *hotelsTable;
 @property (nonatomic, strong) NSDictionary *hotelDetails;
 @property (nonatomic, strong) AVHGuestDetailsViewController *guestDetailsVC;
-@property (nonatomic, assign) BOOL isViewPopped;
+
 
 @end
 
@@ -58,13 +58,7 @@
     }];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    
-    [super viewWillDisappear:animated];
-    
-    if (_isViewPopped)
-        [[self navigationController] setNavigationBarHidden:YES animated:YES];
-}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -75,7 +69,6 @@
 
 - (void)navgationBackClicked:(id)sender {
     
-    _isViewPopped = YES;
     [self.navigationController popViewControllerAnimated:YES];
 }
 

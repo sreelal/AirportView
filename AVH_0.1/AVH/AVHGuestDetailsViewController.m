@@ -30,6 +30,11 @@
     self.navigationItem.rightBarButtonItem = rightBarItem;
     
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
+    
+    [scrollView setContentOffset:CGPointMake(0, 250) animated:YES];
+    
+    NSLog(@"Pin Constraints : %lf", scrollView.frame.size.height);
+    //NSLog(@"Pin Constraints : %lf", pinHeightConstraint.constant);
 }
 
 - (void)didReceiveMemoryWarning {

@@ -230,11 +230,11 @@
     
     switch (indexPath.row) {
         case 0:{
-//            AVHYourStayViewController *yourStayVC = [self.storyboard instantiateViewControllerWithIdentifier:@"YourStayVC"];
-//            [self.navigationController pushViewController:yourStayVC animated:YES];
+            AVHYourStayViewController *yourStayVC = [self.storyboard instantiateViewControllerWithIdentifier:@"YourStayVC"];
+            [self.navigationController pushViewController:yourStayVC animated:YES];
             
-            AVHRoomsRatesViewController *roomRatesVC = [self.storyboard instantiateViewControllerWithIdentifier:@"RoomRatesVC"];
-            [self.navigationController pushViewController:roomRatesVC animated:YES];
+//            AVHRoomsRatesViewController *roomRatesVC = [self.storyboard instantiateViewControllerWithIdentifier:@"RoomRatesVC"];
+//            [self.navigationController pushViewController:roomRatesVC animated:YES];
         }
         break;
             

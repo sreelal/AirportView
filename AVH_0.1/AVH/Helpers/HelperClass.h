@@ -13,6 +13,8 @@
 
 @interface HelperClass : NSObject
 
+@property (nonatomic, strong) NSMutableDictionary *bookingInfoDict;
+
 + (BOOL)hasNetwork;
 
 + (BOOL)cacheJsonForData:(id)data withName:(NSString *)fileName;
