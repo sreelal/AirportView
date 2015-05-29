@@ -12,6 +12,7 @@
 #import "HelperClass.h"
 #import "AppDelegate.h"
 #import "AVHGuestDetailsViewController.h"
+#import "AVHRoomInfoViewController.h"
 
 @interface AVHRoomsRatesViewController ()
 
@@ -34,9 +35,9 @@
     leftBarItem.tintColor = [UIColor whiteColor];
     self.navigationItem.leftBarButtonItem = leftBarItem;
     
-    UIBarButtonItem *rightBarItem = [HelperClass getNextButtonItemWithTarget:self andAction:@selector(navgationNextClicked:)];
-    rightBarItem.tintColor = [UIColor whiteColor];
-    self.navigationItem.rightBarButtonItem = rightBarItem;
+//    UIBarButtonItem *rightBarItem = [HelperClass getNextButtonItemWithTarget:self andAction:@selector(navgationNextClicked:)];
+//    rightBarItem.tintColor = [UIColor whiteColor];
+//    self.navigationItem.rightBarButtonItem = rightBarItem;
     
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
     
@@ -84,9 +85,22 @@
 
 - (void)moreInfoBtnAction:(id)sender {
     
+    UIButton *selectedButton = (UIButton*)sender;
     UINavigationController *roomInfoRootVC = [self.storyboard instantiateViewControllerWithIdentifier:@"RoomInfoNavVC"];
-    
+    AVHRoomInfoViewController *_roomInfoVC = [roomInfoRootVC.viewControllers lastObject];
+    _roomInfoVC.hotelDetails = self.hotelDetails;
+    _roomInfoVC.selectedIndex = selectedButton.tag;
     [self presentViewController:roomInfoRootVC animated:YES completion:nil];
+}
+
+- (void)bookNowBtnAction:(id)sender{
+    
+    _guestDetailsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"GuestDetailsVC"];
+    
+    [self.navigationController pushViewController:_guestDetailsVC animated:YES];
+    
+    _guestDetailsVC = nil;
+
 }
 
 
@@ -107,8 +121,9 @@
     static NSString *cellId = @"hotelCell";
     AVHHotelCellTableViewCell *hotelCell = (AVHHotelCellTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
     
-    hotelCell.selectionStyle = UITableViewCellSelectionStyleNone;
+   // hotelCell.selectionStyle = UITableViewCellSelectionStyleNone;
     hotelCell.moreInfoBtn.tag = indexPath.row;
+    hotelCell.hotelBookNowBtn.tag = indexPath.row;
     
     NSArray *hotelsList = _hotelDetails[@"packages"];
 
@@ -120,6 +135,7 @@
     
     [hotelCell loadRoomImageWithURL:hotelDetails[@"image"]];
     [hotelCell.moreInfoBtn addTarget:self action:@selector(moreInfoBtnAction:) forControlEvents:UIControlEventTouchUpInside];
+     [hotelCell.hotelBookNowBtn addTarget:self action:@selector(bookNowBtnAction:) forControlEvents:UIControlEventTouchUpInside];
     
     if (hotelCell.hotelDescription.text.length > 150) {
         hotelCell.hotelDescription.text = [NSString stringWithFormat:@"%@...", [hotelCell.hotelDescription.text substringToIndex:150]];

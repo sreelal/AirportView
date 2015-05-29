@@ -8,8 +8,11 @@
 
 #import "AVHRoomInfoViewController.h"
 #import "HelperClass.h"
+#import "SwipeView.h"
 
 @interface AVHRoomInfoViewController ()
+
+@property (weak, nonatomic) IBOutlet SwipeView *swipeImageView;
 
 @end
 

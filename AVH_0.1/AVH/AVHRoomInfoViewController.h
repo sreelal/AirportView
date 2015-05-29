@@ -10,4 +10,7 @@
 
 @interface AVHRoomInfoViewController : UIViewController
 
+@property (nonatomic, strong) NSDictionary *hotelDetails;
+@property (nonatomic, assign) NSInteger selectedIndex;
+
 @end
