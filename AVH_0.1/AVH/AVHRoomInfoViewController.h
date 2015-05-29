@@ -8,9 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+
+@protocol AVHRoomInfoViewControllerDelegtae <NSObject>
+
+- (void)didSelectBookingWithDetails:(NSDictionary*)details;
+
+@end
+
 @interface AVHRoomInfoViewController : UIViewController
 
 @property (nonatomic, strong) NSDictionary *hotelDetails;
 @property (nonatomic, assign) NSInteger selectedIndex;
-
+@property (nonatomic, assign) id<AVHRoomInfoViewControllerDelegtae> delegate;
 @end

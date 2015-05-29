@@ -21,6 +21,7 @@
 #import "AVHBookingViewController.h"
 #import "AVHRoomsRatesViewController.h"
 #import "AVHYourStayViewController.h"
+#import "AVHDirectionsViewController.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -244,11 +245,22 @@
         }
         break;
             
+            
+        case 6:{
+            AVHDirectionsViewController *directionsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"DirectionsVC"];
+            [self.navigationController pushViewController:directionsVC animated:YES];
+        }
+        break;
+            
         case 7:{
             AVHWeatherViewController *weatherVC = [self.storyboard instantiateViewControllerWithIdentifier:@"WeatherVC"];
             [self.navigationController pushViewController:weatherVC animated:YES];
         }
         break;
+    
+        
+            
+           // DirectionsVC
             
         default:
         break;

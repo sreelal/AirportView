@@ -37,9 +37,25 @@
     }];
 }
 
-+(void)getImageWithURL:(NSString*)imageURL andCallback:(ResponseCallback)callback{
++ (void)getHotelInfoForID:(NSString*)hotelID withCallBack:(ResponseCallback)callback{
     
     
+    NSString *urlToLoad = [NSString stringWithFormat:@"%@%@.json",HOTELS_DETAILS,hotelID];
+    [RequestHandler getRequestWithURL:urlToLoad withCallback:^(id result, NSError *error) {
+        
+        if (result != nil) {
+            BOOL isCached = [HelperClass cacheJsonForData:result withName:[urlToLoad lastPathComponent]];
+            
+            if (isCached) NSLog(@"Hotels Successfully Cached");
+        }
+        else if (result == nil || error) {
+            result = [HelperClass getCachedJsonFor:[urlToLoad lastPathComponent]];
+            
+            NSLog(@"Cached Result: %@", result);
+        }
+        
+        callback(result, error);
+    }];
 }
 
 + (void)getWeatherInfoWithCallback:(ResponseCallback)callback{

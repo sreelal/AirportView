@@ -14,7 +14,7 @@
 #import "AVHGuestDetailsViewController.h"
 #import "AVHRoomInfoViewController.h"
 
-@interface AVHRoomsRatesViewController ()
+@interface AVHRoomsRatesViewController ()<AVHRoomInfoViewControllerDelegtae>
 
 @property (nonatomic, weak) IBOutlet UITableView *hotelsTable;
 @property (nonatomic, strong) NSDictionary *hotelDetails;
@@ -90,6 +90,7 @@
     AVHRoomInfoViewController *_roomInfoVC = [roomInfoRootVC.viewControllers lastObject];
     _roomInfoVC.hotelDetails = self.hotelDetails;
     _roomInfoVC.selectedIndex = selectedButton.tag;
+    _roomInfoVC.delegate = self;
     [self presentViewController:roomInfoRootVC animated:YES completion:nil];
 }
 
@@ -147,6 +148,21 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     return 210;
+}
+
+#pragma mark - AVHRoomInfoViewController Delegtae{
+
+- (void)didSelectBookingWithDetails:(NSDictionary*)details{
+    
+    [self dismissViewControllerAnimated:NO completion:^{
+        
+        _guestDetailsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"GuestDetailsVC"];
+        
+        [self.navigationController pushViewController:_guestDetailsVC animated:YES];
+        
+        _guestDetailsVC = nil;
+    }];
+    
 }
 
 @end
