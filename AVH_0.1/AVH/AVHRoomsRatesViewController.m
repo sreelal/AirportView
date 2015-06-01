@@ -13,6 +13,7 @@
 #import "AppDelegate.h"
 #import "AVHGuestDetailsViewController.h"
 #import "AVHRoomInfoViewController.h"
+#import "AVHDataHandler.h"
 
 @interface AVHRoomsRatesViewController ()<AVHRoomInfoViewControllerDelegtae>
 
@@ -159,6 +160,22 @@
         _guestDetailsVC = nil;
     }];
     
+}
+
+- (void)saveInformations:(NSDictionary*)details{
+    
+    if (![[AVHDataHandler sharedManager] bookingDataHolder]) {
+        
+        [[AVHDataHandler sharedManager] setBookingDataHolder:[NSMutableDictionary dictionary]];
+    }
+    [[[AVHDataHandler sharedManager] bookingDataHolder] setObject:details forKey:ROOM_RATES_INFO];
+    NSLog(@"done");
+}
+
+- (NSMutableDictionary*)retrieveInformations{
+    
+    return [[[AVHDataHandler sharedManager] bookingDataHolder] objectForKey:ROOM_RATES_INFO];
+    ;
 }
 
 @end

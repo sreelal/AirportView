@@ -10,6 +10,7 @@
 #import "AVHRoomsRatesViewController.h"
 #import "Constants.h"
 #import "HelperClass.h"
+#import "AVHDataHandler.h"
 
 @interface AVHYourStayViewController ()
 
@@ -45,6 +46,12 @@
     for (int i=0; i<=100; i++) {
         [pickerNumberData addObject:[NSString stringWithFormat:@"%d", i]];
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
+    [self loadSavedInformation];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -91,15 +98,10 @@
 
 - (void)navgationNextClicked:(id)sender {
     
+    [self saveInformations];
+    
     AVHRoomsRatesViewController *roomRatesVC = [self.storyboard instantiateViewControllerWithIdentifier:@"RoomRatesVC"];
     [self.navigationController pushViewController:roomRatesVC animated:YES];
-    
-    //_guestDetailsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"GuestDetailsVC"];
-    
-    //[self.navigationController pushViewController:_guestDetailsVC animated:YES];
-    
-    //_guestDetailsVC = nil;
-    //[_swipeView scrollToPage:1 duration:0.5];
 }
 
 #pragma mark - Picker Component Delegate
@@ -148,5 +150,43 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)loadSavedInformation{
+    
+    NSMutableDictionary *_stayInfoDictionary = [self retrieveInformations];
+    if (_stayInfoDictionary) {
+        
+        checkInTxt.text = [_stayInfoDictionary objectForKey:@"checkin"];
+        checkOutTxt.text = [_stayInfoDictionary objectForKey:@"checkout"];
+        adultsTxt.text = [_stayInfoDictionary objectForKey:@"adults"];
+        childrenTxt.text = [_stayInfoDictionary objectForKey:@"children"];
+        roomsTxt.text = [_stayInfoDictionary objectForKey:@"rooms"];
+    }
+}
+
+- (void)saveInformations{
+    
+    //YOUR_STAY_INFO
+    NSMutableDictionary *_stayInfoDictionary = [NSMutableDictionary dictionary];
+    [_stayInfoDictionary setObject:(checkInTxt.text)?checkInTxt.text:@"" forKey:@"checkin"];
+    [_stayInfoDictionary setObject:(checkOutTxt.text)?checkOutTxt.text:@"" forKey:@"checkout"];
+    [_stayInfoDictionary setObject:(adultsTxt.text)?adultsTxt.text:@"" forKey:@"adults"];
+    [_stayInfoDictionary setObject:(childrenTxt.text)?childrenTxt.text:@"" forKey:@"children"];
+    [_stayInfoDictionary setObject:(roomsTxt.text)?roomsTxt.text:@"" forKey:@"rooms"];
+
+    [[AVHDataHandler sharedManager] setBookingDataHolder:nil];
+    if (![[AVHDataHandler sharedManager] bookingDataHolder]) {
+        
+        [[AVHDataHandler sharedManager] setBookingDataHolder:[NSMutableDictionary dictionary]];
+    }
+    [[[AVHDataHandler sharedManager] bookingDataHolder] setObject:_stayInfoDictionary forKey:YOUR_STAY_INFO];
+
+}
+
+- (NSMutableDictionary*)retrieveInformations{
+    
+    return [[[AVHDataHandler sharedManager] bookingDataHolder] objectForKey:YOUR_STAY_INFO];
+;
+}
 
 @end
