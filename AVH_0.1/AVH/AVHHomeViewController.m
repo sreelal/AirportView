@@ -22,6 +22,8 @@
 #import "AVHRoomsRatesViewController.h"
 #import "AVHYourStayViewController.h"
 #import "AVHDirectionsViewController.h"
+#import "AVHHotelInfoListViewController.h"
+#import "AVHOfferInfoListViewController.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -46,7 +48,7 @@
     [categoiesCollectionView setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
     
-    self.menuItems = [[NSMutableArray alloc] initWithObjects:@"BOOKING", @"MY ACCOUNT", @"CONTACT", @"HOTEL INFO", @"RECOMMENDATIONS", @"FLIGHT INFO", @"HOTEL DIRECTIONS", @"WEATHER", nil];
+    self.menuItems = [[NSMutableArray alloc] initWithObjects:@"BOOKING", @"MY ACCOUNT", @"CONTACT", @"HOTEL INFO", @"RECOMMENDATIONS", @"OFFERS", @"HOTEL DIRECTIONS", @"WEATHER", nil];
     
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     
@@ -206,42 +208,22 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-//    UINavigationController *navController;
-//    
-//    ProductCategory *selectedCategory = self.homeCategories[indexPath.row];
-//    
-//    if (selectedCategory.children > 0) {
-//        UINavigationController *categoryVCNav = [self.storyboard instantiateViewControllerWithIdentifier:@"ContentViewNavigation"];
-//        DGHContentViewController *contentView = [[categoryVCNav viewControllers] firstObject];
-//        
-//        contentView.category = selectedCategory;
-//        navController = categoryVCNav;
-//    }
-//    else if (selectedCategory.children == 0) {
-////        UINavigationController *productVCNav = [self.storyboard instantiateViewControllerWithIdentifier:@"weatherNavController"];
-//////        DGHProductViewController *productView = [[productVCNav viewControllers] firstObject];
-//////        
-//////        productView.category = selectedCategory;
-////        navController = productVCNav;
-//    }
-//
-//    [self.sideMenuViewController setContentViewController:navController];
-//    [self.sideMenuViewController hideMenuViewController];
-    
-    
     switch (indexPath.row) {
         case 0:{
             AVHYourStayViewController *yourStayVC = [self.storyboard instantiateViewControllerWithIdentifier:@"YourStayVC"];
             [self.navigationController pushViewController:yourStayVC animated:YES];
-            
-//            AVHRoomsRatesViewController *roomRatesVC = [self.storyboard instantiateViewControllerWithIdentifier:@"RoomRatesVC"];
-//            [self.navigationController pushViewController:roomRatesVC animated:YES];
+        }
+        break;
+         
+        case 3:{
+            AVHHotelInfoListViewController *hotelInfoListVC = [self.storyboard instantiateViewControllerWithIdentifier:@"HotelInfoListVC"];
+            [self.navigationController pushViewController:hotelInfoListVC animated:YES];
         }
         break;
             
         case 5:{
-            AVHFlightInfoViewController *flightInfoVC = [self.storyboard instantiateViewControllerWithIdentifier:@"FlightInfoVC"];
-            [self.navigationController pushViewController:flightInfoVC animated:YES];
+            AVHOfferInfoListViewController *offerInfoVC = [self.storyboard instantiateViewControllerWithIdentifier:@"OfferListVC"];
+            [self.navigationController pushViewController:offerInfoVC animated:YES];
         }
         break;
             

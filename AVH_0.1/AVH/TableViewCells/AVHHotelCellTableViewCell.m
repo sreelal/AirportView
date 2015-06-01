@@ -71,6 +71,7 @@
         self.hotelImage.image = [UIImage imageNamed:@"no_image.png"];
     }
 }
+
 - (IBAction)onMoreInfo:(id)sender {
     
     

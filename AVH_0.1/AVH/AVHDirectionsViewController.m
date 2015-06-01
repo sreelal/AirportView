@@ -28,8 +28,7 @@
     
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
     
-    
-    CLLocationCoordinate2D location = CLLocationCoordinate2DMake(53.506445, -6.196771);
+    CLLocationCoordinate2D location = CLLocationCoordinate2DMake(5.605124, -0.178342);
     MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
     [annotation setCoordinate:location];
     [annotation setTitle:@"Airport View Hotel"]; //You can set the subtitle too

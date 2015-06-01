@@ -23,8 +23,9 @@
 #define HOTELS_LIST @"http://demo.airportviewhotel.net/package.json"
 #define HOTELS_DETAILS @"http://demo.airportviewhotel.net/package/view/"
 
-
-#define SERVICE_URL_ROOT     @"http://www.devicegh.com/index.php?route=service/"
+#define SERVICE_URL_ROOT     @"http://demo.airportviewhotel.net/"
+#define SERVICE_HOTEL_INFO   @"hotel_info/all.json"
+#define SERVICE_OFFER        @"offer.json"
 #define SERVICE_CATEGORY     @"category"
 #define SERVICE_SUB_CATEGORY @"category&parent="
 #define SERVICE_PRODUCT      @"product&path="
@@ -69,6 +70,8 @@
 #define CACHE_ID_CATEGORY_PRO @"Category_Product_"
 #define CACHE_ID_PRODUCT      @"Product_"
 #define CACHE_ID_CATEGORY     @"Category.json"
+#define CACHE_ID_HOTEL_INFO   @"Hotel_Info.json"
+#define CACHE_ID_OFFER_INFO   @"Offer_Info.json"
 #define CACHE_ID_FLIGHT_DEP   @"Departure.json"
 #define CACHE_ID_WEATHER      @"Weather.json"
 #define CACHE_ID_NOTIFICA     @"Notification.json"

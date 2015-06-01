@@ -635,6 +635,92 @@
     }];
 }
 
++ (void)getHotelInfoListWithCallback:(ResponseCallback)callback {
+    
+    /////////////////////////////Handling Offline Mode////////////////////////////////////////////
+    if (![HelperClass hasNetwork]) {
+        [self showAlertWithMessage:ALERT_INTERNET_FAILURE];
+        
+        id cachedHotelInfo = [HelperClass getCachedJsonFor:CACHE_ID_HOTEL_INFO];
+        
+        NSLog(@"Cached Hotel Info List: %@", cachedHotelInfo);
+        
+        if (cachedHotelInfo != nil) {
+            NSMutableArray *hotelInfo = [self parseCategoriesForResult:cachedHotelInfo];
+            
+            callback(hotelInfo, nil);
+        }
+        else callback(nil, nil);
+        
+        return;
+    }
+    //////////////////////////////////////////////////////////////////////////////////////////////
+    
+    NSString *serviceURL = [NSString stringWithFormat:@"%@%@", SERVICE_URL_ROOT, SERVICE_HOTEL_INFO];
+    
+    [RequestHandler getRequestWithURL:serviceURL withCallback:^(id result, NSError *error) {
+        
+        if (result != nil) {
+            BOOL isCached = [HelperClass cacheJsonForData:result withName:CACHE_ID_HOTEL_INFO];
+            
+            if (isCached) NSLog(@"HOTEL INFO List Successfully Cached");
+            else NSLog(@"Failed HOTEL INFO List Caching");
+        }
+        else if (result == nil || error) {
+            result = [HelperClass getCachedJsonFor:CACHE_ID_HOTEL_INFO];
+            
+            NSLog(@"Cached Result: %@", result);
+        }
+        
+        NSMutableArray *hotelInfo = result[@"infos"];
+        
+        callback(hotelInfo, error);
+    }];
+}
+
++ (void)getOfferInfoListWithCallback:(ResponseCallback)callback {
+    
+    /////////////////////////////Handling Offline Mode////////////////////////////////////////////
+    if (![HelperClass hasNetwork]) {
+        [self showAlertWithMessage:ALERT_INTERNET_FAILURE];
+        
+        id cachedOfferInfo = [HelperClass getCachedJsonFor:CACHE_ID_OFFER_INFO];
+        
+        NSLog(@"Cached Offer Info List: %@", cachedOfferInfo);
+        
+        if (cachedOfferInfo != nil) {
+            NSMutableArray *offerInfo = [self parseCategoriesForResult:cachedOfferInfo];
+            
+            callback(offerInfo, nil);
+        }
+        else callback(nil, nil);
+        
+        return;
+    }
+    //////////////////////////////////////////////////////////////////////////////////////////////
+    
+    NSString *serviceURL = [NSString stringWithFormat:@"%@%@", SERVICE_URL_ROOT, SERVICE_OFFER];
+    
+    [RequestHandler getRequestWithURL:serviceURL withCallback:^(id result, NSError *error) {
+        
+        if (result != nil) {
+            BOOL isCached = [HelperClass cacheJsonForData:result withName:CACHE_ID_OFFER_INFO];
+            
+            if (isCached) NSLog(@"Offer INFO List Successfully Cached");
+            else NSLog(@"Failed Offer INFO List Caching");
+        }
+        else if (result == nil || error) {
+            result = [HelperClass getCachedJsonFor:CACHE_ID_OFFER_INFO];
+            
+            NSLog(@"Cached Result: %@", result);
+        }
+        
+        NSMutableArray *offerInfo = result[@"offers"];
+        
+        callback(offerInfo, error);
+    }];
+}
+
 + (void)showAlertWithMessage:(NSString *)message {
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:message delegate:nil cancelButtonTitle:ALERT_OK otherButtonTitles:nil, nil];

@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface AVHImageContainer : UIImageView
+
 - (void)loadRoomImageWithURL:(NSString *)imageURL;
+
 @end

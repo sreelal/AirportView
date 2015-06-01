@@ -40,6 +40,7 @@
     leftBarItem.tintColor = [UIColor whiteColor];
     self.navigationItem.leftBarButtonItem = leftBarItem;
     _imageCountLbl.text = @"";
+    
     _prevButton.hidden = YES;
 
     

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E0018581B19F72500388BE9 /* AVHHotelInfoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0018571B19F72500388BE9 /* AVHHotelInfoDetailViewController.m */; };
+		2E0CD16C1B1B1A5900E61224 /* AVHOfferInfoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0CD16B1B1B1A5900E61224 /* AVHOfferInfoListViewController.m */; };
+		2E1422DF1B1BF874001B08DD /* AVH_SPSCREEN.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E1422DC1B1BF874001B08DD /* AVH_SPSCREEN.png */; };
+		2E1422E01B1BF874001B08DD /* AVH_SPSCREEN@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E1422DD1B1BF874001B08DD /* AVH_SPSCREEN@2x.png */; };
+		2E1422E11B1BF874001B08DD /* AVH_SPSCREEN@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E1422DE1B1BF874001B08DD /* AVH_SPSCREEN@3x.png */; };
+		2E320A1E1B1B788600D88FAA /* AVHOfferCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E320A1D1B1B788600D88FAA /* AVHOfferCell.m */; };
 		2E6B42691A7CEBB8004BCDD8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E6B42681A7CEBB8004BCDD8 /* QuartzCore.framework */; };
 		2EB698551AF9077600843341 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB697C21AF9077600843341 /* AppDelegate.m */; };
 		2EB698581AF9077600843341 /* bg-textbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EB697C71AF9077600843341 /* bg-textbox.png */; };
@@ -52,7 +58,6 @@
 		2EB698801AF9077600843341 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EB6981D1AF9077600843341 /* Icon-60@2x.png */; };
 		2EB698811AF9077600843341 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EB6981E1AF9077600843341 /* Icon-60@3x.png */; };
 		2EB698821AF9077600843341 /* logo_44x44.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2EB6981F1AF9077600843341 /* logo_44x44.jpg */; };
-		2EB698831AF9077600843341 /* logo_500x500.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2EB698201AF9077600843341 /* logo_500x500.jpg */; };
 		2EB698841AF9077600843341 /* logo_500x500.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EB698211AF9077600843341 /* logo_500x500.png */; };
 		2EB698851AF9077600843341 /* AVH_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EB698221AF9077600843341 /* AVH_logo.png */; };
 		2EB698861AF9077600843341 /* enquiry.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EB698231AF9077600843341 /* enquiry.png */; };
@@ -89,6 +94,9 @@
 		2EB698A91AF9077600843341 /* NotificationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB698501AF9077600843341 /* NotificationCell.m */; };
 		2EB698AA1AF9077600843341 /* SubMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB698521AF9077600843341 /* SubMenuCell.m */; };
 		2EB698AB1AF9077600843341 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB698541AF9077600843341 /* ViewController.m */; };
+		2EB84A951B1C020F00FCE9FC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EB84A931B1C020F00FCE9FC /* LaunchScreen.xib */; };
+		2EF640BC1B1994EC002741B4 /* AVHHotelInfoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF640BB1B1994EC002741B4 /* AVHHotelInfoListViewController.m */; };
+		2EF640BF1B19BBFD002741B4 /* AVHHotelInfoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF640BE1B19BBFD002741B4 /* AVHHotelInfoListCell.m */; };
 		680A121D1B18D623005698FE /* AVHDirectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680A121C1B18D623005698FE /* AVHDirectionsViewController.m */; };
 		680A12201B18D81F005698FE /* AVHImageContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 680A121F1B18D81F005698FE /* AVHImageContainer.m */; };
 		688003B31B0265E20033891A /* WeatherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 688003B21B0265E20033891A /* WeatherTableViewCell.m */; };
@@ -151,10 +159,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E0018561B19F72500388BE9 /* AVHHotelInfoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHHotelInfoDetailViewController.h; sourceTree = "<group>"; };
+		2E0018571B19F72500388BE9 /* AVHHotelInfoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHHotelInfoDetailViewController.m; sourceTree = "<group>"; };
+		2E0CD16A1B1B1A5900E61224 /* AVHOfferInfoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHOfferInfoListViewController.h; sourceTree = "<group>"; };
+		2E0CD16B1B1B1A5900E61224 /* AVHOfferInfoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHOfferInfoListViewController.m; sourceTree = "<group>"; };
+		2E1422DC1B1BF874001B08DD /* AVH_SPSCREEN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AVH_SPSCREEN.png; path = "App Icon/AVH_SPSCREEN.png"; sourceTree = "<group>"; };
+		2E1422DD1B1BF874001B08DD /* AVH_SPSCREEN@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AVH_SPSCREEN@2x.png"; path = "App Icon/AVH_SPSCREEN@2x.png"; sourceTree = "<group>"; };
+		2E1422DE1B1BF874001B08DD /* AVH_SPSCREEN@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AVH_SPSCREEN@3x.png"; path = "App Icon/AVH_SPSCREEN@3x.png"; sourceTree = "<group>"; };
+		2E320A1C1B1B788600D88FAA /* AVHOfferCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHOfferCell.h; sourceTree = "<group>"; };
+		2E320A1D1B1B788600D88FAA /* AVHOfferCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHOfferCell.m; sourceTree = "<group>"; };
 		2E6B42681A7CEBB8004BCDD8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2EB697C11AF9077600843341 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2EB697C21AF9077600843341 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2EB697C41AF9077600843341 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2EB697C61AF9077600843341 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2EB697C71AF9077600843341 /* bg-textbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg-textbox.png"; path = "../bg-textbox.png"; sourceTree = "<group>"; };
 		2EB697C81AF9077600843341 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
@@ -234,7 +250,6 @@
 		2EB6981D1AF9077600843341 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
 		2EB6981E1AF9077600843341 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
 		2EB6981F1AF9077600843341 /* logo_44x44.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo_44x44.jpg; sourceTree = "<group>"; };
-		2EB698201AF9077600843341 /* logo_500x500.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo_500x500.jpg; sourceTree = "<group>"; };
 		2EB698211AF9077600843341 /* logo_500x500.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_500x500.png; sourceTree = "<group>"; };
 		2EB698221AF9077600843341 /* AVH_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AVH_logo.png; sourceTree = "<group>"; };
 		2EB698231AF9077600843341 /* enquiry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enquiry.png; sourceTree = "<group>"; };
@@ -280,6 +295,11 @@
 		2EB698521AF9077600843341 /* SubMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubMenuCell.m; sourceTree = "<group>"; };
 		2EB698531AF9077600843341 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2EB698541AF9077600843341 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2EB84A941B1C020F00FCE9FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		2EF640BA1B1994EC002741B4 /* AVHHotelInfoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHHotelInfoListViewController.h; sourceTree = "<group>"; };
+		2EF640BB1B1994EC002741B4 /* AVHHotelInfoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHHotelInfoListViewController.m; sourceTree = "<group>"; };
+		2EF640BD1B19BBFD002741B4 /* AVHHotelInfoListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHHotelInfoListCell.h; sourceTree = "<group>"; };
+		2EF640BE1B19BBFD002741B4 /* AVHHotelInfoListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHHotelInfoListCell.m; sourceTree = "<group>"; };
 		680A121B1B18D623005698FE /* AVHDirectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHDirectionsViewController.h; sourceTree = "<group>"; };
 		680A121C1B18D623005698FE /* AVHDirectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHDirectionsViewController.m; sourceTree = "<group>"; };
 		680A121E1B18D81F005698FE /* AVHImageContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHImageContainer.h; sourceTree = "<group>"; };
@@ -397,6 +417,8 @@
 				2EB697E41AF9077600843341 /* Constants.h */,
 				2EB697E51AF9077600843341 /* HelperClass.h */,
 				2EB697E61AF9077600843341 /* HelperClass.m */,
+				680A121E1B18D81F005698FE /* AVHImageContainer.h */,
+				680A121F1B18D81F005698FE /* AVHImageContainer.m */,
 				E92EEEFB1B13014500AF04EA /* PickerController */,
 				E94781931B11D70C00FDD1FC /* CustomViews */,
 				E947818F1B11D6F700FDD1FC /* SwipeView */,
@@ -406,8 +428,6 @@
 				2EB697F01AF9077600843341 /* RESideMenu */,
 				2EB697F71AF9077600843341 /* Scroller */,
 				2EB6980F1AF9077600843341 /* WebserviceHandlers */,
-				680A121E1B18D81F005698FE /* AVHImageContainer.h */,
-				680A121F1B18D81F005698FE /* AVHImageContainer.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -510,6 +530,9 @@
 		2EB698141AF9077600843341 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2E1422DC1B1BF874001B08DD /* AVH_SPSCREEN.png */,
+				2E1422DD1B1BF874001B08DD /* AVH_SPSCREEN@2x.png */,
+				2E1422DE1B1BF874001B08DD /* AVH_SPSCREEN@3x.png */,
 				E9832AF31B15F43D00DFA2F4 /* AVH_Book.png */,
 				E9832AF41B15F43D00DFA2F4 /* AVH_Book@2x.png */,
 				E9832AF51B15F43D00DFA2F4 /* AVH_Book@3x.png */,
@@ -561,7 +584,6 @@
 				2EB6981D1AF9077600843341 /* Icon-60@2x.png */,
 				2EB6981E1AF9077600843341 /* Icon-60@3x.png */,
 				2EB6981F1AF9077600843341 /* logo_44x44.jpg */,
-				2EB698201AF9077600843341 /* logo_500x500.jpg */,
 				2EB698211AF9077600843341 /* logo_500x500.png */,
 			);
 			path = "App Icon";
@@ -627,6 +649,10 @@
 				E92BE4B81B038A0300AE6B2E /* FlightInfoTableViewCell.m */,
 				68A737461B13867C00E0C100 /* AVHHotelCellTableViewCell.h */,
 				68A737471B13867C00E0C100 /* AVHHotelCellTableViewCell.m */,
+				2EF640BD1B19BBFD002741B4 /* AVHHotelInfoListCell.h */,
+				2EF640BE1B19BBFD002741B4 /* AVHHotelInfoListCell.m */,
+				2E320A1C1B1B788600D88FAA /* AVHOfferCell.h */,
+				2E320A1D1B1B788600D88FAA /* AVHOfferCell.m */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -668,6 +694,14 @@
 				E998CF151B14A45C00969553 /* AVHRoomInfoViewController.m */,
 				E9832AFF1B15FA8D00DFA2F4 /* AVHGuestDetailsViewController.h */,
 				E9832B001B15FA8D00DFA2F4 /* AVHGuestDetailsViewController.m */,
+				2EF640BA1B1994EC002741B4 /* AVHHotelInfoListViewController.h */,
+				2EF640BB1B1994EC002741B4 /* AVHHotelInfoListViewController.m */,
+				2E0018561B19F72500388BE9 /* AVHHotelInfoDetailViewController.h */,
+				2E0018571B19F72500388BE9 /* AVHHotelInfoDetailViewController.m */,
+				2E0CD16A1B1B1A5900E61224 /* AVHOfferInfoListViewController.h */,
+				2E0CD16B1B1B1A5900E61224 /* AVHOfferInfoListViewController.m */,
+				680A121B1B18D623005698FE /* AVHDirectionsViewController.h */,
+				680A121C1B18D623005698FE /* AVHDirectionsViewController.m */,
 				68850F3B1B0111F300F2BD40 /* AVHWeatherViewController.h */,
 				68850F3C1B0111F300F2BD40 /* AVHWeatherViewController.m */,
 				E92BE4B41B0389C700AE6B2E /* AVHFlightInfoViewController.h */,
@@ -684,8 +718,6 @@
 				2EB697D81AF9077600843341 /* DGhNotificationViewController.m */,
 				2EB697DB1AF9077600843341 /* DGHProductInfoViewController.h */,
 				2EB697DC1AF9077600843341 /* DGHProductInfoViewController.m */,
-				680A121B1B18D623005698FE /* AVHDirectionsViewController.h */,
-				680A121C1B18D623005698FE /* AVHDirectionsViewController.m */,
 				2EB697DD1AF9077600843341 /* DGHProductViewController.h */,
 				2EB697DE1AF9077600843341 /* DGHProductViewController.m */,
 				2EB697DF1AF9077600843341 /* DGHWebViewController.h */,
@@ -697,7 +729,7 @@
 		2EB698B01AF9088C00843341 /* Storyboard & Xibs */ = {
 			isa = PBXGroup;
 			children = (
-				2EB697C31AF9077600843341 /* LaunchScreen.xib */,
+				2EB84A931B1C020F00FCE9FC /* LaunchScreen.xib */,
 				2EB697C51AF9077600843341 /* Main.storyboard */,
 			);
 			name = "Storyboard & Xibs";
@@ -878,6 +910,7 @@
 				2EB698811AF9077600843341 /* Icon-60@3x.png in Resources */,
 				2EB698931AF9077600843341 /* menu_6_bg.png in Resources */,
 				E94781CB1B11D81200FDD1FC /* AVHReviewView.xib in Resources */,
+				2E1422E11B1BF874001B08DD /* AVH_SPSCREEN@3x.png in Resources */,
 				E9832AFD1B15F44A00DFA2F4 /* AVH_moreabout@2x.png in Resources */,
 				2EB6988A1AF9077600843341 /* menu_1_icon.png in Resources */,
 				E92EEEF51B12E85600AF04EA /* AVH_cal.png in Resources */,
@@ -894,7 +927,6 @@
 				E92EEEF61B12E85600AF04EA /* AVH_cal@2x.png in Resources */,
 				E9832AF81B15F43D00DFA2F4 /* AVH_Book@3x.png in Resources */,
 				2EB698591AF9077600843341 /* Default.png in Resources */,
-				2EB698831AF9077600843341 /* logo_500x500.jpg in Resources */,
 				E94781D81B11FD3F00FDD1FC /* AVH_logo.png in Resources */,
 				2EB698891AF9077600843341 /* menu_1_bg.png in Resources */,
 				2EB698941AF9077600843341 /* menu_6_icon.png in Resources */,
@@ -904,7 +936,9 @@
 				2EB6985A1AF9077600843341 /* delete.png in Resources */,
 				2EB698841AF9077600843341 /* logo_500x500.png in Resources */,
 				E94781C71B11D81200FDD1FC /* AVHEnhanceStay.xib in Resources */,
+				2EB84A951B1C020F00FCE9FC /* LaunchScreen.xib in Resources */,
 				2EB6987A1AF9077600843341 /* Icon-29@2x.jpg in Resources */,
+				2E1422E01B1BF874001B08DD /* AVH_SPSCREEN@2x.png in Resources */,
 				2EB6987F1AF9077600843341 /* Icon-40@3x.png in Resources */,
 				2EB698791AF9077600843341 /* Enquiry.png in Resources */,
 				2EB6988E1AF9077600843341 /* menu_3_icon.png in Resources */,
@@ -916,6 +950,7 @@
 				E94781DF1B12179E00FDD1FC /* img_btn_next.png in Resources */,
 				E94781D31B11FA6600FDD1FC /* img_btn_back.png in Resources */,
 				2EB6985B1AF9077600843341 /* device_nav_logo.png in Resources */,
+				2E1422DF1B1BF874001B08DD /* AVH_SPSCREEN.png in Resources */,
 				2EB698871AF9077600843341 /* menu_0_bg.png in Resources */,
 				E94781E01B12179E00FDD1FC /* img_btn_next@2x.png in Resources */,
 				2EB6987E1AF9077600843341 /* Icon-40@2x.png in Resources */,
@@ -952,6 +987,7 @@
 				680A121D1B18D623005698FE /* AVHDirectionsViewController.m in Sources */,
 				2EB698611AF9077600843341 /* DGHMenuViewController.m in Sources */,
 				68A7374D1B13929000E0C100 /* AVHRoomsRatesViewController.m in Sources */,
+				2E0018581B19F72500388BE9 /* AVHHotelInfoDetailViewController.m in Sources */,
 				68C03C4B1B11A209002BAC6C /* AVHBookingViewController.m in Sources */,
 				2EB698701AF9077600843341 /* AOScrollerView.m in Sources */,
 				688003B31B0265E20033891A /* WeatherTableViewCell.m in Sources */,
@@ -963,6 +999,8 @@
 				2EB698711AF9077600843341 /* NSURLAdditions.m in Sources */,
 				2EB6986A1AF9077600843341 /* MarqueeLabel.m in Sources */,
 				2EB698A21AF9077600843341 /* ProductCategory.m in Sources */,
+				2E320A1E1B1B788600D88FAA /* AVHOfferCell.m in Sources */,
+				2EF640BC1B1994EC002741B4 /* AVHHotelInfoListViewController.m in Sources */,
 				E92BE4B91B038A0300AE6B2E /* FlightInfoTableViewCell.m in Sources */,
 				2EB6989F1AF9077600843341 /* Banner.m in Sources */,
 				2EB698601AF9077600843341 /* AVHHomeViewController.m in Sources */,
@@ -984,6 +1022,7 @@
 				2EB698691AF9077600843341 /* MBProgressHUD.m in Sources */,
 				E9832B011B15FA8D00DFA2F4 /* AVHGuestDetailsViewController.m in Sources */,
 				2EB698631AF9077600843341 /* DGHProductCell.m in Sources */,
+				2E0CD16C1B1B1A5900E61224 /* AVHOfferInfoListViewController.m in Sources */,
 				2EB698781AF9077600843341 /* WebHandler.m in Sources */,
 				2EB698761AF9077600843341 /* UrlImageView.m in Sources */,
 				2EB698661AF9077600843341 /* DGHWebViewController.m in Sources */,
@@ -996,6 +1035,7 @@
 				E9B194751B13595100F59171 /* Stay.m in Sources */,
 				E998CF161B14A45C00969553 /* AVHRoomInfoViewController.m in Sources */,
 				2EB698731AF9077600843341 /* SDWebImageDownloader.m in Sources */,
+				2EF640BF1B19BBFD002741B4 /* AVHHotelInfoListCell.m in Sources */,
 				68A737491B13867C00E0C100 /* AVHHotelCellTableViewCell.m in Sources */,
 				2EB698AB1AF9077600843341 /* ViewController.m in Sources */,
 				2EB698551AF9077600843341 /* AppDelegate.m in Sources */,
@@ -1020,20 +1060,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2EB697C31AF9077600843341 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2EB697C41AF9077600843341 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
 		2EB697C51AF9077600843341 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2EB697C61AF9077600843341 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2EB84A931B1C020F00FCE9FC /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EB84A941B1C020F00FCE9FC /* Base */,
+			);
+			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

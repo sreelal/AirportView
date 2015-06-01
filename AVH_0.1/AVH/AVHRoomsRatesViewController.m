@@ -35,10 +35,6 @@
     leftBarItem.tintColor = [UIColor whiteColor];
     self.navigationItem.leftBarButtonItem = leftBarItem;
     
-//    UIBarButtonItem *rightBarItem = [HelperClass getNextButtonItemWithTarget:self andAction:@selector(navgationNextClicked:)];
-//    rightBarItem.tintColor = [UIColor whiteColor];
-//    self.navigationItem.rightBarButtonItem = rightBarItem;
-    
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
     
     [[AppDelegate instance] showBusyView:@"Loading Rooms..."];
