@@ -5100,6 +5100,28 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuu-z6-PBR">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="33" id="8yZ-6v-bes"/>
+                                                        <constraint firstAttribute="height" constant="30" id="HVG-46-igP"/>
+                                                    </constraints>
+                                                    <state key="normal" image="edit">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="8yZ-6v-bes"/>
+                                                            <exclude reference="HVG-46-igP"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="8yZ-6v-bes"/>
+                                                            <include reference="HVG-46-igP"/>
+                                                        </mask>
+                                                    </variation>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="4X4-fn-Sd9" firstAttribute="leading" secondItem="82X-wq-Rid" secondAttribute="leading" constant="8" id="3rq-Ul-fPg"/>
@@ -5138,7 +5160,9 @@
                                                 <constraint firstItem="8xg-51-6mg" firstAttribute="top" secondItem="eEW-gX-md3" secondAttribute="bottom" constant="8" id="hHh-LU-Fpc"/>
                                                 <constraint firstItem="0Am-z9-14J" firstAttribute="leading" secondItem="8xg-51-6mg" secondAttribute="trailing" constant="8" id="iVZ-8y-dAw"/>
                                                 <constraint firstItem="0Am-z9-14J" firstAttribute="top" secondItem="eEW-gX-md3" secondAttribute="bottom" constant="8" id="jEb-9j-Gvm"/>
+                                                <constraint firstAttribute="bottom" secondItem="tuu-z6-PBR" secondAttribute="bottom" constant="8" id="jcC-ad-RAB"/>
                                                 <constraint firstItem="iZG-Qb-fqX" firstAttribute="leading" secondItem="82X-wq-Rid" secondAttribute="leading" constant="8" id="kGa-Ra-79r"/>
+                                                <constraint firstAttribute="trailing" secondItem="tuu-z6-PBR" secondAttribute="trailing" constant="8" id="n0e-Q2-0ff"/>
                                                 <constraint firstItem="0Sa-oX-ZP5" firstAttribute="top" secondItem="jaN-1P-shI" secondAttribute="bottom" constant="8" id="qIl-H5-cBM"/>
                                                 <constraint firstItem="YUh-c9-EZs" firstAttribute="top" secondItem="jaN-1P-shI" secondAttribute="bottom" constant="8" id="qj4-lG-m7m"/>
                                                 <constraint firstItem="RVV-Oi-1ME" firstAttribute="leading" secondItem="eEW-gX-md3" secondAttribute="trailing" constant="8" id="rAc-qZ-dol"/>
@@ -5174,6 +5198,7 @@
                                                     <exclude reference="ptl-vm-p88"/>
                                                     <exclude reference="DFT-ui-QaZ"/>
                                                     <exclude reference="iZG-Qb-fqX"/>
+                                                    <exclude reference="tuu-z6-PBR"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <exclude reference="3rq-Ul-fPg"/>
@@ -5223,6 +5248,8 @@
                                                     <exclude reference="BZR-0G-P2v"/>
                                                     <exclude reference="XwJ-ZN-GYY"/>
                                                     <exclude reference="a5T-WC-1cu"/>
+                                                    <exclude reference="jcC-ad-RAB"/>
+                                                    <exclude reference="n0e-Q2-0ff"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
@@ -5249,6 +5276,7 @@
                                                     <include reference="ptl-vm-p88"/>
                                                     <include reference="DFT-ui-QaZ"/>
                                                     <include reference="iZG-Qb-fqX"/>
+                                                    <include reference="tuu-z6-PBR"/>
                                                 </mask>
                                                 <mask key="constraints">
                                                     <include reference="3rq-Ul-fPg"/>
@@ -5298,6 +5326,8 @@
                                                     <include reference="BZR-0G-P2v"/>
                                                     <include reference="XwJ-ZN-GYY"/>
                                                     <include reference="a5T-WC-1cu"/>
+                                                    <include reference="jcC-ad-RAB"/>
+                                                    <include reference="n0e-Q2-0ff"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
