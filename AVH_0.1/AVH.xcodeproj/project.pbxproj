@@ -12,6 +12,8 @@
 		2E1422DF1B1BF874001B08DD /* AVH_SPSCREEN.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E1422DC1B1BF874001B08DD /* AVH_SPSCREEN.png */; };
 		2E1422E01B1BF874001B08DD /* AVH_SPSCREEN@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E1422DD1B1BF874001B08DD /* AVH_SPSCREEN@2x.png */; };
 		2E1422E11B1BF874001B08DD /* AVH_SPSCREEN@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E1422DE1B1BF874001B08DD /* AVH_SPSCREEN@3x.png */; };
+		2E17508E1B1DFD0600B271DD /* InputAccessoryBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E17508C1B1DFD0600B271DD /* InputAccessoryBar.m */; };
+		2E17508F1B1DFD0600B271DD /* InputAccessoryBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E17508D1B1DFD0600B271DD /* InputAccessoryBar.xib */; };
 		2E320A1E1B1B788600D88FAA /* AVHOfferCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E320A1D1B1B788600D88FAA /* AVHOfferCell.m */; };
 		2E6B42691A7CEBB8004BCDD8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E6B42681A7CEBB8004BCDD8 /* QuartzCore.framework */; };
 		2EB698551AF9077600843341 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB697C21AF9077600843341 /* AppDelegate.m */; };
@@ -167,6 +169,9 @@
 		2E1422DC1B1BF874001B08DD /* AVH_SPSCREEN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AVH_SPSCREEN.png; path = "App Icon/AVH_SPSCREEN.png"; sourceTree = "<group>"; };
 		2E1422DD1B1BF874001B08DD /* AVH_SPSCREEN@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AVH_SPSCREEN@2x.png"; path = "App Icon/AVH_SPSCREEN@2x.png"; sourceTree = "<group>"; };
 		2E1422DE1B1BF874001B08DD /* AVH_SPSCREEN@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AVH_SPSCREEN@3x.png"; path = "App Icon/AVH_SPSCREEN@3x.png"; sourceTree = "<group>"; };
+		2E17508B1B1DFD0600B271DD /* InputAccessoryBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputAccessoryBar.h; sourceTree = "<group>"; };
+		2E17508C1B1DFD0600B271DD /* InputAccessoryBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputAccessoryBar.m; sourceTree = "<group>"; };
+		2E17508D1B1DFD0600B271DD /* InputAccessoryBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputAccessoryBar.xib; sourceTree = "<group>"; };
 		2E320A1C1B1B788600D88FAA /* AVHOfferCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHOfferCell.h; sourceTree = "<group>"; };
 		2E320A1D1B1B788600D88FAA /* AVHOfferCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHOfferCell.m; sourceTree = "<group>"; };
 		2E6B42681A7CEBB8004BCDD8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -395,6 +400,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E17508A1B1DFD0600B271DD /* InputAccessory */ = {
+			isa = PBXGroup;
+			children = (
+				2E17508B1B1DFD0600B271DD /* InputAccessoryBar.h */,
+				2E17508C1B1DFD0600B271DD /* InputAccessoryBar.m */,
+				2E17508D1B1DFD0600B271DD /* InputAccessoryBar.xib */,
+			);
+			path = InputAccessory;
+			sourceTree = "<group>";
+		};
 		2EB697C01AF9077600843341 /* AVH */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,6 +437,7 @@
 				2EB697E61AF9077600843341 /* HelperClass.m */,
 				680A121E1B18D81F005698FE /* AVHImageContainer.h */,
 				680A121F1B18D81F005698FE /* AVHImageContainer.m */,
+				2E17508A1B1DFD0600B271DD /* InputAccessory */,
 				E92EEEFB1B13014500AF04EA /* PickerController */,
 				E94781931B11D70C00FDD1FC /* CustomViews */,
 				E947818F1B11D6F700FDD1FC /* SwipeView */,
@@ -892,6 +908,7 @@
 				E94781D01B11F1EB00FDD1FC /* Main.storyboard in Resources */,
 				2EB698961AF9077600843341 /* menu_7_icon.png in Resources */,
 				E94781DC1B11FDD500FDD1FC /* AVH_logo_HR.png in Resources */,
+				2E17508F1B1DFD0600B271DD /* InputAccessoryBar.xib in Resources */,
 				E92BE4B31B03875F00AE6B2E /* NavigationBg.png in Resources */,
 				2EB6988D1AF9077600843341 /* menu_3_bg.png in Resources */,
 				2EB6989A1AF9077600843341 /* Images.xcassets in Resources */,
@@ -996,6 +1013,7 @@
 				68C03C4B1B11A209002BAC6C /* AVHBookingViewController.m in Sources */,
 				2EB698701AF9077600843341 /* AOScrollerView.m in Sources */,
 				688003B31B0265E20033891A /* WeatherTableViewCell.m in Sources */,
+				2E17508E1B1DFD0600B271DD /* InputAccessoryBar.m in Sources */,
 				2EB698A31AF9077600843341 /* ProductInfo.m in Sources */,
 				2EB6986B1AF9077600843341 /* Reachability.m in Sources */,
 				2EB6986E1AF9077600843341 /* UIViewController+RESideMenu.m in Sources */,

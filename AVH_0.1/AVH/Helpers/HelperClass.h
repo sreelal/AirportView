@@ -56,4 +56,6 @@
 
 + (NSDate *)getNSDateFromString:(NSString *)strDate withFormat:(NSString *)format;
 
++ (NSArray *)getListOfCountries;
+
 @end

@@ -265,4 +265,11 @@
     return stringDate;
 }
 
++ (NSArray *)getListOfCountries {
+    
+    NSArray *countries = [[NSArray alloc] initWithObjects:@"Afghanistan", @"Albania", @"Algeria", @"Andorra", @"Angola", @"Antigua and Barbuda", @"Argentina", @"Armenia", @"Aruba", @"Australia", @"Austria", @"Azerbaijan", nil];
+    
+    return countries;
+}
+
 @end
