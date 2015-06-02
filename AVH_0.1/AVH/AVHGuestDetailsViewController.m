@@ -8,8 +8,24 @@
 
 #import "AVHGuestDetailsViewController.h"
 #import "HelperClass.h"
+#import "AVHDataHandler.h"
 
 @interface AVHGuestDetailsViewController ()
+
+@property (weak, nonatomic) IBOutlet UITextField *titleTxt;
+@property (weak, nonatomic) IBOutlet UITextField *firstnameTxt;
+@property (weak, nonatomic) IBOutlet UITextField *lastnameTxt;
+@property (weak, nonatomic) IBOutlet UITextField *dobTxt;
+@property (weak, nonatomic) IBOutlet UITextField *emailTxt;
+@property (weak, nonatomic) IBOutlet UITextField *companynameTxt;
+@property (weak, nonatomic) IBOutlet UITextField *countryTxt;
+@property (weak, nonatomic) IBOutlet UITextField *cityTxt;
+@property (weak, nonatomic) IBOutlet UITextField *postalcodeTxt;
+@property (weak, nonatomic) IBOutlet UITextField *phoneNoTxt;
+@property (weak, nonatomic) IBOutlet UITextField *comments2Txt;
+@property (weak, nonatomic) IBOutlet UITextField *addressTxt;
+@property (weak, nonatomic) IBOutlet UITextField *addressTxt2;
+@property (weak, nonatomic) IBOutlet UITextField *addressTxt3;
 
 @end
 
@@ -37,6 +53,13 @@
     //NSLog(@"Pin Constraints : %lf", pinHeightConstraint.constant);
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
+    [self loadSavedInformation];
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -50,7 +73,68 @@
 
 - (void)navgationNextClicked:(id)sender {
     
+    [self saveInformations];
     //[_swipeView scrollToPage:1 duration:0.5];
+}
+
+
+- (void)loadSavedInformation{
+    
+    NSMutableDictionary *_guestInfoDictionary = [self retrieveInformations];
+    if (_guestInfoDictionary) {
+        
+        _titleTxt.text = [_guestInfoDictionary objectForKey:@"titleTxt"];
+        _firstnameTxt.text = [_guestInfoDictionary objectForKey:@"firstname"];
+        _lastnameTxt.text = [_guestInfoDictionary objectForKey:@"lastname"];
+        _dobTxt.text = [_guestInfoDictionary objectForKey:@"dob"];
+        _emailTxt.text = [_guestInfoDictionary objectForKey:@"email"];
+        
+        _companynameTxt.text = [_guestInfoDictionary objectForKey:@"companyname"];
+        _countryTxt.text = [_guestInfoDictionary objectForKey:@"country"];
+        _addressTxt.text = [_guestInfoDictionary objectForKey:@"address1"];
+        _addressTxt2.text = [_guestInfoDictionary objectForKey:@"address2"];
+        _addressTxt3.text = [_guestInfoDictionary objectForKey:@"address3"];
+        
+        _cityTxt.text = [_guestInfoDictionary objectForKey:@"city"];
+        _postalcodeTxt.text = [_guestInfoDictionary objectForKey:@"postalcode"];
+        _phoneNoTxt.text = [_guestInfoDictionary objectForKey:@"phoneno"];
+        
+    }
+}
+
+- (void)saveInformations{
+    
+    //YOUR_STAY_INFO
+    NSMutableDictionary *_guestInfoDictionary = [NSMutableDictionary dictionary];
+    [_guestInfoDictionary setObject:(_titleTxt.text)?_titleTxt.text:@"" forKey:@"titleTxt"];
+    [_guestInfoDictionary setObject:(_firstnameTxt.text)?_firstnameTxt.text:@"" forKey:@"firstname"];
+    [_guestInfoDictionary setObject:(_lastnameTxt.text)?_lastnameTxt.text:@"" forKey:@"lastname"];
+    [_guestInfoDictionary setObject:(_dobTxt.text)?_dobTxt.text:@"" forKey:@"dob"];
+    [_guestInfoDictionary setObject:(_emailTxt.text)?_emailTxt.text:@"" forKey:@"email"];
+    
+    [_guestInfoDictionary setObject:(_companynameTxt.text)?_companynameTxt.text:@"" forKey:@"companyname"];
+    [_guestInfoDictionary setObject:(_countryTxt.text)?_countryTxt.text:@"" forKey:@"country"];
+    [_guestInfoDictionary setObject:(_addressTxt.text)?_addressTxt.text:@"" forKey:@"address1"];
+    [_guestInfoDictionary setObject:(_addressTxt2.text)?_addressTxt2.text:@"" forKey:@"address2"];
+    [_guestInfoDictionary setObject:(_addressTxt3.text)?_addressTxt3.text:@"" forKey:@"address3"];
+    
+    [_guestInfoDictionary setObject:(_cityTxt.text)?_cityTxt.text:@"" forKey:@"city"];
+    [_guestInfoDictionary setObject:(_postalcodeTxt.text)?_postalcodeTxt.text:@"" forKey:@"postalcode"];
+    [_guestInfoDictionary setObject:(_phoneNoTxt.text)?_phoneNoTxt.text:@"" forKey:@"phoneno"];
+    
+    
+    if (![[AVHDataHandler sharedManager] bookingDataHolder]) {
+        
+        [[AVHDataHandler sharedManager] setBookingDataHolder:[NSMutableDictionary dictionary]];
+    }
+    [[[AVHDataHandler sharedManager] bookingDataHolder] setObject:_guestInfoDictionary forKey:GUEST_DETAILS];
+    
+}
+
+- (NSMutableDictionary*)retrieveInformations{
+    
+    return [[[AVHDataHandler sharedManager] bookingDataHolder] objectForKey:GUEST_DETAILS];
+    ;
 }
 
 @end

@@ -174,7 +174,6 @@
     [_stayInfoDictionary setObject:(childrenTxt.text)?childrenTxt.text:@"" forKey:@"children"];
     [_stayInfoDictionary setObject:(roomsTxt.text)?roomsTxt.text:@"" forKey:@"rooms"];
 
-    [[AVHDataHandler sharedManager] setBookingDataHolder:nil];
     if (![[AVHDataHandler sharedManager] bookingDataHolder]) {
         
         [[AVHDataHandler sharedManager] setBookingDataHolder:[NSMutableDictionary dictionary]];
