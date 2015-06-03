@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2E0018581B19F72500388BE9 /* AVHHotelInfoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0018571B19F72500388BE9 /* AVHHotelInfoDetailViewController.m */; };
+		2E0083B71B1F3E9900E8E635 /* AVHPlacesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0083B61B1F3E9900E8E635 /* AVHPlacesListViewController.m */; };
+		2E0083BA1B1F3F4A00E8E635 /* AVHPlaceInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0083B91B1F3F4A00E8E635 /* AVHPlaceInfoViewController.m */; };
 		2E0CD16C1B1B1A5900E61224 /* AVHOfferInfoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0CD16B1B1B1A5900E61224 /* AVHOfferInfoListViewController.m */; };
 		2E1422DF1B1BF874001B08DD /* AVH_SPSCREEN.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E1422DC1B1BF874001B08DD /* AVH_SPSCREEN.png */; };
 		2E1422E01B1BF874001B08DD /* AVH_SPSCREEN@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E1422DD1B1BF874001B08DD /* AVH_SPSCREEN@2x.png */; };
@@ -171,6 +173,10 @@
 /* Begin PBXFileReference section */
 		2E0018561B19F72500388BE9 /* AVHHotelInfoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHHotelInfoDetailViewController.h; sourceTree = "<group>"; };
 		2E0018571B19F72500388BE9 /* AVHHotelInfoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHHotelInfoDetailViewController.m; sourceTree = "<group>"; };
+		2E0083B51B1F3E9900E8E635 /* AVHPlacesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHPlacesListViewController.h; sourceTree = "<group>"; };
+		2E0083B61B1F3E9900E8E635 /* AVHPlacesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHPlacesListViewController.m; sourceTree = "<group>"; };
+		2E0083B81B1F3F4A00E8E635 /* AVHPlaceInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHPlaceInfoViewController.h; sourceTree = "<group>"; };
+		2E0083B91B1F3F4A00E8E635 /* AVHPlaceInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHPlaceInfoViewController.m; sourceTree = "<group>"; };
 		2E0CD16A1B1B1A5900E61224 /* AVHOfferInfoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHOfferInfoListViewController.h; sourceTree = "<group>"; };
 		2E0CD16B1B1B1A5900E61224 /* AVHOfferInfoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHOfferInfoListViewController.m; sourceTree = "<group>"; };
 		2E1422DC1B1BF874001B08DD /* AVH_SPSCREEN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AVH_SPSCREEN.png; path = "App Icon/AVH_SPSCREEN.png"; sourceTree = "<group>"; };
@@ -748,6 +754,10 @@
 				2E0018571B19F72500388BE9 /* AVHHotelInfoDetailViewController.m */,
 				2E0CD16A1B1B1A5900E61224 /* AVHOfferInfoListViewController.h */,
 				2E0CD16B1B1B1A5900E61224 /* AVHOfferInfoListViewController.m */,
+				2E0083B51B1F3E9900E8E635 /* AVHPlacesListViewController.h */,
+				2E0083B61B1F3E9900E8E635 /* AVHPlacesListViewController.m */,
+				2E0083B81B1F3F4A00E8E635 /* AVHPlaceInfoViewController.h */,
+				2E0083B91B1F3F4A00E8E635 /* AVHPlaceInfoViewController.m */,
 				680A121B1B18D623005698FE /* AVHDirectionsViewController.h */,
 				680A121C1B18D623005698FE /* AVHDirectionsViewController.m */,
 				68850F3B1B0111F300F2BD40 /* AVHWeatherViewController.h */,
@@ -1028,8 +1038,10 @@
 			files = (
 				2EB698AA1AF9077600843341 /* SubMenuCell.m in Sources */,
 				2EB6989E1AF9077600843341 /* main.m in Sources */,
+				2E0083B71B1F3E9900E8E635 /* AVHPlacesListViewController.m in Sources */,
 				2EB698771AF9077600843341 /* RequestHandler.m in Sources */,
 				E94781C41B11D81200FDD1FC /* AVHConfirmationView.m in Sources */,
+				2E0083BA1B1F3F4A00E8E635 /* AVHPlaceInfoViewController.m in Sources */,
 				2EB698621AF9077600843341 /* DGhNotificationViewController.m in Sources */,
 				E94781CA1B11D81200FDD1FC /* AVHReviewView.m in Sources */,
 				686982B71B1E1D2900623402 /* AVHEditStayCell.m in Sources */,

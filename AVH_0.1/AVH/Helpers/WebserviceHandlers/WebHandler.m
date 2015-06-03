@@ -646,7 +646,7 @@
         NSLog(@"Cached Hotel Info List: %@", cachedHotelInfo);
         
         if (cachedHotelInfo != nil) {
-            NSMutableArray *hotelInfo = [self parseCategoriesForResult:cachedHotelInfo];
+            NSMutableArray *hotelInfo = cachedHotelInfo[@"infos"];
             
             callback(hotelInfo, nil);
         }
@@ -689,7 +689,7 @@
         NSLog(@"Cached Offer Info List: %@", cachedOfferInfo);
         
         if (cachedOfferInfo != nil) {
-            NSMutableArray *offerInfo = [self parseCategoriesForResult:cachedOfferInfo];
+            NSMutableArray *offerInfo = cachedOfferInfo[@"offers"];
             
             callback(offerInfo, nil);
         }
@@ -718,6 +718,49 @@
         NSMutableArray *offerInfo = result[@"offers"];
         
         callback(offerInfo, error);
+    }];
+}
+
++ (void)getPlacesToVisitWithCallback:(ResponseCallback)callback {
+    
+    /////////////////////////////Handling Offline Mode////////////////////////////////////////////
+    if (![HelperClass hasNetwork]) {
+        [self showAlertWithMessage:ALERT_INTERNET_FAILURE];
+        
+        id cachedPlaces = [HelperClass getCachedJsonFor:CACHE_ID_PLACES];
+        
+        NSLog(@"Cached Places Info List: %@", cachedPlaces);
+        
+        if (cachedPlaces != nil) {
+            NSMutableArray *places = cachedPlaces[@"recommendations"];
+            
+            callback(places, nil);
+        }
+        else callback(nil, nil);
+        
+        return;
+    }
+    //////////////////////////////////////////////////////////////////////////////////////////////
+    
+    NSString *serviceURL = [NSString stringWithFormat:@"%@%@", SERVICE_URL_ROOT, SERVICE_PLACES];
+    
+    [RequestHandler getRequestWithURL:serviceURL withCallback:^(id result, NSError *error) {
+        
+        if (result != nil) {
+            BOOL isCached = [HelperClass cacheJsonForData:result withName:CACHE_ID_PLACES];
+            
+            if (isCached) NSLog(@"places INFO List Successfully Cached");
+            else NSLog(@"Failed Places INFO List Caching");
+        }
+        else if (result == nil || error) {
+            result = [HelperClass getCachedJsonFor:CACHE_ID_PLACES];
+            
+            NSLog(@"Cached Result: %@", result);
+        }
+        
+        NSMutableArray *places = result[@"recommendations"];
+        
+        callback(places, error);
     }];
 }
 

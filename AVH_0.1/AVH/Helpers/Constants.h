@@ -25,6 +25,7 @@
 
 #define SERVICE_URL_ROOT     @"http://demo.airportviewhotel.net/"
 #define SERVICE_HOTEL_INFO   @"hotel_info/all.json"
+#define SERVICE_PLACES       @"recommendation/all.json"
 #define SERVICE_OFFER        @"offer.json"
 #define SERVICE_CATEGORY     @"category"
 #define SERVICE_SUB_CATEGORY @"category&parent="
@@ -72,6 +73,7 @@
 #define CACHE_ID_CATEGORY     @"Category.json"
 #define CACHE_ID_HOTEL_INFO   @"Hotel_Info.json"
 #define CACHE_ID_OFFER_INFO   @"Offer_Info.json"
+#define CACHE_ID_PLACES       @"Places_To_Visit.json"
 #define CACHE_ID_FLIGHT_DEP   @"Departure.json"
 #define CACHE_ID_WEATHER      @"Weather.json"
 #define CACHE_ID_NOTIFICA     @"Notification.json"

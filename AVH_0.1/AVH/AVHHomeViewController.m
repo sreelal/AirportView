@@ -24,6 +24,7 @@
 #import "AVHDirectionsViewController.h"
 #import "AVHHotelInfoListViewController.h"
 #import "AVHOfferInfoListViewController.h"
+#import "AVHPlacesListViewController.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -229,7 +230,12 @@
         }
         break;
             
-            
+        case 5:{
+            AVHPlacesListViewController *placesListVC = [self.storyboard instantiateViewControllerWithIdentifier:@"PlacesListVC"];
+            [self.navigationController pushViewController:placesListVC animated:YES];
+        }
+        break;
+
         case 6:{
             AVHWeatherViewController *weatherVC = [self.storyboard instantiateViewControllerWithIdentifier:@"WeatherVC"];
             [self.navigationController pushViewController:weatherVC animated:YES];
