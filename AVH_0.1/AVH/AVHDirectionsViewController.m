@@ -33,11 +33,11 @@
     self.navigationItem.leftBarButtonItem = leftBarItem;
     
     
-    UIBarButtonItem *righttBarItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
+    /*UIBarButtonItem *righttBarItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
                                                                                  target:self
                                                                                  action:@selector(loadDirectionsFromCurrentPosition)];
     righttBarItem.tintColor = [UIColor whiteColor];
-    self.navigationItem.rightBarButtonItem = righttBarItem;
+    self.navigationItem.rightBarButtonItem = righttBarItem;*/
     
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
     
@@ -48,14 +48,20 @@
     [_mapControl addAnnotation:annotation];
     [_mapControl setCenterCoordinate:location];
     
-    if(IS_OS_8_OR_LATER) {
+    MKCoordinateRegion mapRegion;
+    mapRegion.center = location;
+    mapRegion.span.latitudeDelta = 0.2;
+    mapRegion.span.longitudeDelta = 0.2;
+    [_mapControl setRegion:mapRegion animated: YES]; //Zooming
+    
+    /*if(IS_OS_8_OR_LATER) {
 
         self.locationManager = [[CLLocationManager alloc] init];
         [self.locationManager requestAlwaysAuthorization];
         [self.locationManager requestWhenInUseAuthorization];
     }
 
-    [self loadDirectionsFromCurrentPosition];
+    [self loadDirectionsFromCurrentPosition];*/
 }
 
 - (void)didReceiveMemoryWarning {

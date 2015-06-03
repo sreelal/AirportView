@@ -50,6 +50,14 @@
     }];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    
+    if (_isViewPopped)
+        [[self navigationController] setNavigationBarHidden:YES animated:YES];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

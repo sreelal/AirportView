@@ -48,7 +48,7 @@
     [categoiesCollectionView setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
     
-    self.menuItems = [[NSMutableArray alloc] initWithObjects:@"BOOKING", @"MY ACCOUNT", @"CONTACT", @"HOTEL INFO", @"RECOMMENDATIONS", @"OFFERS", @"HOTEL DIRECTIONS", @"WEATHER", nil];
+    self.menuItems = [[NSMutableArray alloc] initWithObjects:@"BOOKING", @"HOTEL INFO", @"CONTACT", @"OFFERS", @"GALLERY", @"PLACES TO VISIT", @"WEATHER", nil];
     
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     
@@ -58,7 +58,6 @@
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-    
     
     //[self loadCategories];
     //[self loadBannerImages];
@@ -147,12 +146,15 @@
 
 #pragma mark - Button Actions
 
-- (IBAction)equireListClicked:(id)sender {
+- (IBAction)locationBtnAction:(id)sender {
     
-    UINavigationController *enquireVCNav = [self.storyboard instantiateViewControllerWithIdentifier:@"EnquireViewNavigation"];
+    AVHDirectionsViewController *directionsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"DirectionsVC"];
+    [self.navigationController pushViewController:directionsVC animated:YES];
+}
+
+- (IBAction)menuBtnAction:(id)sender {
     
-    [self.sideMenuViewController setContentViewController:enquireVCNav];
-    [self.sideMenuViewController hideMenuViewController];
+    
 }
 
 #pragma mark - Marquee Scrolling Label
@@ -197,8 +199,8 @@
     
     DGHHomeCollectionViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"HomeCell" forIndexPath:indexPath];
     
-    cell.iconImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"menu_%ld_icon", indexPath.row]];
-    cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"menu_%ld_bg", indexPath.row]];
+    cell.iconImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"menu_%ld_icon", (long)indexPath.row]];
+    cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"menu_%ld_bg", (long)indexPath.row]];
     cell.titleLabel.text = self.menuItems[indexPath.row];
     //[cell setupBg];
     //[cell loadCategoryImageForCategory:category];
@@ -215,13 +217,13 @@
         }
         break;
          
-        case 3:{
+        case 1:{
             AVHHotelInfoListViewController *hotelInfoListVC = [self.storyboard instantiateViewControllerWithIdentifier:@"HotelInfoListVC"];
             [self.navigationController pushViewController:hotelInfoListVC animated:YES];
         }
         break;
             
-        case 5:{
+        case 3:{
             AVHOfferInfoListViewController *offerInfoVC = [self.storyboard instantiateViewControllerWithIdentifier:@"OfferListVC"];
             [self.navigationController pushViewController:offerInfoVC animated:YES];
         }
@@ -229,14 +231,14 @@
             
             
         case 6:{
-            AVHDirectionsViewController *directionsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"DirectionsVC"];
-            [self.navigationController pushViewController:directionsVC animated:YES];
+            AVHWeatherViewController *weatherVC = [self.storyboard instantiateViewControllerWithIdentifier:@"WeatherVC"];
+            [self.navigationController pushViewController:weatherVC animated:YES];
         }
         break;
             
         case 7:{
-            AVHWeatherViewController *weatherVC = [self.storyboard instantiateViewControllerWithIdentifier:@"WeatherVC"];
-            [self.navigationController pushViewController:weatherVC animated:YES];
+            AVHDirectionsViewController *directionsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"DirectionsVC"];
+            [self.navigationController pushViewController:directionsVC animated:YES];
         }
         break;
     
