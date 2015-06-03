@@ -99,6 +99,8 @@
 #define DocumentsDirectory [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
 
 
-#define YOUR_STAY_INFO       @"yourstayinformation"
+
+#define YOUR_STAY_INFO        @"yourstayinformation"
 #define ROOM_RATES_INFO       @"roomratesinformation"
+#define GUEST_DETAILS         @"guestinformation"
 

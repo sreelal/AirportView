@@ -93,12 +93,13 @@
 
 - (void)bookNowBtnAction:(id)sender{
     
+    UIButton *btnSelected = (UIButton*)sender;
+    NSArray *hotelsList = _hotelDetails[@"packages"];
+    [self saveInformations:[hotelsList objectAtIndex:btnSelected.tag]];
+    
     _guestDetailsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"GuestDetailsVC"];
-    
     [self.navigationController pushViewController:_guestDetailsVC animated:YES];
-    
     _guestDetailsVC = nil;
-
 }
 
 
@@ -153,10 +154,9 @@
     
     [self dismissViewControllerAnimated:NO completion:^{
         
+        [self saveInformations:details];
         _guestDetailsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"GuestDetailsVC"];
-        
         [self.navigationController pushViewController:_guestDetailsVC animated:YES];
-        
         _guestDetailsVC = nil;
     }];
     

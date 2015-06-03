@@ -101,6 +101,9 @@
 		2EF640BF1B19BBFD002741B4 /* AVHHotelInfoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF640BE1B19BBFD002741B4 /* AVHHotelInfoListCell.m */; };
 		680A121D1B18D623005698FE /* AVHDirectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680A121C1B18D623005698FE /* AVHDirectionsViewController.m */; };
 		680A12201B18D81F005698FE /* AVHImageContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 680A121F1B18D81F005698FE /* AVHImageContainer.m */; };
+		686982B71B1E1D2900623402 /* AVHEditStayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 686982B61B1E1D2900623402 /* AVHEditStayCell.m */; };
+		686982BA1B1E1DAF00623402 /* AVHEditRoomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 686982B91B1E1DAF00623402 /* AVHEditRoomCell.m */; };
+		686982BD1B1E1E1700623402 /* AVHEditGuestsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 686982BC1B1E1E1700623402 /* AVHEditGuestsCell.m */; };
 		688003B31B0265E20033891A /* WeatherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 688003B21B0265E20033891A /* WeatherTableViewCell.m */; };
 		68850F3D1B0111F300F2BD40 /* AVHWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68850F3C1B0111F300F2BD40 /* AVHWeatherViewController.m */; };
 		68A737491B13867C00E0C100 /* AVHHotelCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A737471B13867C00E0C100 /* AVHHotelCellTableViewCell.m */; };
@@ -310,6 +313,12 @@
 		680A121C1B18D623005698FE /* AVHDirectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHDirectionsViewController.m; sourceTree = "<group>"; };
 		680A121E1B18D81F005698FE /* AVHImageContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHImageContainer.h; sourceTree = "<group>"; };
 		680A121F1B18D81F005698FE /* AVHImageContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHImageContainer.m; sourceTree = "<group>"; };
+		686982B51B1E1D2900623402 /* AVHEditStayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AVHEditStayCell.h; path = TableViewCells/AVHEditStayCell.h; sourceTree = "<group>"; };
+		686982B61B1E1D2900623402 /* AVHEditStayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AVHEditStayCell.m; path = TableViewCells/AVHEditStayCell.m; sourceTree = "<group>"; };
+		686982B81B1E1DAF00623402 /* AVHEditRoomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHEditRoomCell.h; sourceTree = "<group>"; };
+		686982B91B1E1DAF00623402 /* AVHEditRoomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHEditRoomCell.m; sourceTree = "<group>"; };
+		686982BB1B1E1E1700623402 /* AVHEditGuestsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHEditGuestsCell.h; sourceTree = "<group>"; };
+		686982BC1B1E1E1700623402 /* AVHEditGuestsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHEditGuestsCell.m; sourceTree = "<group>"; };
 		688003B11B0265E20033891A /* WeatherTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherTableViewCell.h; sourceTree = "<group>"; };
 		688003B21B0265E20033891A /* WeatherTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherTableViewCell.m; sourceTree = "<group>"; };
 		68847F6F1A349DB200942FA5 /* AVH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVH.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -687,6 +696,12 @@
 				2EB697CC1AF9077600843341 /* DGHCategoryCollectionViewCell.m */,
 				2EB697D91AF9077600843341 /* DGHProductCell.h */,
 				2EB697DA1AF9077600843341 /* DGHProductCell.m */,
+				686982B51B1E1D2900623402 /* AVHEditStayCell.h */,
+				686982B61B1E1D2900623402 /* AVHEditStayCell.m */,
+				686982B81B1E1DAF00623402 /* AVHEditRoomCell.h */,
+				686982B91B1E1DAF00623402 /* AVHEditRoomCell.m */,
+				686982BB1B1E1E1700623402 /* AVHEditGuestsCell.h */,
+				686982BC1B1E1E1700623402 /* AVHEditGuestsCell.m */,
 			);
 			name = CollectionViewCell;
 			sourceTree = "<group>";
@@ -1001,10 +1016,12 @@
 				E94781C41B11D81200FDD1FC /* AVHConfirmationView.m in Sources */,
 				2EB698621AF9077600843341 /* DGhNotificationViewController.m in Sources */,
 				E94781CA1B11D81200FDD1FC /* AVHReviewView.m in Sources */,
+				686982B71B1E1D2900623402 /* AVHEditStayCell.m in Sources */,
 				680A12201B18D81F005698FE /* AVHImageContainer.m in Sources */,
 				68850F3D1B0111F300F2BD40 /* AVHWeatherViewController.m in Sources */,
 				2EB698681AF9077600843341 /* HelperClass.m in Sources */,
 				E998CF131B14899B00969553 /* AVHYourStayViewController.m in Sources */,
+				686982BA1B1E1DAF00623402 /* AVHEditRoomCell.m in Sources */,
 				E92BE4B61B0389C700AE6B2E /* AVHFlightInfoViewController.m in Sources */,
 				680A121D1B18D623005698FE /* AVHDirectionsViewController.m in Sources */,
 				2EB698611AF9077600843341 /* DGHMenuViewController.m in Sources */,
@@ -1018,6 +1035,7 @@
 				2EB6986B1AF9077600843341 /* Reachability.m in Sources */,
 				2EB6986E1AF9077600843341 /* UIViewController+RESideMenu.m in Sources */,
 				2EB6986C1AF9077600843341 /* RECommonFunctions.m in Sources */,
+				686982BD1B1E1E1700623402 /* AVHEditGuestsCell.m in Sources */,
 				E94781CE1B11D81200FDD1FC /* AVHYourStayView.m in Sources */,
 				2EB698711AF9077600843341 /* NSURLAdditions.m in Sources */,
 				2EB6986A1AF9077600843341 /* MarqueeLabel.m in Sources */,
