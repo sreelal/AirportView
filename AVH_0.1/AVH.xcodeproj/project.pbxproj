@@ -105,6 +105,7 @@
 		2EB84A951B1C020F00FCE9FC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EB84A931B1C020F00FCE9FC /* LaunchScreen.xib */; };
 		2EF640BC1B1994EC002741B4 /* AVHHotelInfoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF640BB1B1994EC002741B4 /* AVHHotelInfoListViewController.m */; };
 		2EF640BF1B19BBFD002741B4 /* AVHHotelInfoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF640BE1B19BBFD002741B4 /* AVHHotelInfoListCell.m */; };
+		583D1DD71B208C3D00268EB6 /* AVHBookingReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583D1DD61B208C3D00268EB6 /* AVHBookingReviewViewController.m */; };
 		680A121D1B18D623005698FE /* AVHDirectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680A121C1B18D623005698FE /* AVHDirectionsViewController.m */; };
 		680A12201B18D81F005698FE /* AVHImageContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 680A121F1B18D81F005698FE /* AVHImageContainer.m */; };
 		686982B71B1E1D2900623402 /* AVHEditStayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 686982B61B1E1D2900623402 /* AVHEditStayCell.m */; };
@@ -323,6 +324,8 @@
 		2EF640BB1B1994EC002741B4 /* AVHHotelInfoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHHotelInfoListViewController.m; sourceTree = "<group>"; };
 		2EF640BD1B19BBFD002741B4 /* AVHHotelInfoListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHHotelInfoListCell.h; sourceTree = "<group>"; };
 		2EF640BE1B19BBFD002741B4 /* AVHHotelInfoListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHHotelInfoListCell.m; sourceTree = "<group>"; };
+		583D1DD51B208C3D00268EB6 /* AVHBookingReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHBookingReviewViewController.h; sourceTree = "<group>"; };
+		583D1DD61B208C3D00268EB6 /* AVHBookingReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHBookingReviewViewController.m; sourceTree = "<group>"; };
 		680A121B1B18D623005698FE /* AVHDirectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHDirectionsViewController.h; sourceTree = "<group>"; };
 		680A121C1B18D623005698FE /* AVHDirectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHDirectionsViewController.m; sourceTree = "<group>"; };
 		680A121E1B18D81F005698FE /* AVHImageContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHImageContainer.h; sourceTree = "<group>"; };
@@ -754,6 +757,8 @@
 				2E0018571B19F72500388BE9 /* AVHHotelInfoDetailViewController.m */,
 				2E0CD16A1B1B1A5900E61224 /* AVHOfferInfoListViewController.h */,
 				2E0CD16B1B1B1A5900E61224 /* AVHOfferInfoListViewController.m */,
+				583D1DD51B208C3D00268EB6 /* AVHBookingReviewViewController.h */,
+				583D1DD61B208C3D00268EB6 /* AVHBookingReviewViewController.m */,
 				2E0083B51B1F3E9900E8E635 /* AVHPlacesListViewController.h */,
 				2E0083B61B1F3E9900E8E635 /* AVHPlacesListViewController.m */,
 				2E0083B81B1F3F4A00E8E635 /* AVHPlaceInfoViewController.h */,
@@ -1050,6 +1055,7 @@
 				2EB698681AF9077600843341 /* HelperClass.m in Sources */,
 				E998CF131B14899B00969553 /* AVHYourStayViewController.m in Sources */,
 				686982BA1B1E1DAF00623402 /* AVHEditRoomCell.m in Sources */,
+				583D1DD71B208C3D00268EB6 /* AVHBookingReviewViewController.m in Sources */,
 				E92BE4B61B0389C700AE6B2E /* AVHFlightInfoViewController.m in Sources */,
 				680A121D1B18D623005698FE /* AVHDirectionsViewController.m in Sources */,
 				2EB698611AF9077600843341 /* DGHMenuViewController.m in Sources */,

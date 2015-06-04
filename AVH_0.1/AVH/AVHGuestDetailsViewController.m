@@ -11,7 +11,7 @@
 #import "AVHDataHandler.h"
 #import "InputAccessoryBar.h"
 
-@interface AVHGuestDetailsViewController () <ToolbarDelegate> {
+@interface AVHGuestDetailsViewController () <ToolbarDelegate,AVHBookingProtocol> {
     NSArray *titles;
     NSArray *countries;
     
@@ -88,6 +88,8 @@
 - (void)navgationNextClicked:(id)sender {
     
     [self saveInformations];
+    [self.navigationController pushViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"bookingReviewVC"] animated:YES];
+    
 }
 
 - (IBAction)showDatePicker:(id)sender {
@@ -138,6 +140,8 @@
     pickerComponent = [[PickerComponent alloc] initWithFrame:[UIScreen mainScreen].bounds andDelegate:self andData:data withTag:btn.tag];
 }
 
+#pragma mark - Protocol methods
+
 - (void)saveInformations {
     
     //YOUR_STAY_INFO
@@ -157,7 +161,8 @@
     [_guestInfoDictionary setObject:(txtCity.text)?txtCity.text:@"" forKey:@"city"];
     [_guestInfoDictionary setObject:(txtPostalCode.text)?txtPostalCode.text:@"" forKey:@"postalcode"];
     [_guestInfoDictionary setObject:(txtPhoneNumber.text)?txtPhoneNumber.text:@"" forKey:@"phoneno"];
-    
+    [_guestInfoDictionary setObject:(txtComments.text)?txtComments.text:@"" forKey:@"comments"];
+
     if (![[AVHDataHandler sharedManager] bookingDataHolder]) {
         
         [[AVHDataHandler sharedManager] setBookingDataHolder:[NSMutableDictionary dictionary]];
@@ -169,6 +174,23 @@
 - (NSMutableDictionary*)retrieveInformations {
     
     return [[[AVHDataHandler sharedManager] bookingDataHolder] objectForKey:GUEST_DETAILS];
+}
+
+- (void)enableEditMode{
+    
+    UIBarButtonItem *rightBarItem = [HelperClass getUpdateButton:self andAction:@selector(onUpdateData)];
+    rightBarItem.tintColor = [UIColor whiteColor];
+    self.navigationItem.rightBarButtonItem = rightBarItem;
+    
+    [self.navigationItem setHidesBackButton:YES];
+    self.navigationItem.leftBarButtonItem = nil;
+}
+
+- (void)onUpdateData{
+    
+    [self saveInformations];
+    //navigate back to review page
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Picker Component Delegate

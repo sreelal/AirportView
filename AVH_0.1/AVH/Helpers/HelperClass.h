@@ -11,6 +11,13 @@
 #import "MBProgressHUD.h"
 #import "Reachability.h"
 
+@protocol AVHBookingProtocol <NSObject>
+- (void)saveInformations;
+- (NSMutableDictionary*)retrieveInformations;
+- (void)enableEditMode;
+@end
+
+
 @interface HelperClass : NSObject
 
 @property (nonatomic, strong) NSMutableDictionary *bookingInfoDict;
@@ -57,5 +64,10 @@
 + (NSDate *)getNSDateFromString:(NSString *)strDate withFormat:(NSString *)format;
 
 + (NSArray *)getListOfCountries;
+
++ (UIBarButtonItem *)getReviewAndSubmitButton:(id)target andAction:(SEL)action;
+
++ (UIBarButtonItem *)getUpdateButton:(id)target andAction:(SEL)action;
+
 
 @end

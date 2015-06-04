@@ -15,11 +15,13 @@
 #import "AVHRoomInfoViewController.h"
 #import "AVHDataHandler.h"
 
-@interface AVHRoomsRatesViewController ()<AVHRoomInfoViewControllerDelegtae>
+@interface AVHRoomsRatesViewController ()<AVHRoomInfoViewControllerDelegtae,AVHBookingProtocol>
 
 @property (nonatomic, weak) IBOutlet UITableView *hotelsTable;
 @property (nonatomic, strong) NSDictionary *hotelDetails;
 @property (nonatomic, strong) AVHGuestDetailsViewController *guestDetailsVC;
+@property (nonatomic, strong) NSDictionary *selectedHotelDetails;
+@property (nonatomic, assign) BOOL isEditMode;
 
 
 @end
@@ -56,6 +58,12 @@
     }];
 }
 
+
+- (void)viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
+    [self loadSavedInformation];
+}
 
 
 - (void)didReceiveMemoryWarning {
@@ -95,11 +103,19 @@
     
     UIButton *btnSelected = (UIButton*)sender;
     NSArray *hotelsList = _hotelDetails[@"packages"];
-    [self saveInformations:[hotelsList objectAtIndex:btnSelected.tag]];
+    self.selectedHotelDetails = [hotelsList objectAtIndex:btnSelected.tag];
+    [self saveInformations];
     
-    _guestDetailsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"GuestDetailsVC"];
-    [self.navigationController pushViewController:_guestDetailsVC animated:YES];
-    _guestDetailsVC = nil;
+    if (_isEditMode) {
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+    else{
+        
+        _guestDetailsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"GuestDetailsVC"];
+        [self.navigationController pushViewController:_guestDetailsVC animated:YES];
+        _guestDetailsVC = nil;
+    }
 }
 
 
@@ -124,6 +140,7 @@
     hotelCell.moreInfoBtn.tag = indexPath.row;
     hotelCell.hotelBookNowBtn.tag = indexPath.row;
     
+ 
     NSArray *hotelsList = _hotelDetails[@"packages"];
 
     NSDictionary *hotelDetails = hotelsList[indexPath.row];
@@ -140,6 +157,17 @@
         hotelCell.hotelDescription.text = [NSString stringWithFormat:@"%@...", [hotelCell.hotelDescription.text substringToIndex:150]];
     }
     
+    if (self.selectedHotelDetails) {
+        
+        if ([self.selectedHotelDetails[@"name"] isEqualToString:hotelDetails[@"name"]]) {
+            
+            [hotelCell.hotelBookNowBtn setUserInteractionEnabled:NO];
+            [hotelCell.hotelBookNowBtn setTitle:@"" forState:UIControlStateNormal];
+            [hotelCell.hotelBookNowBtn setImage:[UIImage imageNamed:@"tick"] forState:UIControlStateNormal];
+
+        }
+    }
+    
     return hotelCell;
 }
 
@@ -154,7 +182,8 @@
     
     [self dismissViewControllerAnimated:NO completion:^{
         
-        [self saveInformations:details];
+        self.selectedHotelDetails = details;
+        [self saveInformations];
         _guestDetailsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"GuestDetailsVC"];
         [self.navigationController pushViewController:_guestDetailsVC animated:YES];
         _guestDetailsVC = nil;
@@ -162,13 +191,22 @@
     
 }
 
-- (void)saveInformations:(NSDictionary*)details{
+- (void)loadSavedInformation{
+    
+    NSMutableDictionary *_stayInfoDictionary = [self retrieveInformations];
+    self.selectedHotelDetails = _stayInfoDictionary;
+    [_hotelsTable reloadData];
+}
+
+#pragma mark - Protocol methods
+
+- (void)saveInformations{
     
     if (![[AVHDataHandler sharedManager] bookingDataHolder]) {
         
         [[AVHDataHandler sharedManager] setBookingDataHolder:[NSMutableDictionary dictionary]];
     }
-    [[[AVHDataHandler sharedManager] bookingDataHolder] setObject:details forKey:ROOM_RATES_INFO];
+    [[[AVHDataHandler sharedManager] bookingDataHolder] setObject:self.selectedHotelDetails forKey:ROOM_RATES_INFO];
     NSLog(@"done");
 }
 
@@ -176,6 +214,24 @@
     
     return [[[AVHDataHandler sharedManager] bookingDataHolder] objectForKey:ROOM_RATES_INFO];
     ;
+}
+
+- (void)enableEditMode{
+    
+    UIBarButtonItem *rightBarItem = [HelperClass getUpdateButton:self andAction:@selector(onUpdateData)];
+    rightBarItem.tintColor = [UIColor whiteColor];
+    self.navigationItem.rightBarButtonItem = rightBarItem;
+    
+    [self.navigationItem setHidesBackButton:YES];
+    self.navigationItem.leftBarButtonItem = nil;
+    _isEditMode = YES;
+}
+
+- (void)onUpdateData{
+    
+    [self saveInformations];
+    //navigate back to review page
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

@@ -60,7 +60,7 @@
     BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:filePath];
     
     if (fileExists) {
-        cachedObject = [NSArray arrayWithContentsOfFile:filePath];
+        cachedObject = [NSArray arrayWithContentsOfFile:filePath];//[NSDictionary dictionaryWithContentsOfFile:filePath];
     }
     
     return cachedObject;
@@ -194,6 +194,19 @@
     
     return leftBarButtonItem;
 }
+
++ (UIBarButtonItem *)getReviewAndSubmitButton:(id)target andAction:(SEL)action {
+    
+    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Book Now" style:UIBarButtonItemStylePlain target:target action:action];
+    return rightBarButtonItem;
+}
+
++ (UIBarButtonItem *)getUpdateButton:(id)target andAction:(SEL)action {
+    
+    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Update" style:UIBarButtonItemStylePlain target:target action:action];
+    return rightBarButtonItem;
+}
+
 
 #pragma mark - NSDate Helpers
 

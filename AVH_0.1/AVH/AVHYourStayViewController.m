@@ -12,7 +12,7 @@
 #import "HelperClass.h"
 #import "AVHDataHandler.h"
 
-@interface AVHYourStayViewController ()
+@interface AVHYourStayViewController ()<AVHBookingProtocol>
 
 @property (nonatomic, assign) BOOL isViewPopped;
 
@@ -151,6 +151,7 @@
 }
 */
 
+
 - (void)loadSavedInformation{
     
     NSMutableDictionary *_stayInfoDictionary = [self retrieveInformations];
@@ -163,6 +164,8 @@
         roomsTxt.text = [_stayInfoDictionary objectForKey:@"rooms"];
     }
 }
+
+#pragma mark - protocol methods
 
 - (void)saveInformations{
     
@@ -186,6 +189,23 @@
     
     return [[[AVHDataHandler sharedManager] bookingDataHolder] objectForKey:YOUR_STAY_INFO];
 ;
+}
+
+- (void)enableEditMode{
+    
+    UIBarButtonItem *rightBarItem = [HelperClass getUpdateButton:self andAction:@selector(onUpdateData)];
+    rightBarItem.tintColor = [UIColor whiteColor];
+    self.navigationItem.rightBarButtonItem = rightBarItem;
+    
+    [self.navigationItem setHidesBackButton:YES];
+    self.navigationItem.leftBarButtonItem = nil;
+}
+
+- (void)onUpdateData{
+    
+    [self saveInformations];
+    //navigate back to review page
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
