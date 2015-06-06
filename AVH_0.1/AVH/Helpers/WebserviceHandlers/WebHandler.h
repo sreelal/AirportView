@@ -24,6 +24,7 @@ typedef void (^ResponseCallback) (id object, NSError *error);
 + (void)getCategoriesWithCallback:(ResponseCallback)callback;
 + (void)getBannerImagesWithCallback:(ResponseCallback)bannerImagesCallback;
 + (void)getSubCategoriesForCategoryId:(NSString *)categoryId withCallback:(ResponseCallback)callback;
++ (void)getGalleryInfoWithCallback:(ResponseCallback)callback;
 + (void)getProductsForCategoryId:(NSString *)categoryId withCallback:(ResponseCallback)callback;
 + (void)getProductInfoWithId:(NSString *)productId withCallback:(ResponseCallback)callback;
 + (void)sendDeviceToken:(NSString *)deviceToken withCallback:(ResponseCallback)callback;

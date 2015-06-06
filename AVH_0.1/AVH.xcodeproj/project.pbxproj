@@ -11,6 +11,12 @@
 		2E0083B71B1F3E9900E8E635 /* AVHPlacesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0083B61B1F3E9900E8E635 /* AVHPlacesListViewController.m */; };
 		2E0083BA1B1F3F4A00E8E635 /* AVHPlaceInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0083B91B1F3F4A00E8E635 /* AVHPlaceInfoViewController.m */; };
 		2E0CD16C1B1B1A5900E61224 /* AVHOfferInfoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0CD16B1B1B1A5900E61224 /* AVHOfferInfoListViewController.m */; };
+		2E129BCE1B22CD0400030220 /* AVHGalleryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E129BCD1B22CD0400030220 /* AVHGalleryListViewController.m */; };
+		2E129C641B22E0DB00030220 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E129C631B22E0DB00030220 /* MessageUI.framework */; };
+		2E129C661B22E0F200030220 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E129C651B22E0F200030220 /* AssetsLibrary.framework */; };
+		2E129C681B22E0F700030220 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E129C671B22E0F700030220 /* ImageIO.framework */; };
+		2E129CB21B22EF8E00030220 /* MWPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2E129CB11B22EF8E00030220 /* MWPhotoBrowser.bundle */; };
+		2E129CB31B22EFCE00030220 /* libMWPhotoBrowser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E129CB01B22EF4300030220 /* libMWPhotoBrowser.a */; };
 		2E1422DF1B1BF874001B08DD /* AVH_SPSCREEN.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E1422DC1B1BF874001B08DD /* AVH_SPSCREEN.png */; };
 		2E1422E01B1BF874001B08DD /* AVH_SPSCREEN@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E1422DD1B1BF874001B08DD /* AVH_SPSCREEN@2x.png */; };
 		2E1422E11B1BF874001B08DD /* AVH_SPSCREEN@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E1422DE1B1BF874001B08DD /* AVH_SPSCREEN@3x.png */; };
@@ -162,6 +168,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2E129CAF1B22EF4300030220 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E129CAB1B22EF4200030220 /* MWPhotoBrowser.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4C6F96C414AF704100F8389A;
+			remoteInfo = MWPhotoBrowser;
+		};
+		2E129CB41B22EFD400030220 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E129CAB1B22EF4200030220 /* MWPhotoBrowser.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C6F96C314AF704100F8389A;
+			remoteInfo = MWPhotoBrowser;
+		};
 		68847F891A349DB200942FA5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 68847F671A349DB200942FA5 /* Project object */;
@@ -180,6 +200,13 @@
 		2E0083B91B1F3F4A00E8E635 /* AVHPlaceInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHPlaceInfoViewController.m; sourceTree = "<group>"; };
 		2E0CD16A1B1B1A5900E61224 /* AVHOfferInfoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHOfferInfoListViewController.h; sourceTree = "<group>"; };
 		2E0CD16B1B1B1A5900E61224 /* AVHOfferInfoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHOfferInfoListViewController.m; sourceTree = "<group>"; };
+		2E129BCC1B22CD0400030220 /* AVHGalleryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHGalleryListViewController.h; sourceTree = "<group>"; };
+		2E129BCD1B22CD0400030220 /* AVHGalleryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHGalleryListViewController.m; sourceTree = "<group>"; };
+		2E129C631B22E0DB00030220 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		2E129C651B22E0F200030220 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		2E129C671B22E0F700030220 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		2E129CAB1B22EF4200030220 /* MWPhotoBrowser.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MWPhotoBrowser.xcodeproj; path = MWPhotoBrowser/MWPhotoBrowser.xcodeproj; sourceTree = "<group>"; };
+		2E129CB11B22EF8E00030220 /* MWPhotoBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MWPhotoBrowser.bundle; path = MWPhotoBrowser/MWPhotoBrowser.bundle; sourceTree = "<group>"; };
 		2E1422DC1B1BF874001B08DD /* AVH_SPSCREEN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AVH_SPSCREEN.png; path = "App Icon/AVH_SPSCREEN.png"; sourceTree = "<group>"; };
 		2E1422DD1B1BF874001B08DD /* AVH_SPSCREEN@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AVH_SPSCREEN@2x.png"; path = "App Icon/AVH_SPSCREEN@2x.png"; sourceTree = "<group>"; };
 		2E1422DE1B1BF874001B08DD /* AVH_SPSCREEN@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AVH_SPSCREEN@3x.png"; path = "App Icon/AVH_SPSCREEN@3x.png"; sourceTree = "<group>"; };
@@ -412,7 +439,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E129CB31B22EFCE00030220 /* libMWPhotoBrowser.a in Frameworks */,
+				2E129C681B22E0F700030220 /* ImageIO.framework in Frameworks */,
+				2E129C661B22E0F200030220 /* AssetsLibrary.framework in Frameworks */,
 				2E6B42691A7CEBB8004BCDD8 /* QuartzCore.framework in Frameworks */,
+				2E129C641B22E0DB00030220 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +457,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E129CAC1B22EF4200030220 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E129CB01B22EF4300030220 /* libMWPhotoBrowser.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E129CB61B22F00100030220 /* MWPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				2E129CB11B22EF8E00030220 /* MWPhotoBrowser.bundle */,
+				2E129CAB1B22EF4200030220 /* MWPhotoBrowser.xcodeproj */,
+			);
+			name = MWPhotoBrowser;
+			sourceTree = "<group>";
+		};
 		2E17508A1B1DFD0600B271DD /* InputAccessory */ = {
 			isa = PBXGroup;
 			children = (
@@ -463,6 +511,9 @@
 				2EB697E61AF9077600843341 /* HelperClass.m */,
 				680A121E1B18D81F005698FE /* AVHImageContainer.h */,
 				680A121F1B18D81F005698FE /* AVHImageContainer.m */,
+				68BB47421B1CCC6500E078FA /* AVHDataHandler.h */,
+				68BB47431B1CCC6600E078FA /* AVHDataHandler.m */,
+				2E129CB61B22F00100030220 /* MWPhotoBrowser */,
 				2E17508A1B1DFD0600B271DD /* InputAccessory */,
 				E92EEEFB1B13014500AF04EA /* PickerController */,
 				E94781931B11D70C00FDD1FC /* CustomViews */,
@@ -473,8 +524,6 @@
 				2EB697F01AF9077600843341 /* RESideMenu */,
 				2EB697F71AF9077600843341 /* Scroller */,
 				2EB6980F1AF9077600843341 /* WebserviceHandlers */,
-				68BB47421B1CCC6500E078FA /* AVHDataHandler.h */,
-				68BB47431B1CCC6600E078FA /* AVHDataHandler.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -761,6 +810,8 @@
 				583D1DD61B208C3D00268EB6 /* AVHBookingReviewViewController.m */,
 				2E0083B51B1F3E9900E8E635 /* AVHPlacesListViewController.h */,
 				2E0083B61B1F3E9900E8E635 /* AVHPlacesListViewController.m */,
+				2E129BCC1B22CD0400030220 /* AVHGalleryListViewController.h */,
+				2E129BCD1B22CD0400030220 /* AVHGalleryListViewController.m */,
 				2E0083B81B1F3F4A00E8E635 /* AVHPlaceInfoViewController.h */,
 				2E0083B91B1F3F4A00E8E635 /* AVHPlaceInfoViewController.m */,
 				680A121B1B18D623005698FE /* AVHDirectionsViewController.h */,
@@ -810,6 +861,9 @@
 		68847F661A349DB200942FA5 = {
 			isa = PBXGroup;
 			children = (
+				2E129C671B22E0F700030220 /* ImageIO.framework */,
+				2E129C651B22E0F200030220 /* AssetsLibrary.framework */,
+				2E129C631B22E0DB00030220 /* MessageUI.framework */,
 				2E6B42681A7CEBB8004BCDD8 /* QuartzCore.framework */,
 				2EB697C01AF9077600843341 /* AVH */,
 				68847F701A349DB200942FA5 /* Products */,
@@ -879,6 +933,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				2E129CB51B22EFD400030220 /* PBXTargetDependency */,
 			);
 			name = AVH;
 			productName = DeviceGH;
@@ -934,6 +989,12 @@
 			mainGroup = 68847F661A349DB200942FA5;
 			productRefGroup = 68847F701A349DB200942FA5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2E129CAC1B22EF4200030220 /* Products */;
+					ProjectRef = 2E129CAB1B22EF4200030220 /* MWPhotoBrowser.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				68847F6E1A349DB200942FA5 /* AVH */,
@@ -941,6 +1002,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		2E129CB01B22EF4300030220 /* libMWPhotoBrowser.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMWPhotoBrowser.a;
+			remoteRef = 2E129CAF1B22EF4300030220 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		68847F6D1A349DB200942FA5 /* Resources */ = {
@@ -956,6 +1027,7 @@
 				2E1437111B1E90DA0011186F /* AVH-loc@3x.png in Resources */,
 				2EB698581AF9077600843341 /* bg-textbox.png in Resources */,
 				E9832AF61B15F43D00DFA2F4 /* AVH_Book.png in Resources */,
+				2E129CB21B22EF8E00030220 /* MWPhotoBrowser.bundle in Resources */,
 				2EB698981AF9077600843341 /* no_image.png in Resources */,
 				2E1437101B1E90DA0011186F /* AVH-loc@2x.png in Resources */,
 				2EB698991AF9077600843341 /* row_bg.jpg in Resources */,
@@ -1076,6 +1148,7 @@
 				2EB698A21AF9077600843341 /* ProductCategory.m in Sources */,
 				2E320A1E1B1B788600D88FAA /* AVHOfferCell.m in Sources */,
 				2EF640BC1B1994EC002741B4 /* AVHHotelInfoListViewController.m in Sources */,
+				2E129BCE1B22CD0400030220 /* AVHGalleryListViewController.m in Sources */,
 				E92BE4B91B038A0300AE6B2E /* FlightInfoTableViewCell.m in Sources */,
 				2EB6989F1AF9077600843341 /* Banner.m in Sources */,
 				2EB698601AF9077600843341 /* AVHHomeViewController.m in Sources */,
@@ -1128,6 +1201,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2E129CB51B22EFD400030220 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MWPhotoBrowser;
+			targetProxy = 2E129CB41B22EFD400030220 /* PBXContainerItemProxy */;
+		};
 		68847F8A1A349DB200942FA5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 68847F6E1A349DB200942FA5 /* AVH */;
@@ -1240,6 +1318,7 @@
 		68847F931A349DB200942FA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: sreelash bruce (EWV4EX7QX6)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: sreelash bruce (EWV4EX7QX6)";
@@ -1249,12 +1328,14 @@
 				PRODUCT_NAME = AVH;
 				PROVISIONING_PROFILE = "6c0a23fd-5770-4d1c-a98a-4c9db9c4f936";
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "../** Folder/iOS/Projects/Tarek/Airpot View Hotel/ABH_0.3/AVH_0.1/AVH/Helpers/MWPhotoBrowser";
 			};
 			name = Debug;
 		};
 		68847F941A349DB200942FA5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: sreelash bruce (EWV4EX7QX6)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: sreelash bruce (EWV4EX7QX6)";
@@ -1264,6 +1345,7 @@
 				PRODUCT_NAME = AVH;
 				PROVISIONING_PROFILE = "6c0a23fd-5770-4d1c-a98a-4c9db9c4f936";
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "../** Folder/iOS/Projects/Tarek/Airpot View Hotel/ABH_0.3/AVH_0.1/AVH/Helpers/MWPhotoBrowser";
 			};
 			name = Release;
 		};

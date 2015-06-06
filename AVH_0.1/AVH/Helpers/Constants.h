@@ -26,6 +26,7 @@
 #define SERVICE_URL_ROOT     @"http://demo.airportviewhotel.net/"
 #define SERVICE_HOTEL_INFO   @"hotel_info/all.json"
 #define SERVICE_PLACES       @"recommendation/all.json"
+#define SERVICE_GALLERY      @"gallery.json"
 #define SERVICE_OFFER        @"offer.json"
 #define SERVICE_CATEGORY     @"category"
 #define SERVICE_SUB_CATEGORY @"category&parent="

@@ -25,6 +25,7 @@
 #import "AVHHotelInfoListViewController.h"
 #import "AVHOfferInfoListViewController.h"
 #import "AVHPlacesListViewController.h"
+#import "AVHGalleryListViewController.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -227,6 +228,12 @@
         case 3:{
             AVHOfferInfoListViewController *offerInfoVC = [self.storyboard instantiateViewControllerWithIdentifier:@"OfferListVC"];
             [self.navigationController pushViewController:offerInfoVC animated:YES];
+        }
+        break;
+            
+        case 4:{
+            AVHGalleryListViewController *galleryVC = [self.storyboard instantiateViewControllerWithIdentifier:@"GalleryVC"];
+            [self.navigationController pushViewController:galleryVC animated:YES];
         }
         break;
             

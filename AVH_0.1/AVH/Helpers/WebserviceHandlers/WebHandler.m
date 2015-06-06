@@ -764,6 +764,48 @@
     }];
 }
 
++ (void)getGalleryInfoWithCallback:(ResponseCallback)callback {
+    
+    if (![HelperClass hasNetwork]) {
+        [self showAlertWithMessage:ALERT_INTERNET_FAILURE];
+        
+        /*id cachedPlaces = [HelperClass getCachedJsonFor:CACHE_ID_PLACES];
+        
+        NSLog(@"Cached Places Info List: %@", cachedPlaces);
+        
+        if (cachedPlaces != nil) {
+            NSMutableArray *places = cachedPlaces[@"recommendations"];
+            
+            callback(places, nil);
+        }
+        else callback(nil, nil);*/
+        
+        return;
+    }
+    //////////////////////////////////////////////////////////////////////////////////////////////
+    
+    NSString *serviceURL = [NSString stringWithFormat:@"%@%@", SERVICE_URL_ROOT, SERVICE_GALLERY];
+    
+    [RequestHandler getRequestWithURL:serviceURL withCallback:^(id result, NSError *error) {
+        
+        /*if (result != nil) {
+            BOOL isCached = [HelperClass cacheJsonForData:result withName:CACHE_ID_PLACES];
+            
+            if (isCached) NSLog(@"places INFO List Successfully Cached");
+            else NSLog(@"Failed Places INFO List Caching");
+        }
+        else if (result == nil || error) {
+            result = [HelperClass getCachedJsonFor:CACHE_ID_PLACES];
+            
+            NSLog(@"Cached Result: %@", result);
+        }*/
+        
+        NSMutableArray *galleries = result[@"galleries"];
+        
+        callback(galleries, error);
+    }];
+}
+
 + (void)showAlertWithMessage:(NSString *)message {
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:message delegate:nil cancelButtonTitle:ALERT_OK otherButtonTitles:nil, nil];
