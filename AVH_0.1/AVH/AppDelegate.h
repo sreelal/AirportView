@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MBProgressHUD.h"
+#import "AVHMBProgressHUD.h"
 #import "AVHHomeViewController.h"
 #import "DGHContentViewController.h"
 
@@ -15,7 +15,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (retain) MBProgressHUD *hud;
+@property (retain) AVHMBProgressHUD *hud;
 
 @property (strong, nonatomic) AVHHomeViewController *homeVC;
 

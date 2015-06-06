@@ -4,9 +4,9 @@
 // Created by Matej Bukovinski on 2.4.09.
 //
 
-#import "MBProgressHUD.h"
+#import "AVHMBProgressHUD.h"
 
-@interface MBProgressHUD ()
+@interface AVHMBProgressHUD ()
 
 - (void)hideUsingAnimation:(BOOL)animated;
 - (void)showUsingAnimation:(BOOL)animated;
@@ -30,7 +30,7 @@
 @end
 
 
-@implementation MBProgressHUD
+@implementation AVHMBProgressHUD
 
 #pragma mark -
 #pragma mark Accessors
@@ -153,7 +153,7 @@
 }
 
 - (void)updateProgress {
-    [(MBRoundProgressView *)indicator setProgress:progress];
+    [(AVHMBRoundProgressView *)indicator setProgress:progress];
 }
 
 - (void)updateIndicators {
@@ -162,7 +162,7 @@
     }
 	
     if (mode == MBProgressHUDModeDeterminate) {
-        self.indicator = [[[MBRoundProgressView alloc] initWithDefaultSize] autorelease];
+        self.indicator = [[[AVHMBRoundProgressView alloc] initWithDefaultSize] autorelease];
     }
     else if (mode == MBProgressHUDModeCustomView && self.customView != nil){
         self.indicator = self.customView;
@@ -190,8 +190,8 @@
 #pragma mark -
 #pragma mark Class methods
 
-+ (MBProgressHUD *)showHUDAddedTo:(UIView *)view animated:(BOOL)animated {
-	MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:view];
++ (AVHMBProgressHUD *)showHUDAddedTo:(UIView *)view animated:(BOOL)animated {
+	AVHMBProgressHUD *hud = [[AVHMBProgressHUD alloc] initWithView:view];
 	[view addSubview:hud];
 	[hud show:animated];
 	return [hud autorelease];
@@ -200,12 +200,12 @@
 + (BOOL)hideHUDForView:(UIView *)view animated:(BOOL)animated {
 	UIView *viewToRemove = nil;
 	for (UIView *v in [view subviews]) {
-		if ([v isKindOfClass:[MBProgressHUD class]]) {
+		if ([v isKindOfClass:[AVHMBProgressHUD class]]) {
 			viewToRemove = v;
 		}
 	}
 	if (viewToRemove != nil) {
-		MBProgressHUD *HUD = (MBProgressHUD *)viewToRemove;
+		AVHMBProgressHUD *HUD = (AVHMBProgressHUD *)viewToRemove;
 		HUD.removeFromSuperViewOnHide = YES;
 		[HUD hide:animated];
 		return YES;
@@ -626,7 +626,7 @@
 @end
 
 
-@implementation MBRoundProgressView
+@implementation AVHMBRoundProgressView
 
 - (id)initWithDefaultSize {
     return [super initWithFrame:CGRectMake(0.0f, 0.0f, 37.0f, 37.0f)];

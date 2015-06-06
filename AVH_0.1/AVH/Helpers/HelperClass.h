@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Constants.h"
-#import "MBProgressHUD.h"
+#import "AVHMBProgressHUD.h"
 #import "Reachability.h"
 
 @protocol AVHBookingProtocol <NSObject>

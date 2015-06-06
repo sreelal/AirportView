@@ -26,10 +26,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+        
     // Clear cache for testing
-    [[SDImageCache sharedImageCache] clearDisk];
-    [[SDImageCache sharedImageCache] clearMemory];
+//    [[SDImageCache sharedImageCache] clearDisk];
+//    [[SDImageCache sharedImageCache] clearMemory];
 
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"AVH_logo.png"]];
     
@@ -107,8 +107,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSMutableArray *photos = [[NSMutableArray alloc] init];
-    NSMutableArray *thumbs = [[NSMutableArray alloc] init];
+    NSArray *images = (NSArray *)_galleries[indexPath.row][@"images"];
+    
+    __block NSMutableArray *photos = [[NSMutableArray alloc] init];
+    __block NSMutableArray *thumbs = [[NSMutableArray alloc] init];
     
     BOOL displayActionButton = YES;
     BOOL displaySelectionButtons = NO;
@@ -116,7 +118,14 @@
     BOOL enableGrid = YES;
     BOOL startOnGrid = NO;
     
-    [photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"http://farm4.static.flickr.com/3567/3523321514_371d9ac42f_b.jpg"]]];
+    [images enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSString *imageURL = (NSString *)obj;
+        
+        [photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:imageURL]]];
+        [thumbs addObject:[MWPhoto photoWithURL:[NSURL URLWithString:imageURL]]];
+    }];
+    
+    /*[photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"http://farm4.static.flickr.com/3567/3523321514_371d9ac42f_b.jpg"]]];
     [photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"http://farm4.static.flickr.com/3629/3339128908_7aecabc34b_b.jpg"]]];
     [photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"http://farm4.static.flickr.com/3364/3338617424_7ff836d55f_b.jpg"]]];
     [photos addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"http://farm4.static.flickr.com/3590/3329114220_5fbc5bc92b_b.jpg"]]];
@@ -126,7 +135,7 @@
     [thumbs addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"http://farm4.static.flickr.com/3629/3339128908_7aecabc34b_q.jpg"]]];
     [thumbs addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"http://farm4.static.flickr.com/3364/3338617424_7ff836d55f_q.jpg"]]];
     [thumbs addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"http://farm4.static.flickr.com/3590/3329114220_5fbc5bc92b_q.jpg"]]];
-    [thumbs addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"http://farm3.static.flickr.com/2449/4052876281_6e068ac860_q.jpg"]]];
+    [thumbs addObject:[MWPhoto photoWithURL:[NSURL URLWithString:@"http://farm3.static.flickr.com/2449/4052876281_6e068ac860_q.jpg"]]];*/
     
     self.photos = photos;
     self.thumbs = thumbs;
@@ -179,9 +188,9 @@
 //    NSLog(@"ACTION!");
 //}
 
-- (void)photoBrowser:(MWPhotoBrowser *)photoBrowser didDisplayPhotoAtIndex:(NSUInteger)index {
-    NSLog(@"Did start viewing photo at index %lu", (unsigned long)index);
-}
+//- (void)photoBrowser:(MWPhotoBrowser *)photoBrowser didDisplayPhotoAtIndex:(NSUInteger)index {
+//    NSLog(@"Did start viewing photo at index %lu", (unsigned long)index);
+//}
 
 //- (BOOL)photoBrowser:(MWPhotoBrowser *)photoBrowser isPhotoSelectedAtIndex:(NSUInteger)index {
 //    return [[_selections objectAtIndex:index] boolValue];
@@ -191,10 +200,10 @@
 //    return [NSString stringWithFormat:@"Photo %lu", (unsigned long)index+1];
 //}
 
-- (void)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index selectedChanged:(BOOL)selected {
-    //[_selections replaceObjectAtIndex:index withObject:[NSNumber numberWithBool:selected]];
-    NSLog(@"Photo at index %lu selected %@", (unsigned long)index, selected ? @"YES" : @"NO");
-}
+//- (void)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index selectedChanged:(BOOL)selected {
+//    //[_selections replaceObjectAtIndex:index withObject:[NSNumber numberWithBool:selected]];
+//    NSLog(@"Photo at index %lu selected %@", (unsigned long)index, selected ? @"YES" : @"NO");
+//}
 
 //- (void)photoBrowserDidFinishModalPresentation:(MWPhotoBrowser *)photoBrowser {
 //    // If we subscribe to this method we must dismiss the view controller ourselves

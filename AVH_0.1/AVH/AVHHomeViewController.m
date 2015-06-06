@@ -7,7 +7,7 @@
 //
 
 #import "AVHHomeViewController.h"
-#import "AOScrollerView.h"
+//#import "AOScrollerView.h"
 #import "WebHandler.h"
 #import "Constants.h"
 #import "ProductCategory.h"
@@ -29,7 +29,7 @@
 
 #import <QuartzCore/QuartzCore.h>
 
-@interface AVHHomeViewController ()<ValueClickDelegate, RESideMenuDelegate>{
+@interface AVHHomeViewController ()<RESideMenuDelegate>{
    
 
 }
@@ -114,13 +114,13 @@
                     UIView *removingView = [self.view viewWithTag:222];
                     [removingView removeFromSuperview];
                     
-                    AOScrollerView *aSV = [[AOScrollerView alloc]initWithNameArr:bannerImages titleArr:nil height:120
+                    /*AOScrollerView *aSV = [[AOScrollerView alloc]initWithNameArr:bannerImages titleArr:nil height:120
                                                                            width: self.view.frame.size.width];
                     aSV.vDelegate=self;
                     aSV.frame = CGRectMake(0, 110, self.view.frame.size.width, 120);
                     aSV.tag = 222;
                     
-                    [self.view addSubview:aSV];
+                    [self.view addSubview:aSV];*/
                 });
             }            
         }

@@ -28,14 +28,14 @@
 
 - (void)showBusyView:(NSString *)textToDisplay {
     
-    _hud = [MBProgressHUD showHUDAddedTo:self.window animated:YES];
+    _hud = [AVHMBProgressHUD showHUDAddedTo:self.window animated:YES];
     
     _hud.labelText = textToDisplay;
 }
 
 - (void)hideBusyView {
     
-    [MBProgressHUD hideHUDForView:self.window animated:YES];
+    [AVHMBProgressHUD hideHUDForView:self.window animated:YES];
     
     self.hud=nil;
 }

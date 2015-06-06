@@ -64,7 +64,7 @@ typedef enum {
 /**
  * A progress view for showing definite progress by filling up a circle (similar to the indicator for building in xcode).
  */
-@interface MBRoundProgressView : UIProgressView {}
+@interface AVHMBRoundProgressView : UIProgressView {}
 
 /**
  * Create a 37 by 37 pixel indicator. 
@@ -86,7 +86,7 @@ typedef enum {
  *
  * This view supports three modes of operation:
  * - MBProgressHUDModeIndeterminate - shows a UIActivityIndicatorView
- * - MBProgressHUDModeDeterminate - shows a custom round progress indicator (MBRoundProgressView)
+ * - MBProgressHUDModeDeterminate - shows a custom round progress indicator (AVHMBRoundProgressView)
  * - MBProgressHUDModeCustomView - shows an arbitrary, user specified view (@see customView)
  *
  * All three modes can have optional labels assigned:
@@ -94,7 +94,7 @@ typedef enum {
  *   indicator view.
  * - If also the detailsLabelText property is set then another label is placed below the first label.
  */
-@interface MBProgressHUD : UIView {
+@interface AVHMBProgressHUD : UIView {
 	
 	MBProgressHUDMode mode;
     MBProgressHUDAnimation animationType;
@@ -150,7 +150,7 @@ typedef enum {
  *
  * @see hideHUDForView:animated:
  */
-+ (MBProgressHUD *)showHUDAddedTo:(UIView *)view animated:(BOOL)animated;
++ (AVHMBProgressHUD *)showHUDAddedTo:(UIView *)view animated:(BOOL)animated;
 
 /**
  * Finds a HUD sibview and hides it. The counterpart to this method is showHUDAddedTo:animated:.
