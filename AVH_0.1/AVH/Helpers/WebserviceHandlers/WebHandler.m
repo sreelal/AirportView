@@ -18,6 +18,16 @@
 
 @implementation WebHandler
 
+
++(void)bookRoomNowWithDetails:(NSDictionary*)bookingDetails andResponseCallback:(ResponseCallback)callback{
+    
+    [RequestHandler postRequestWithURL:HOTELS_BOOKING_URL
+                         andDictionary:bookingDetails withCallback:^(id result, NSError *error) {
+                             
+                             callback(result, error);
+                         }];
+}
+
 + (void)getHotelsList:(ResponseCallback)callback{
     
     [RequestHandler getRequestWithURL:HOTELS_LIST withCallback:^(id result, NSError *error) {

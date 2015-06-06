@@ -13,7 +13,8 @@
 #import "AVHDataHandler.h"
 #import "Constants.h"
 #import "HelperClass.h"
-
+#import "WebHandler.h"
+#import "AppDelegate.h"
 
 @interface AVHBookingReviewViewController()
 
@@ -63,8 +64,8 @@
             NSMutableDictionary *_stayDetails = [[[AVHDataHandler sharedManager] bookingDataHolder] objectForKey:YOUR_STAY_INFO];
             if (_stayDetails) {
                 
-                editStayCell.checkinDate.text =_stayDetails[@"checkin"];
-                editStayCell.checkoutDate.text =_stayDetails[@"checkout"];
+                editStayCell.checkinDate.text =_stayDetails[@"check_in"];
+                editStayCell.checkoutDate.text =_stayDetails[@"check_out"];
                 editStayCell.adultsValue.text =_stayDetails[@"adults"];
                 editStayCell.childrenValue.text =_stayDetails[@"children"];
                 editStayCell.roomsValue.text =_stayDetails[@"rooms"];
@@ -172,7 +173,78 @@
     
     //
     //Post all the data
-    NSLog(@"Book Now .....");
+    [[AppDelegate instance] showBusyView:@"Booking Rooms..."];
+    //Prepare request now
+    
+    NSMutableDictionary *_bookingDictionary = [NSMutableDictionary dictionary];
+    
+    NSMutableDictionary *_stayInformations = [[[AVHDataHandler sharedManager] bookingDataHolder] objectForKey:YOUR_STAY_INFO];
+    NSMutableDictionary *_roomRatesInfo = [[[AVHDataHandler sharedManager] bookingDataHolder] objectForKey:ROOM_RATES_INFO];
+    NSMutableDictionary *_guestDetails = [[[AVHDataHandler sharedManager] bookingDataHolder] objectForKey:GUEST_DETAILS];
+    
+
+    _bookingDictionary[@"check_in"] = (_stayInformations[@"check_in"])?_stayInformations[@"check_in"]:@"";
+    _bookingDictionary[@"check_out"] =(_stayInformations[@"check_out"])?_stayInformations[@"check_out"]:@"";
+    _bookingDictionary[@"adults"] = (_stayInformations[@"adults"])?_stayInformations[@"adults"]:@"";
+    _bookingDictionary[@"children"] = (_stayInformations[@"children"])?_stayInformations[@"children"]:@"";
+    _bookingDictionary[@"rooms"] = (_stayInformations[@"rooms"])?_stayInformations[@"rooms"]:@"";
+    _bookingDictionary[@"package_id"] = (_roomRatesInfo[@"id"])?_roomRatesInfo[@"id"]:@"";
+    _bookingDictionary[@"title"] = (_guestDetails[@"titleTxt"])?_guestDetails[@"titleTxt"]:@"";
+
+    _bookingDictionary[@"first_name"] = (_guestDetails[@"firstname"])?_guestDetails[@"firstname"]:@"";
+    _bookingDictionary[@"last_name"] = (_guestDetails[@"lastname"])?_guestDetails[@"lastname"]:@"";
+    _bookingDictionary[@"date_of_birth"] = (_guestDetails[@"dob"])?_guestDetails[@"dob"]:@"";
+    _bookingDictionary[@"email"] = (_guestDetails[@"email"])?_guestDetails[@"email"]:@"";
+    _bookingDictionary[@"company"] = (_guestDetails[@"companyname"])?_guestDetails[@"companyname"]:@"";
+    _bookingDictionary[@"country"] = (_guestDetails[@"country"])?_guestDetails[@"country"]:@"";
+    _bookingDictionary[@"address1"] = (_guestDetails[@"address1"])?_guestDetails[@"address1"]:@"";
+    _bookingDictionary[@"address2"] =@"";
+    _bookingDictionary[@"address3"] = @"";
+    _bookingDictionary[@"city"] = (_guestDetails[@"city"])?_guestDetails[@"city"]:@"";
+    _bookingDictionary[@"postal_code"] = (_guestDetails[@"postalcode"])?_guestDetails[@"postalcode"]:@"";
+    _bookingDictionary[@"day_phone"] = (_guestDetails[@"phoneno"])?_guestDetails[@"phoneno"]:@"";
+    _bookingDictionary[@"mobile_phone"] = (_guestDetails[@"phoneno"])?_guestDetails[@"phoneno"]:@"";
+    _bookingDictionary[@"comments"] = (_guestDetails[@"comments"])?_guestDetails[@"comments"]:@"";
+
+    
+    [WebHandler bookRoomNowWithDetails:_bookingDictionary andResponseCallback:^(id object, NSError *error) {
+        
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [[AppDelegate instance] hideBusyView];
+            
+            if (!error) {
+                
+                NSDictionary *_bbokingResponse = (NSDictionary*)object;
+                if ([_bbokingResponse[@"errors"] count]<=0) {
+                    
+                    
+                    UIAlertView *_alert = [[UIAlertView alloc] initWithTitle:@""
+                                                                     message:[NSString stringWithFormat:@"Your Room has been booked"]
+                                                                    delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+                    [_alert show];
+                }
+                else{
+                    
+                    UIAlertView *_alert = [[UIAlertView alloc] initWithTitle:@""
+                                                                     message:[NSString stringWithFormat:@"Error Occured while booking .Please check all the data and try again"]
+                                                                    delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+                    [_alert show];
+                }
+            }
+            else{
+                
+                UIAlertView *_alert = [[UIAlertView alloc] initWithTitle:@""
+                                                                 message:[NSString stringWithFormat:@"Unexpected error occured.Please try again later"]
+                                                                delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+                [_alert show];
+            }
+            
+        });
+
+    }];
+    
 }
 
 - (void)onSelectEdit:(id)sender{
@@ -217,6 +289,13 @@
                          }
                          
                      }];
+}
+
+#pragma mark - UIAlert delegates
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    [self.navigationController popToRootViewControllerAnimated:NO];
 }
 
 @end

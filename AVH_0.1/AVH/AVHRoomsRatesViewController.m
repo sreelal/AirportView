@@ -39,22 +39,27 @@
     self.navigationItem.leftBarButtonItem = leftBarItem;
     
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
-    
     [[AppDelegate instance] showBusyView:@"Loading Rooms..."];
-    
     [WebHandler getHotelsList:^(id object, NSError *error) {
         
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[AppDelegate instance] hideBusyView];
         if (object) {
             
-            dispatch_async(dispatch_get_main_queue(), ^{
-                
-                _hotelDetails = object;
-                [_hotelsTable reloadData];
-                
-                [[AppDelegate instance] hideBusyView];
-            });
-      
+            _hotelDetails = object;
+            [_hotelsTable reloadData];
+            
         }
+        else{
+            
+            UIAlertView *_alert = [[UIAlertView alloc] initWithTitle:@""
+                                                             message:[NSString stringWithFormat:@"Unexpected error occured.Please try again later"]
+                                                            delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            [_alert show];
+        }
+        
+       });
+
     }];
 }
 

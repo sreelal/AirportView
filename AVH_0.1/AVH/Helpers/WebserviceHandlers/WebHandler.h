@@ -32,4 +32,5 @@ typedef void (^ResponseCallback) (id object, NSError *error);
 + (void)sendEnquiryWithDict:(NSDictionary *)enqDict withCallback:(ResponseCallback)callback;
 + (void)searchProductsWithCriteria:(NSString*)searchCriteria withCallback:(ResponseCallback)callback;
 + (void)getFooterTextWithCallback:(ResponseCallback)callback;
++(void)bookRoomNowWithDetails:(NSDictionary*)bookingDetails andResponseCallback:(ResponseCallback)callback;
 @end
