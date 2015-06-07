@@ -22,6 +22,7 @@
 #define WEATHER_AIRPORT @"ACC"
 #define HOTELS_LIST @"http://demo.airportviewhotel.net/package.json"
 #define HOTELS_DETAILS @"http://demo.airportviewhotel.net/package/view/"
+#define HOTELS_BOOKING_URL @"http://demo.airportviewhotel.net/booking/confirm"
 
 #define SERVICE_URL_ROOT     @"http://demo.airportviewhotel.net/"
 #define SERVICE_HOTEL_INFO   @"hotel_info/all.json"
@@ -96,7 +97,7 @@
 //----------------------------------------------------
 
 #define SELECT_DATE @"Select Date"
-#define DATE_FORMAT_MM_DD_YYYY @"dd/MM/yyyy"
+#define DATE_FORMAT_MM_DD_YYYY @"yyyy-MM-dd"
 
 #define CacheDirectory     [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0]
 #define DocumentsDirectory [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]

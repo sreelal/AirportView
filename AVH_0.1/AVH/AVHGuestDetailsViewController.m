@@ -79,6 +79,33 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (BOOL)validateEmailWithString:(NSString*)email
+{
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:email];
+}
+
+- (BOOL)validateFields{
+    
+    
+    if ((txtTitle.text.length<=0)||
+        (txtFirstName.text.length<=0)||
+        (txtLastName.text.length<=0)||
+        (txtDob.text.length<=0)||
+        (txtEmail.text.length<=0)||
+        (txtCompanyName.text.length<=0)||
+        (txtAddress.text.length<=0)||
+        (txtCity.text.length<=0)||
+        (txtPostalCode.text.length<=0)||
+        (txtPhoneNumber.text.length<=0)||
+        (txtCountry.text.length<=0)) {
+        
+        return NO;
+    }
+    return YES;
+}
+
 #pragma mark - Button Actions
 
 - (void)navgationBackClicked:(id)sender {
@@ -87,8 +114,34 @@
 
 - (void)navgationNextClicked:(id)sender {
     
-    [self saveInformations];
-    [self.navigationController pushViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"bookingReviewVC"] animated:YES];
+    if ([self validateFields]) {
+        
+        if ([self validateEmailWithString:txtEmail.text]) {
+            
+            [self saveInformations];
+            [self.navigationController pushViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"bookingReviewVC"] animated:YES];
+            
+        }
+        else{
+            
+            UIAlertView *_alert = [[UIAlertView alloc] initWithTitle:@""
+                                                             message:[NSString stringWithFormat:@"Please enter a valid email"]
+                                                            delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            [_alert show];
+            return;
+            
+        }
+    }
+    else{
+        
+        UIAlertView *_alert = [[UIAlertView alloc] initWithTitle:@""
+                                                         message:[NSString stringWithFormat:@"Please enter all the informations"]
+                                                        delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [_alert show];
+        return;
+    }
+    
+ 
     
 }
 

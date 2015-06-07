@@ -157,8 +157,8 @@
     NSMutableDictionary *_stayInfoDictionary = [self retrieveInformations];
     if (_stayInfoDictionary) {
         
-        checkInTxt.text = [_stayInfoDictionary objectForKey:@"checkin"];
-        checkOutTxt.text = [_stayInfoDictionary objectForKey:@"checkout"];
+        checkInTxt.text = [_stayInfoDictionary objectForKey:@"check_in"];
+        checkOutTxt.text = [_stayInfoDictionary objectForKey:@"check_out"];
         adultsTxt.text = [_stayInfoDictionary objectForKey:@"adults"];
         childrenTxt.text = [_stayInfoDictionary objectForKey:@"children"];
         roomsTxt.text = [_stayInfoDictionary objectForKey:@"rooms"];
@@ -171,8 +171,8 @@
     
     //YOUR_STAY_INFO
     NSMutableDictionary *_stayInfoDictionary = [NSMutableDictionary dictionary];
-    [_stayInfoDictionary setObject:(checkInTxt.text)?checkInTxt.text:@"" forKey:@"checkin"];
-    [_stayInfoDictionary setObject:(checkOutTxt.text)?checkOutTxt.text:@"" forKey:@"checkout"];
+    [_stayInfoDictionary setObject:(checkInTxt.text)?checkInTxt.text:@"" forKey:@"check_in"];
+    [_stayInfoDictionary setObject:(checkOutTxt.text)?checkOutTxt.text:@"" forKey:@"check_out"];
     [_stayInfoDictionary setObject:(adultsTxt.text)?adultsTxt.text:@"" forKey:@"adults"];
     [_stayInfoDictionary setObject:(childrenTxt.text)?childrenTxt.text:@"" forKey:@"children"];
     [_stayInfoDictionary setObject:(roomsTxt.text)?roomsTxt.text:@"" forKey:@"rooms"];

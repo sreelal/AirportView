@@ -45,7 +45,6 @@
     
     [super viewDidLoad];
     
-    [[self navigationController] setNavigationBarHidden:YES animated:YES];
     
     [categoiesCollectionView setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
@@ -60,7 +59,8 @@
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-    
+    [[self navigationController] setNavigationBarHidden:YES animated:YES];
+
     //[self loadCategories];
     //[self loadBannerImages];
     //[self loadFooterText];
