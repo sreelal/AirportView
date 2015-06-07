@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "RESideMenu.h"
 
-@interface DGHMenuViewController : UIViewController<RESideMenuDelegate, UITableViewDelegate, UITableViewDataSource> {
-    
+@interface AVHMenuViewController : UIViewController<RESideMenuDelegate, UITableViewDelegate, UITableViewDataSource> {
+        IBOutlet NSLayoutConstraint *dummyViewWidthPin;
 }
 
 @property (nonatomic, strong) IBOutlet UITableView *menuTableView;

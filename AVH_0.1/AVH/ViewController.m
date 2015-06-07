@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "DGHMenuViewController.h"
+#import "AVHMenuViewController.h"
 #import "AppDelegate.h"
 
 @interface ViewController ()
@@ -28,7 +28,7 @@
     
     self.contentViewController  = [AppDelegate instance].homeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"homeviewController"];
     
-    self.leftMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"leftMenuViewController"];
+    self.rightMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"rightMenuViewcontroller"];
     
     self.delegate = self;
 }

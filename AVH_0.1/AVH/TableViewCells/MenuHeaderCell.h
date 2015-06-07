@@ -11,5 +11,6 @@
 @interface MenuHeaderCell : UITableViewCell
 
 @property (nonatomic, strong) IBOutlet UILabel *menuHeaderLabel;
+@property (nonatomic, strong) IBOutlet UIImageView *menuIconImgView;
 
 @end

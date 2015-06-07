@@ -9,7 +9,7 @@
 #import "MenuHeaderCell.h"
 
 @implementation MenuHeaderCell
-@synthesize menuHeaderLabel;
+@synthesize menuHeaderLabel, menuIconImgView;
 
 - (void)awakeFromNib {
     // Initialization code

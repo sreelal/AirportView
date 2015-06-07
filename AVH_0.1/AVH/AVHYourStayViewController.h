@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "PickerComponent.h"
+#import "RESideMenu.h"
 
 @interface AVHYourStayViewController : UIViewController {
     

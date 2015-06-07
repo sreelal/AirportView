@@ -11,7 +11,7 @@
 #import "HelperClass.h"
 #import "Constants.h"
 #import "CacheManager.h"
-#import "DGHMenuViewController.h"
+#import "AVHMenuViewController.h"
 
 @interface AppDelegate ()
 
