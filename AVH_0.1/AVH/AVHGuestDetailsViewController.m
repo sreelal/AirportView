@@ -63,6 +63,10 @@
     
     txtPostalCode.inputAccessoryView  = [self getInputAccesory];
     txtPhoneNumber.inputAccessoryView = [self getInputAccesory];
+    txtComments.inputAccessoryView = [self getInputAccesory];
+    txtComments.layer.cornerRadius = 5.0f;
+    txtComments.layer.borderWidth = 0.5f;
+    txtComments.layer.borderColor = [[UIColor lightGrayColor] CGColor];
     
     NSLog(@"Pin Constraints : %lf", scrollView.frame.size.height);
 }
@@ -152,7 +156,7 @@
     
     UIButton *btn     = (UIButton *)sender;
     
-    pickerComponent = [[PickerComponent alloc] initWithFrame:[UIScreen mainScreen].bounds forSelectedDate:[NSDate date] andDelegate:self withTag:btn.tag];
+    pickerComponent = [[PickerComponent alloc] initWithFrame:[UIScreen mainScreen].bounds forSelectedDate:[NSDate date] andMinDate:nil  andDelegate:self withTag:btn.tag];
 }
 
 - (void)loadSavedInformation {
@@ -280,6 +284,15 @@
 }
 
 #pragma mark - TextField Delegate
+
+- (void)textViewDidBeginEditing:(UITextView *)textView {
+    
+    activeTextField = (UITextField *)textView;
+    
+    pinHeightConstraint.constant = viewDefaultHeightPin + 250;
+    
+    [self.view layoutIfNeeded];
+}
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     

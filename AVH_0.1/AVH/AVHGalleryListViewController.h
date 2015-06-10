@@ -13,6 +13,8 @@
     IBOutlet UITableView *infoTableView;
 }
 
+@property (nonatomic, assign) BOOL isFromMenu;
+
 @property (nonatomic, strong) NSMutableArray *photos;
 @property (nonatomic, strong) NSMutableArray *thumbs;
 

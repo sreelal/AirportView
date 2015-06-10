@@ -11,6 +11,7 @@
 #import "Constants.h"
 #import "HelperClass.h"
 #import "AVHDataHandler.h"
+#import "AppDelegate.h"
 
 @interface AVHYourStayViewController ()<AVHBookingProtocol>
 
@@ -19,6 +20,7 @@
 @end
 
 @implementation AVHYourStayViewController
+@synthesize isFromMenu;
 
 - (void)viewDidLoad {
     
@@ -79,7 +81,7 @@
     else
         selDate = [HelperClass getNSDateFromString:checkOutTxt.text withFormat:DATE_FORMAT_MM_DD_YYYY];
     
-    pickerComponent = [[PickerComponent alloc] initWithFrame:[UIScreen mainScreen].bounds forSelectedDate:selDate andDelegate:self withTag:btn.tag];
+    pickerComponent = [[PickerComponent alloc] initWithFrame:[UIScreen mainScreen].bounds forSelectedDate:selDate andMinDate:[NSDate date] andDelegate:self withTag:btn.tag];
 }
 
 - (IBAction)showNumberPicker:(id)sender {
@@ -91,9 +93,15 @@
 
 - (void)navgationBackClicked:(id)sender {
     
-    _isViewPopped = YES;
+    if (isFromMenu) {
+        [self.sideMenuViewController setContentViewController:[AppDelegate instance].homeVC];
+        [self.sideMenuViewController hideMenuViewController];
+    }
+    else {
+        _isViewPopped = YES;
     
-    [self.navigationController popViewControllerAnimated:YES];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 - (void)navgationNextClicked:(id)sender {

@@ -256,7 +256,7 @@
         case 0:
         {
             
-            selectedViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"yourstayNavigaton"];
+            selectedViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"yourStayNavigation"];
         }
             break;
             

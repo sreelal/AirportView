@@ -12,4 +12,6 @@
     IBOutlet UITableView *infoTableView;
 }
 
+@property (nonatomic, assign) BOOL isFromMenu;
+
 @end

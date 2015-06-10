@@ -103,7 +103,7 @@
 }
 
 //- (instancetype)initWithFrame:(CGRect)frame forDatePicker:(BOOL)isDatePicker andDelegate:(id)target withTag:(int)tag {
-- (instancetype)initWithFrame:(CGRect)frame forSelectedDate:(NSDate *)selDate andDelegate:(id)target withTag:(long int)tag {
+- (instancetype)initWithFrame:(CGRect)frame forSelectedDate:(NSDate *)selDate andMinDate:(NSDate *)minDate andDelegate:(id)target withTag:(long int)tag {
 
     self = [super initWithFrame:frame];
     
@@ -142,7 +142,9 @@
         datePickerView = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, frame.size.height - 216, frame.size.width, 216)];
         datePickerView.datePickerMode = UIDatePickerModeDate;
         datePickerView.date = selDate;
-        datePickerView.minimumDate = [NSDate date];
+        
+        if (minDate)
+            datePickerView.minimumDate = [NSDate date];
         
         [datePickerView addTarget:self
                            action:@selector(dateChange:)

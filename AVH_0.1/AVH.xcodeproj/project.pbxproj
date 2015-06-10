@@ -10,6 +10,7 @@
 		2E0018581B19F72500388BE9 /* AVHHotelInfoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0018571B19F72500388BE9 /* AVHHotelInfoDetailViewController.m */; };
 		2E0083B71B1F3E9900E8E635 /* AVHPlacesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0083B61B1F3E9900E8E635 /* AVHPlacesListViewController.m */; };
 		2E0083BA1B1F3F4A00E8E635 /* AVHPlaceInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0083B91B1F3F4A00E8E635 /* AVHPlaceInfoViewController.m */; };
+		2E04D3721B27D17900F17418 /* AVHContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E04D3711B27D17900F17418 /* AVHContactUsViewController.m */; };
 		2E0CD16C1B1B1A5900E61224 /* AVHOfferInfoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E0CD16B1B1B1A5900E61224 /* AVHOfferInfoListViewController.m */; };
 		2E129BCE1B22CD0400030220 /* AVHGalleryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E129BCD1B22CD0400030220 /* AVHGalleryListViewController.m */; };
 		2E129C641B22E0DB00030220 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E129C631B22E0DB00030220 /* MessageUI.framework */; };
@@ -28,6 +29,9 @@
 		2E1437141B1E90DA0011186F /* AVH-menu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E14370E1B1E90DA0011186F /* AVH-menu@3x.png */; };
 		2E17508E1B1DFD0600B271DD /* InputAccessoryBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E17508C1B1DFD0600B271DD /* InputAccessoryBar.m */; };
 		2E17508F1B1DFD0600B271DD /* InputAccessoryBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E17508D1B1DFD0600B271DD /* InputAccessoryBar.xib */; };
+		2E2EACC51B268597007F0890 /* menu_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2EACC21B268597007F0890 /* menu_0.png */; };
+		2E2EACC61B268597007F0890 /* menu_0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2EACC31B268597007F0890 /* menu_0@2x.png */; };
+		2E2EACC71B268597007F0890 /* menu_0@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2EACC41B268597007F0890 /* menu_0@3x.png */; };
 		2E320A1E1B1B788600D88FAA /* AVHOfferCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E320A1D1B1B788600D88FAA /* AVHOfferCell.m */; };
 		2E636E411B249615006F5FA9 /* UtilClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E636E401B249615006F5FA9 /* UtilClass.m */; };
 		2E636E5E1B249804006F5FA9 /* menu_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E636E431B249804006F5FA9 /* menu_1.png */; };
@@ -218,6 +222,8 @@
 		2E0083B61B1F3E9900E8E635 /* AVHPlacesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHPlacesListViewController.m; sourceTree = "<group>"; };
 		2E0083B81B1F3F4A00E8E635 /* AVHPlaceInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHPlaceInfoViewController.h; sourceTree = "<group>"; };
 		2E0083B91B1F3F4A00E8E635 /* AVHPlaceInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHPlaceInfoViewController.m; sourceTree = "<group>"; };
+		2E04D3701B27D17900F17418 /* AVHContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHContactUsViewController.h; sourceTree = "<group>"; };
+		2E04D3711B27D17900F17418 /* AVHContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHContactUsViewController.m; sourceTree = "<group>"; };
 		2E0CD16A1B1B1A5900E61224 /* AVHOfferInfoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHOfferInfoListViewController.h; sourceTree = "<group>"; };
 		2E0CD16B1B1B1A5900E61224 /* AVHOfferInfoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHOfferInfoListViewController.m; sourceTree = "<group>"; };
 		2E129BCC1B22CD0400030220 /* AVHGalleryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHGalleryListViewController.h; sourceTree = "<group>"; };
@@ -239,6 +245,9 @@
 		2E17508B1B1DFD0600B271DD /* InputAccessoryBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputAccessoryBar.h; sourceTree = "<group>"; };
 		2E17508C1B1DFD0600B271DD /* InputAccessoryBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputAccessoryBar.m; sourceTree = "<group>"; };
 		2E17508D1B1DFD0600B271DD /* InputAccessoryBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputAccessoryBar.xib; sourceTree = "<group>"; };
+		2E2EACC21B268597007F0890 /* menu_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_0.png; sourceTree = "<group>"; };
+		2E2EACC31B268597007F0890 /* menu_0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_0@2x.png"; sourceTree = "<group>"; };
+		2E2EACC41B268597007F0890 /* menu_0@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_0@3x.png"; sourceTree = "<group>"; };
 		2E320A1C1B1B788600D88FAA /* AVHOfferCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHOfferCell.h; sourceTree = "<group>"; };
 		2E320A1D1B1B788600D88FAA /* AVHOfferCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHOfferCell.m; sourceTree = "<group>"; };
 		2E636E3F1B249615006F5FA9 /* UtilClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilClass.h; sourceTree = "<group>"; };
@@ -515,6 +524,9 @@
 		2E636E421B249804006F5FA9 /* Right_Menu_Icons */ = {
 			isa = PBXGroup;
 			children = (
+				2E2EACC21B268597007F0890 /* menu_0.png */,
+				2E2EACC31B268597007F0890 /* menu_0@2x.png */,
+				2E2EACC41B268597007F0890 /* menu_0@3x.png */,
 				2E636E431B249804006F5FA9 /* menu_1.png */,
 				2E636E441B249804006F5FA9 /* menu_1@2x.png */,
 				2E636E451B249804006F5FA9 /* menu_1@3x.png */,
@@ -822,6 +834,8 @@
 				E998CF151B14A45C00969553 /* AVHRoomInfoViewController.m */,
 				E9832AFF1B15FA8D00DFA2F4 /* AVHGuestDetailsViewController.h */,
 				E9832B001B15FA8D00DFA2F4 /* AVHGuestDetailsViewController.m */,
+				2E04D3701B27D17900F17418 /* AVHContactUsViewController.h */,
+				2E04D3711B27D17900F17418 /* AVHContactUsViewController.m */,
 				2EF640BA1B1994EC002741B4 /* AVHHotelInfoListViewController.h */,
 				2EF640BB1B1994EC002741B4 /* AVHHotelInfoListViewController.m */,
 				2E0018561B19F72500388BE9 /* AVHHotelInfoDetailViewController.h */,
@@ -1041,12 +1055,14 @@
 				E94781D01B11F1EB00FDD1FC /* Main.storyboard in Resources */,
 				E94781DC1B11FDD500FDD1FC /* AVH_logo_HR.png in Resources */,
 				2E17508F1B1DFD0600B271DD /* InputAccessoryBar.xib in Resources */,
+				2E2EACC61B268597007F0890 /* menu_0@2x.png in Resources */,
 				2E636E6B1B249804006F5FA9 /* menu_5@2x.png in Resources */,
 				E92BE4B31B03875F00AE6B2E /* NavigationBg.png in Resources */,
 				2EB6988D1AF9077600843341 /* menu_3_bg.png in Resources */,
 				2E636E661B249804006F5FA9 /* menu_3@3x.png in Resources */,
 				2EB6989A1AF9077600843341 /* Images.xcassets in Resources */,
 				2E1437111B1E90DA0011186F /* AVH-loc@3x.png in Resources */,
+				2E2EACC51B268597007F0890 /* menu_0.png in Resources */,
 				2EB698581AF9077600843341 /* bg-textbox.png in Resources */,
 				2E636E6C1B249804006F5FA9 /* menu_5@3x.png in Resources */,
 				E9832AF61B15F43D00DFA2F4 /* AVH_Book.png in Resources */,
@@ -1103,6 +1119,7 @@
 				E94781D81B11FD3F00FDD1FC /* AVH_logo.png in Resources */,
 				2EB698891AF9077600843341 /* menu_1_bg.png in Resources */,
 				2EB698941AF9077600843341 /* menu_6_icon.png in Resources */,
+				2E2EACC71B268597007F0890 /* menu_0@3x.png in Resources */,
 				2E636E651B249804006F5FA9 /* menu_3@2x.png in Resources */,
 				E9832AFC1B15F44A00DFA2F4 /* AVH_moreabout.png in Resources */,
 				E94781C51B11D81200FDD1FC /* AVHConfirmationView.xib in Resources */,
@@ -1212,6 +1229,7 @@
 				2EB698691AF9077600843341 /* AVHMBProgressHUD.m in Sources */,
 				E9832B011B15FA8D00DFA2F4 /* AVHGuestDetailsViewController.m in Sources */,
 				2EB698631AF9077600843341 /* DGHProductCell.m in Sources */,
+				2E04D3721B27D17900F17418 /* AVHContactUsViewController.m in Sources */,
 				2E0CD16C1B1B1A5900E61224 /* AVHOfferInfoListViewController.m in Sources */,
 				2EB698781AF9077600843341 /* WebHandler.m in Sources */,
 				2EB698661AF9077600843341 /* DGHWebViewController.m in Sources */,

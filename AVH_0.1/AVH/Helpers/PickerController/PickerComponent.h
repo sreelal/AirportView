@@ -21,10 +21,11 @@
 @property (nonatomic, assign) long int tag;
 @property (nonatomic, strong) NSMutableArray *data;
 @property (nonatomic, assign) id <PickerComponentDelegate> delegate;
+@property (nonatomic, assign) BOOL isMinDateToCurrentDate;
 
 - (instancetype)initWithData:(NSMutableArray *)data;
 - (instancetype)initWithFrame:(CGRect)frame andDelegate:(id)target andData:(NSMutableArray *)data withTag:(long int)tag;
 //- (instancetype)initWithFrame:(CGRect)frame forDatePicker:(BOOL)isDatePicker andDelegate:(id)target withTag:(int)tag;
-- (instancetype)initWithFrame:(CGRect)frame forSelectedDate:(NSDate *)selDate andDelegate:(id)target withTag:(long int)tag;
+- (instancetype)initWithFrame:(CGRect)frame forSelectedDate:(NSDate *)selDate andMinDate:(NSDate *)minDate andDelegate:(id)target withTag:(long int)tag;
 
 @end

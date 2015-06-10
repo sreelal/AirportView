@@ -48,7 +48,7 @@
     else
         selDate = [HelperClass getNSDateFromString:checkOutTxt.text withFormat:DATE_FORMAT_MM_DD_YYYY];
     
-    pickerComponent = [[PickerComponent alloc] initWithFrame:[UIScreen mainScreen].bounds forSelectedDate:selDate andDelegate:self withTag:btn.tag];
+    pickerComponent = [[PickerComponent alloc] initWithFrame:[UIScreen mainScreen].bounds forSelectedDate:selDate andMinDate:[NSDate date]  andDelegate:self withTag:btn.tag];
 }
 
 - (IBAction)showNumberPicker:(id)sender {

@@ -17,4 +17,6 @@
     IBOutlet UILabel *reportLbl;
 }
 
+@property (nonatomic, assign) BOOL isFromMenu;
+
 @end

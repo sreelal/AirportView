@@ -22,4 +22,6 @@
     NSMutableArray *pickerNumberData;
 }
 
+@property (nonatomic, assign) BOOL isFromMenu;
+
 @end

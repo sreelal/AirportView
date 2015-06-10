@@ -26,6 +26,8 @@
 #import "AVHOfferInfoListViewController.h"
 #import "AVHPlacesListViewController.h"
 #import "AVHGalleryListViewController.h"
+#import "AVHContactUsViewController.h"
+#import "UtilClass.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -214,44 +216,63 @@
     
     switch (indexPath.row) {
         case 0:{
+            [[UtilClass sharedManager] setActiveMenuIndex:1];
+            
             AVHYourStayViewController *yourStayVC = [self.storyboard instantiateViewControllerWithIdentifier:@"YourStayVC"];
             [self.navigationController pushViewController:yourStayVC animated:YES];
         }
         break;
          
         case 1:{
+            [[UtilClass sharedManager] setActiveMenuIndex:2];
+            
             AVHHotelInfoListViewController *hotelInfoListVC = [self.storyboard instantiateViewControllerWithIdentifier:@"HotelInfoListVC"];
             [self.navigationController pushViewController:hotelInfoListVC animated:YES];
         }
         break;
             
+        case 2:{
+            [[UtilClass sharedManager] setActiveMenuIndex:9];
+            
+            AVHContactUsViewController *contactUsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ContactVC"];
+            [self.navigationController pushViewController:contactUsVC animated:YES];
+        }
+            break;
+            
         case 3:{
+            [[UtilClass sharedManager] setActiveMenuIndex:3];
+            
             AVHOfferInfoListViewController *offerInfoVC = [self.storyboard instantiateViewControllerWithIdentifier:@"OfferListVC"];
             [self.navigationController pushViewController:offerInfoVC animated:YES];
         }
         break;
             
         case 4:{
+            [[UtilClass sharedManager] setActiveMenuIndex:4];
+            
             AVHGalleryListViewController *galleryVC = [self.storyboard instantiateViewControllerWithIdentifier:@"GalleryVC"];
             [self.navigationController pushViewController:galleryVC animated:YES];
         }
         break;
             
         case 5:{
+            [[UtilClass sharedManager] setActiveMenuIndex:5];
+            
             AVHPlacesListViewController *placesListVC = [self.storyboard instantiateViewControllerWithIdentifier:@"PlacesListVC"];
             [self.navigationController pushViewController:placesListVC animated:YES];
         }
         break;
 
         case 6:{
+            [[UtilClass sharedManager] setActiveMenuIndex:6];
+            
             AVHWeatherViewController *weatherVC = [self.storyboard instantiateViewControllerWithIdentifier:@"WeatherVC"];
             [self.navigationController pushViewController:weatherVC animated:YES];
         }
         break;
             
         case 7:{
-            AVHDirectionsViewController *directionsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"DirectionsVC"];
-            [self.navigationController pushViewController:directionsVC animated:YES];
+            
         }
         break;
     

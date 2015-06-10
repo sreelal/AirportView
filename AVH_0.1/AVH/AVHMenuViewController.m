@@ -13,6 +13,7 @@
 #import "AVHOfferInfoListViewController.h"
 #import "AVHGalleryListViewController.h"
 #import "AVHPlacesListViewController.h"
+#import "AVHContactUsViewController.h"
 
 #import "ProductCategory.h"
 #import "Constants.h"
@@ -48,9 +49,7 @@
     [self.view layoutIfNeeded];
     /////////////////////////////////////
     
-    //self.view.backgroundColor = [UIColor colorWithPatternImage: [UIImage imageNamed: @"NavigationBg.png"]];
-    
-    self.menus = [[NSMutableArray alloc] initWithObjects:@"Home", @"Booking", @"Hotel Info", @"Contact", @"Offers", @"Gallery", @"Places To Visit", @"Weather", @"Trip Advisor", @"Facebook", nil];
+    self.menus = [[NSMutableArray alloc] initWithObjects:@"Home", @"Booking", @"Hotel Info", @"Offers", @"Gallery", @"Places To Visit", @"Weather", @"Trip Advisor", @"Facebook", @"Contact", nil];
     
     self.menuTableView.delegate = self;
     self.menuTableView.dataSource = self;
@@ -59,6 +58,12 @@
     self.menuTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshMenuCategories:) name:NOTIFICATION_REFRESH_MENU object:nil];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    
+    [menuTableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -83,53 +88,74 @@
     [[UtilClass sharedManager] setActiveMenuIndex:indexPath.row];
     
     [self.menuTableView reloadData];
-    
-    //[tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    switch (indexPath.section) {
+        
+    switch (indexPath.row) {
         case 0: {
-            [self.sideMenuViewController setContentViewController:[AppDelegate instance].homeVC];
+            AVHHomeViewController *homeVC = [self.storyboard instantiateViewControllerWithIdentifier:@"homeviewController"];
+            [self.sideMenuViewController setContentViewController:homeVC];
             [self.sideMenuViewController hideMenuViewController];
         }
         break;
         case 1: {
-            AVHYourStayViewController *yourStayVC = [self.storyboard instantiateViewControllerWithIdentifier:@"YourStayVC"];
-            [self.sideMenuViewController setContentViewController:yourStayVC];
+            UINavigationController *yourStayNavVC = [self.storyboard instantiateViewControllerWithIdentifier:@"yourStayNavigation"];
+            AVHYourStayViewController *yourStayVC = [yourStayNavVC.viewControllers firstObject];
+            yourStayVC.isFromMenu = YES;
+            
+            [self.sideMenuViewController setContentViewController:yourStayNavVC];
             [self.sideMenuViewController hideMenuViewController];
         }
         break;
         case 2: {
-            AVHHotelInfoListViewController *hotelInfoListVC = [self.storyboard instantiateViewControllerWithIdentifier:@"HotelInfoListVC"];
+            UINavigationController *hotelInfoNavVC = [self.storyboard instantiateViewControllerWithIdentifier:@"hotelInfoNav"];
+            AVHHotelInfoListViewController *hotelInfoVC = [hotelInfoNavVC.viewControllers firstObject];
+            hotelInfoVC.isFromMenu = YES;
             
-            [self.sideMenuViewController setContentViewController:hotelInfoListVC];
+            [self.sideMenuViewController setContentViewController:hotelInfoNavVC];
             [self.sideMenuViewController hideMenuViewController];
         }
         break;
         case 3: {
-            AVHOfferInfoListViewController *offerInfoVC = [self.storyboard instantiateViewControllerWithIdentifier:@"OfferListVC"];
+            UINavigationController *offerNavVC = [self.storyboard instantiateViewControllerWithIdentifier:@"OfferNav"];
+            AVHOfferInfoListViewController *offerInfoVC = [offerNavVC.viewControllers firstObject];
+            offerInfoVC.isFromMenu = YES;
             
-            [self.sideMenuViewController setContentViewController:offerInfoVC];
+            [self.sideMenuViewController setContentViewController:offerNavVC];
             [self.sideMenuViewController hideMenuViewController];
         }
             break;
         case 4: {
-            AVHGalleryListViewController *galleryVC = [self.storyboard instantiateViewControllerWithIdentifier:@"GalleryVC"];
+            UINavigationController *galleryNavVC = [self.storyboard instantiateViewControllerWithIdentifier:@"GalleryNav"];
+            AVHGalleryListViewController *galleryVC = [galleryNavVC.viewControllers firstObject];
+            galleryVC.isFromMenu = YES;
             
-            [self.sideMenuViewController setContentViewController:galleryVC];
+            [self.sideMenuViewController setContentViewController:galleryNavVC];
             [self.sideMenuViewController hideMenuViewController];
         }
-        break;
+            break;
         case 5: {
-            AVHPlacesListViewController *placesListVC = [self.storyboard instantiateViewControllerWithIdentifier:@"PlacesListVC"];
+            UINavigationController *placesNavVC = [self.storyboard instantiateViewControllerWithIdentifier:@"PlacesNav"];
+            AVHPlacesListViewController *placesListVC = [placesNavVC.viewControllers firstObject];
+            placesListVC.isFromMenu = YES;
             
-            [self.sideMenuViewController setContentViewController:placesListVC];
+            [self.sideMenuViewController setContentViewController:placesNavVC];
             [self.sideMenuViewController hideMenuViewController];
         }
         break;
         case 6: {
-            AVHWeatherViewController *weatherVC = [self.storyboard instantiateViewControllerWithIdentifier:@"WeatherVC"];
+            UINavigationController *weatherNavVC = [self.storyboard instantiateViewControllerWithIdentifier:@"WeatherNav"];
+            AVHWeatherViewController *weatherVC= [weatherNavVC.viewControllers firstObject];
+            weatherVC.isFromMenu = YES;
             
-            [self.sideMenuViewController setContentViewController:weatherVC];
+            [self.sideMenuViewController setContentViewController:weatherNavVC];
+            [self.sideMenuViewController hideMenuViewController];
+        }
+        break;
+        case 9: {
+            UINavigationController *contactNavVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ContactNav"];
+            AVHContactUsViewController *contactVC= [contactNavVC.viewControllers firstObject];
+            contactVC.isFromMenu = YES;
+            
+            [self.sideMenuViewController setContentViewController:contactNavVC];
             [self.sideMenuViewController hideMenuViewController];
         }
         break;
@@ -162,7 +188,7 @@
     
     if ([[UtilClass sharedManager] getActiveMenuIndex] == indexPath.row) {
         menuCell.contentView.backgroundColor = [UIColor lightGrayColor];
-        //menuCell.menuIconImgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"menu_%ld_selected.png", indexPath.row]];
+        menuCell.menuIconImgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"menu_%ld.png", (long)indexPath.row]];
         menuCell.menuHeaderLabel.textColor = [UIColor darkGrayColor];
     }
     else {

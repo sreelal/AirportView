@@ -23,6 +23,7 @@
 @end
 
 @implementation AVHGalleryListViewController
+@synthesize isFromMenu;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -72,9 +73,15 @@
 
 - (void)navgationBackClicked:(id)sender {
     
-    _isViewPopped = YES;
+    if (isFromMenu) {
+        [self.sideMenuViewController setContentViewController:[AppDelegate instance].homeVC];
+        [self.sideMenuViewController hideMenuViewController];
+    }
+    else {
+        _isViewPopped = YES;
+        [self.navigationController popViewControllerAnimated:YES];
+    }
     
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - TableView Delegates & Datasource
