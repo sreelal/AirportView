@@ -14,6 +14,7 @@
 #import "AVHGalleryListViewController.h"
 #import "AVHPlacesListViewController.h"
 #import "AVHContactUsViewController.h"
+#import "AVHFaceBookViewController.h"
 
 #import "ProductCategory.h"
 #import "Constants.h"
@@ -150,6 +151,15 @@
             [self.sideMenuViewController hideMenuViewController];
         }
         break;
+        case 8: {
+            UINavigationController *fbNavVC = [self.storyboard instantiateViewControllerWithIdentifier:@"fbNav"];
+            AVHFaceBookViewController *fbVC= [fbNavVC.viewControllers firstObject];
+            fbVC.isFromMenu = YES;
+            
+            [self.sideMenuViewController setContentViewController:fbNavVC];
+            [self.sideMenuViewController hideMenuViewController];
+        }
+            break;
         case 9: {
             UINavigationController *contactNavVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ContactNav"];
             AVHContactUsViewController *contactVC= [contactNavVC.viewControllers firstObject];

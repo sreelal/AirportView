@@ -21,6 +21,8 @@ typedef void (^ResponseCallback) (id object, NSError *error);
 + (void)getHotelInfoListWithCallback:(ResponseCallback)callback;
 + (void)getOfferInfoListWithCallback:(ResponseCallback)callback;
 + (void)getPlacesToVisitWithCallback:(ResponseCallback)callback;
++ (void)getFacebookProfilewithCallback:(ResponseCallback)callback;
++ (void)getFacebookPostswithCallback:(ResponseCallback)callback;
 + (void)getCategoriesWithCallback:(ResponseCallback)callback;
 + (void)getBannerImagesWithCallback:(ResponseCallback)bannerImagesCallback;
 + (void)getSubCategoriesForCategoryId:(NSString *)categoryId withCallback:(ResponseCallback)callback;

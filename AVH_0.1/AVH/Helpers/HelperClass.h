@@ -69,5 +69,7 @@
 
 + (UIBarButtonItem *)getUpdateButton:(id)target andAction:(SEL)action;
 
++ (UIColor *)colorFromHexString:(NSString *)hexString;
+
 
 @end

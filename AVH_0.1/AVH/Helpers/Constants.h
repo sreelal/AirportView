@@ -39,6 +39,10 @@
 #define SERVICE_ENQUIRY      @"enquiry/submit"
 #define SEARCH_PRODUCT       @"product/search&search="
 #define SERVICE_FOOTER_TXT   @"status/text"
+
+#define SERVICE_FACEBOOK_POST   @"https://graph.facebook.com/136288153081650/posts?access_token=1588533571375395%7CM5TnS1YB_lWBsO0EXQs70GVhN6c"
+#define SERVICE_FACEBOOK_PROF   @"https://graph.facebook.com/136288153081650"
+#define SERVICE_FB_PAGE_IMG_URL @"https://graph.facebook.com/136288153081650/picture"
 //--------------------------------------------------
 
 //------------------Dictionary Keys-----------------
@@ -102,7 +106,7 @@
 #define CacheDirectory     [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0]
 #define DocumentsDirectory [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
 
-
+#define APP_THEME     @"#66BFE8"
 
 #define YOUR_STAY_INFO        @"yourstayinformation"
 #define ROOM_RATES_INFO       @"roomratesinformation"

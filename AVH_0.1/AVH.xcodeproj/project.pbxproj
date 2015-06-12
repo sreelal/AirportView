@@ -29,6 +29,9 @@
 		2E1437141B1E90DA0011186F /* AVH-menu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E14370E1B1E90DA0011186F /* AVH-menu@3x.png */; };
 		2E17508E1B1DFD0600B271DD /* InputAccessoryBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E17508C1B1DFD0600B271DD /* InputAccessoryBar.m */; };
 		2E17508F1B1DFD0600B271DD /* InputAccessoryBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E17508D1B1DFD0600B271DD /* InputAccessoryBar.xib */; };
+		2E1894101B2A6DBA00E495F9 /* AVHFaceBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E18940D1B2A6DBA00E495F9 /* AVHFaceBookViewController.m */; };
+		2E1894111B2A6DBA00E495F9 /* AVHFBPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E18940F1B2A6DBA00E495F9 /* AVHFBPostViewController.m */; };
+		2E1894171B2A6F3100E495F9 /* FBTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1894161B2A6F3100E495F9 /* FBTableViewCell.m */; };
 		2E2EACC51B268597007F0890 /* menu_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2EACC21B268597007F0890 /* menu_0.png */; };
 		2E2EACC61B268597007F0890 /* menu_0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2EACC31B268597007F0890 /* menu_0@2x.png */; };
 		2E2EACC71B268597007F0890 /* menu_0@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2EACC41B268597007F0890 /* menu_0@3x.png */; };
@@ -245,6 +248,12 @@
 		2E17508B1B1DFD0600B271DD /* InputAccessoryBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputAccessoryBar.h; sourceTree = "<group>"; };
 		2E17508C1B1DFD0600B271DD /* InputAccessoryBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputAccessoryBar.m; sourceTree = "<group>"; };
 		2E17508D1B1DFD0600B271DD /* InputAccessoryBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputAccessoryBar.xib; sourceTree = "<group>"; };
+		2E18940C1B2A6DBA00E495F9 /* AVHFaceBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHFaceBookViewController.h; sourceTree = "<group>"; };
+		2E18940D1B2A6DBA00E495F9 /* AVHFaceBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHFaceBookViewController.m; sourceTree = "<group>"; };
+		2E18940E1B2A6DBA00E495F9 /* AVHFBPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHFBPostViewController.h; sourceTree = "<group>"; };
+		2E18940F1B2A6DBA00E495F9 /* AVHFBPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHFBPostViewController.m; sourceTree = "<group>"; };
+		2E1894151B2A6F3100E495F9 /* FBTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTableViewCell.h; sourceTree = "<group>"; };
+		2E1894161B2A6F3100E495F9 /* FBTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTableViewCell.m; sourceTree = "<group>"; };
 		2E2EACC21B268597007F0890 /* menu_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_0.png; sourceTree = "<group>"; };
 		2E2EACC31B268597007F0890 /* menu_0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_0@2x.png"; sourceTree = "<group>"; };
 		2E2EACC41B268597007F0890 /* menu_0@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_0@3x.png"; sourceTree = "<group>"; };
@@ -785,6 +794,8 @@
 				2EF640BE1B19BBFD002741B4 /* AVHHotelInfoListCell.m */,
 				2E320A1C1B1B788600D88FAA /* AVHOfferCell.h */,
 				2E320A1D1B1B788600D88FAA /* AVHOfferCell.m */,
+				2E1894151B2A6F3100E495F9 /* FBTableViewCell.h */,
+				2E1894161B2A6F3100E495F9 /* FBTableViewCell.m */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -858,6 +869,10 @@
 				E92BE4B51B0389C700AE6B2E /* AVHFlightInfoViewController.m */,
 				68C03C491B11A209002BAC6C /* AVHBookingViewController.h */,
 				68C03C4A1B11A209002BAC6C /* AVHBookingViewController.m */,
+				2E18940C1B2A6DBA00E495F9 /* AVHFaceBookViewController.h */,
+				2E18940D1B2A6DBA00E495F9 /* AVHFaceBookViewController.m */,
+				2E18940E1B2A6DBA00E495F9 /* AVHFBPostViewController.h */,
+				2E18940F1B2A6DBA00E495F9 /* AVHFBPostViewController.m */,
 				2EB697CD1AF9077600843341 /* DGHContentViewController.h */,
 				2EB697CE1AF9077600843341 /* DGHContentViewController.m */,
 				2EB697CF1AF9077600843341 /* DGHEnquireViewController.h */,
@@ -1192,6 +1207,7 @@
 				E998CF131B14899B00969553 /* AVHYourStayViewController.m in Sources */,
 				686982BA1B1E1DAF00623402 /* AVHEditRoomCell.m in Sources */,
 				583D1DD71B208C3D00268EB6 /* AVHBookingReviewViewController.m in Sources */,
+				2E1894111B2A6DBA00E495F9 /* AVHFBPostViewController.m in Sources */,
 				E92BE4B61B0389C700AE6B2E /* AVHFlightInfoViewController.m in Sources */,
 				680A121D1B18D623005698FE /* AVHDirectionsViewController.m in Sources */,
 				2EB698611AF9077600843341 /* AVHMenuViewController.m in Sources */,
@@ -1223,6 +1239,7 @@
 				2EB698671AF9077600843341 /* CacheManager.m in Sources */,
 				E94781921B11D6F700FDD1FC /* SwipeView.m in Sources */,
 				2EB698A91AF9077600843341 /* NotificationCell.m in Sources */,
+				2E1894171B2A6F3100E495F9 /* FBTableViewCell.m in Sources */,
 				2EB698651AF9077600843341 /* DGHProductViewController.m in Sources */,
 				2EB698A81AF9077600843341 /* MenuHeaderCell.m in Sources */,
 				2EB698A11AF9077600843341 /* Product.m in Sources */,
@@ -1237,6 +1254,7 @@
 				68BB47441B1CCC6600E078FA /* AVHDataHandler.m in Sources */,
 				E94781C61B11D81200FDD1FC /* AVHEnhanceStay.m in Sources */,
 				2E636E411B249615006F5FA9 /* UtilClass.m in Sources */,
+				2E1894101B2A6DBA00E495F9 /* AVHFaceBookViewController.m in Sources */,
 				E94781C81B11D81200FDD1FC /* AVHGuestDetails.m in Sources */,
 				2EB6985F1AF9077600843341 /* DGHHomeCollectionViewCell.m in Sources */,
 				2EB6985E1AF9077600843341 /* DGHEnquireViewController.m in Sources */,
