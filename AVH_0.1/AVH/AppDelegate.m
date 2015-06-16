@@ -131,7 +131,9 @@
         NSString *token = [deviceToken description];
         token = [token stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]];
         token = [token stringByReplacingOccurrencesOfString:@" " withString:@""];
-        
+    
+        [[NSUserDefaults standardUserDefaults] setObject:token forKey:KEY_DEVICE_TOKEN];
+        [[NSUserDefaults standardUserDefaults] synchronize];
         NSLog(@"My token is: %@", token);
         
         [WebHandler sendDeviceToken:token withCallback:^(id object, NSError *error) {

@@ -36,13 +36,14 @@
 #define SERVICE_BANNER       @"banner&banner=7"
 #define SERVICE_POST_TOKEN   @"device/register"
 #define SERVICE_NOTIFICATION @"notification"
-#define SERVICE_ENQUIRY      @"enquiry/submit"
+#define SERVICE_ENQUIRY      @"contact/submit1"
 #define SEARCH_PRODUCT       @"product/search&search="
 #define SERVICE_FOOTER_TXT   @"status/text"
 
-#define SERVICE_FACEBOOK_POST   @"https://graph.facebook.com/136288153081650/posts?access_token=1588533571375395%7CM5TnS1YB_lWBsO0EXQs70GVhN6c"
-#define SERVICE_FACEBOOK_PROF   @"https://graph.facebook.com/136288153081650"
-#define SERVICE_FB_PAGE_IMG_URL @"https://graph.facebook.com/136288153081650/picture"
+//#define SERVICE_FACEBOOK_POST   @"https://graph.facebook.com/136288153081650/posts?access_token=1588533571375395%7CM5TnS1YB_lWBsO0EXQs70GVhN6c"
+#define SERVICE_FACEBOOK_POST   @"https://graph.facebook.com/379712298860476/posts?access_token=CAACEdEose0cBAMQ3bLi7jBvwGMSUDX9QfDx55526yccu5J5XkAntZA3lvggul0zSxFOGM0cFkY1lXJEGiZCxqK6ZCEwG1ROwP3yXMCmQXfBZCcYDr1HtQRpyg87TeVLt8Fv2DOrHfv3GOjYCgildLOxldD6htwmv16giwREPp7111L21JvvmMwZAD791XQLCjYBcrdV8Px1rW74buMcCJ"
+#define SERVICE_FACEBOOK_PROF   @"https://graph.facebook.com/379712298860476"
+#define SERVICE_FB_PAGE_IMG_URL @"https://graph.facebook.com/379712298860476/picture"
 //--------------------------------------------------
 
 //------------------Dictionary Keys-----------------

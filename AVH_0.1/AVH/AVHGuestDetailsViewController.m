@@ -54,7 +54,7 @@
     
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
     
-    [scrollView setContentOffset:CGPointMake(0, 250) animated:YES];
+    //[scrollView setContentOffset:CGPointMake(0, 250) animated:YES];
     
     countries = [HelperClass getListOfCountries];
     titles    = [[NSArray alloc] initWithObjects:@"Ms.", @"Miss", @"Mrs", @"Mr.",  @"Dr.", @"Professor", nil];
@@ -69,12 +69,30 @@
     txtComments.layer.borderColor = [[UIColor lightGrayColor] CGColor];
     
     NSLog(@"Pin Constraints : %lf", scrollView.frame.size.height);
+    
+    //Testing
+    
+    //CGPoint point = CGPointMake(0.0f, -100);
+    //scrollView.contentOffset = point;
+    
+    //[txtAddress becomeFirstResponder];
+    
+    //[self autoScrolTextField:txtAddress];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     
     [super viewWillAppear:animated];
     [self loadSavedInformation];
+}
+
+- (void)viewDidLayoutSubviews {
+    
+    NSLog(@"Content Size: %f", scrollView.contentSize.height);
+    
+    //scrollView.contentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, 1200);
+    
+    //NSLog(@"Content Size: %f", scrollView.contentSize.height);
 }
 
 
@@ -98,10 +116,8 @@
         (txtLastName.text.length<=0)||
         (txtDob.text.length<=0)||
         (txtEmail.text.length<=0)||
-        (txtCompanyName.text.length<=0)||
         (txtAddress.text.length<=0)||
         (txtCity.text.length<=0)||
-        (txtPostalCode.text.length<=0)||
         (txtPhoneNumber.text.length<=0)||
         (txtCountry.text.length<=0)) {
         
@@ -209,8 +225,6 @@
     [_guestInfoDictionary setObject:(txtDob.text)?txtDob.text:@"" forKey:@"dob"];
     [_guestInfoDictionary setObject:(txtEmail.text)?txtEmail.text:@"" forKey:@"email"];
     
-    //NSLog(@"Selected Index: %d", index);
-    
     [_guestInfoDictionary setObject:(txtCompanyName.text)?txtCompanyName.text:@"" forKey:@"companyname"];
     [_guestInfoDictionary setObject:(txtCountry.text)?txtCountry.text:@"" forKey:@"country"];
     [_guestInfoDictionary setObject:(txtAddress.text)?txtAddress.text:@"" forKey:@"address1"];
@@ -219,9 +233,9 @@
     [_guestInfoDictionary setObject:(txtPostalCode.text)?txtPostalCode.text:@"" forKey:@"postalcode"];
     [_guestInfoDictionary setObject:(txtPhoneNumber.text)?txtPhoneNumber.text:@"" forKey:@"phoneno"];
     [_guestInfoDictionary setObject:(txtComments.text)?txtComments.text:@"" forKey:@"comments"];
+    [_guestInfoDictionary setObject:@"PENDING" forKey:@"status"];
 
     if (![[AVHDataHandler sharedManager] bookingDataHolder]) {
-        
         [[AVHDataHandler sharedManager] setBookingDataHolder:[NSMutableDictionary dictionary]];
     }
     
@@ -229,7 +243,6 @@
 }
 
 - (NSMutableDictionary*)retrieveInformations {
-    
     return [[[AVHDataHandler sharedManager] bookingDataHolder] objectForKey:GUEST_DETAILS];
 }
 
@@ -287,6 +300,7 @@
 
 - (void)textViewDidBeginEditing:(UITextView *)textView {
     
+    
     activeTextField = (UITextField *)textView;
     
     pinHeightConstraint.constant = viewDefaultHeightPin + 250;
@@ -296,11 +310,16 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     
+    //NSLog(@"Content Offset Y: %f", scrollView.contentOffset.y);
+    //NSLog(@"Txt Y pos: %f", textField.frame.origin.y);
+    
     activeTextField = textField;
     
     pinHeightConstraint.constant = viewDefaultHeightPin + 250;
     
     [self.view layoutIfNeeded];
+    
+    //[self autoScrolTextField:textField];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -351,6 +370,31 @@
     pinHeightConstraint.constant = viewDefaultHeightPin;
     
     [self.view layoutIfNeeded];
+}
+
+- (void) autoScrolTextField: (UITextField *) textField  {
+    
+    //NSLog(@"Txt Y pos: %f", textField.frame.origin.y);
+    
+    //[scrollView setContentOffset:CGPointMake(0, 200) animated:YES];
+    
+    float slidePoint = 0.0f;
+    float keyBoard_Y_Origin = self.view.bounds.size.height - 216.0f;
+    float textFieldBottomPoint = textField.superview.frame.origin.y + (textField.frame.origin.y + textField.frame.size.height);
+    float textFldValidationPoint = textFieldBottomPoint - scrollView.contentOffset.y;
+    
+    NSLog(@"KeyBY : %f, txtValidPoint : %f", keyBoard_Y_Origin, textFldValidationPoint);
+    
+    if (keyBoard_Y_Origin < textFldValidationPoint) {
+        NSLog(@"Before Content Offset Y: %f", scrollView.contentOffset.y);
+        
+        //slidePoint = textFieldBottomPoint - keyBoard_Y_Origin + 10.0f;
+        slidePoint = textFieldBottomPoint + keyBoard_Y_Origin;
+        CGPoint point = CGPointMake(0.0f, slidePoint);
+        [scrollView setContentOffset:point animated:YES];
+        
+        NSLog(@"After Content Offset Y: %f", scrollView.contentOffset.y);
+    }
 }
 
 @end

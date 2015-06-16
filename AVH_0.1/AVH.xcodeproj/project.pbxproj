@@ -36,6 +36,7 @@
 		2E2EACC61B268597007F0890 /* menu_0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2EACC31B268597007F0890 /* menu_0@2x.png */; };
 		2E2EACC71B268597007F0890 /* menu_0@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2EACC41B268597007F0890 /* menu_0@3x.png */; };
 		2E320A1E1B1B788600D88FAA /* AVHOfferCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E320A1D1B1B788600D88FAA /* AVHOfferCell.m */; };
+		2E4AA1BC1B2E6CF900CB1519 /* AVHOfferInfoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4AA1BB1B2E6CF900CB1519 /* AVHOfferInfoDetailViewController.m */; };
 		2E636E411B249615006F5FA9 /* UtilClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E636E401B249615006F5FA9 /* UtilClass.m */; };
 		2E636E5E1B249804006F5FA9 /* menu_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E636E431B249804006F5FA9 /* menu_1.png */; };
 		2E636E5F1B249804006F5FA9 /* menu_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E636E441B249804006F5FA9 /* menu_1@2x.png */; };
@@ -61,7 +62,6 @@
 		2E636E731B249804006F5FA9 /* menu_8.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E636E581B249804006F5FA9 /* menu_8.png */; };
 		2E636E741B249804006F5FA9 /* menu_8@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E636E591B249804006F5FA9 /* menu_8@2x.png */; };
 		2E636E751B249804006F5FA9 /* menu_8@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E636E5A1B249804006F5FA9 /* menu_8@3x.png */; };
-		2E636E761B249804006F5FA9 /* menu_9@.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E636E5B1B249804006F5FA9 /* menu_9@.png */; };
 		2E636E771B249804006F5FA9 /* menu_9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E636E5C1B249804006F5FA9 /* menu_9@2x.png */; };
 		2E636E781B249804006F5FA9 /* menu_9@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E636E5D1B249804006F5FA9 /* menu_9@3x.png */; };
 		2E6B42691A7CEBB8004BCDD8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E6B42681A7CEBB8004BCDD8 /* QuartzCore.framework */; };
@@ -136,6 +136,7 @@
 		2EB698AA1AF9077600843341 /* SubMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB698521AF9077600843341 /* SubMenuCell.m */; };
 		2EB698AB1AF9077600843341 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EB698541AF9077600843341 /* ViewController.m */; };
 		2EB84A951B1C020F00FCE9FC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EB84A931B1C020F00FCE9FC /* LaunchScreen.xib */; };
+		2EC9477A1B2DCF43008423EB /* menu_9.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EC947791B2DCF43008423EB /* menu_9.png */; };
 		2EF640BC1B1994EC002741B4 /* AVHHotelInfoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF640BB1B1994EC002741B4 /* AVHHotelInfoListViewController.m */; };
 		2EF640BF1B19BBFD002741B4 /* AVHHotelInfoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF640BE1B19BBFD002741B4 /* AVHHotelInfoListCell.m */; };
 		583D1DD71B208C3D00268EB6 /* AVHBookingReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583D1DD61B208C3D00268EB6 /* AVHBookingReviewViewController.m */; };
@@ -259,6 +260,8 @@
 		2E2EACC41B268597007F0890 /* menu_0@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_0@3x.png"; sourceTree = "<group>"; };
 		2E320A1C1B1B788600D88FAA /* AVHOfferCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHOfferCell.h; sourceTree = "<group>"; };
 		2E320A1D1B1B788600D88FAA /* AVHOfferCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHOfferCell.m; sourceTree = "<group>"; };
+		2E4AA1BA1B2E6CF900CB1519 /* AVHOfferInfoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHOfferInfoDetailViewController.h; sourceTree = "<group>"; };
+		2E4AA1BB1B2E6CF900CB1519 /* AVHOfferInfoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHOfferInfoDetailViewController.m; sourceTree = "<group>"; };
 		2E636E3F1B249615006F5FA9 /* UtilClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilClass.h; sourceTree = "<group>"; };
 		2E636E401B249615006F5FA9 /* UtilClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilClass.m; sourceTree = "<group>"; };
 		2E636E431B249804006F5FA9 /* menu_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_1.png; sourceTree = "<group>"; };
@@ -285,7 +288,6 @@
 		2E636E581B249804006F5FA9 /* menu_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_8.png; sourceTree = "<group>"; };
 		2E636E591B249804006F5FA9 /* menu_8@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_8@2x.png"; sourceTree = "<group>"; };
 		2E636E5A1B249804006F5FA9 /* menu_8@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_8@3x.png"; sourceTree = "<group>"; };
-		2E636E5B1B249804006F5FA9 /* menu_9@.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_9@.png"; sourceTree = "<group>"; };
 		2E636E5C1B249804006F5FA9 /* menu_9@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_9@2x.png"; sourceTree = "<group>"; };
 		2E636E5D1B249804006F5FA9 /* menu_9@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_9@3x.png"; sourceTree = "<group>"; };
 		2E6B42681A7CEBB8004BCDD8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -393,6 +395,7 @@
 		2EB698531AF9077600843341 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2EB698541AF9077600843341 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2EB84A941B1C020F00FCE9FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		2EC947791B2DCF43008423EB /* menu_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_9.png; sourceTree = "<group>"; };
 		2EF640BA1B1994EC002741B4 /* AVHHotelInfoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHHotelInfoListViewController.h; sourceTree = "<group>"; };
 		2EF640BB1B1994EC002741B4 /* AVHHotelInfoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHHotelInfoListViewController.m; sourceTree = "<group>"; };
 		2EF640BD1B19BBFD002741B4 /* AVHHotelInfoListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHHotelInfoListCell.h; sourceTree = "<group>"; };
@@ -560,7 +563,7 @@
 				2E636E581B249804006F5FA9 /* menu_8.png */,
 				2E636E591B249804006F5FA9 /* menu_8@2x.png */,
 				2E636E5A1B249804006F5FA9 /* menu_8@3x.png */,
-				2E636E5B1B249804006F5FA9 /* menu_9@.png */,
+				2EC947791B2DCF43008423EB /* menu_9.png */,
 				2E636E5C1B249804006F5FA9 /* menu_9@2x.png */,
 				2E636E5D1B249804006F5FA9 /* menu_9@3x.png */,
 			);
@@ -853,6 +856,8 @@
 				2E0018571B19F72500388BE9 /* AVHHotelInfoDetailViewController.m */,
 				2E0CD16A1B1B1A5900E61224 /* AVHOfferInfoListViewController.h */,
 				2E0CD16B1B1B1A5900E61224 /* AVHOfferInfoListViewController.m */,
+				2E4AA1BA1B2E6CF900CB1519 /* AVHOfferInfoDetailViewController.h */,
+				2E4AA1BB1B2E6CF900CB1519 /* AVHOfferInfoDetailViewController.m */,
 				583D1DD51B208C3D00268EB6 /* AVHBookingReviewViewController.h */,
 				583D1DD61B208C3D00268EB6 /* AVHBookingReviewViewController.m */,
 				2E0083B51B1F3E9900E8E635 /* AVHPlacesListViewController.h */,
@@ -1069,6 +1074,7 @@
 			files = (
 				E94781D01B11F1EB00FDD1FC /* Main.storyboard in Resources */,
 				E94781DC1B11FDD500FDD1FC /* AVH_logo_HR.png in Resources */,
+				2EC9477A1B2DCF43008423EB /* menu_9.png in Resources */,
 				2E17508F1B1DFD0600B271DD /* InputAccessoryBar.xib in Resources */,
 				2E2EACC61B268597007F0890 /* menu_0@2x.png in Resources */,
 				2E636E6B1B249804006F5FA9 /* menu_5@2x.png in Resources */,
@@ -1159,7 +1165,6 @@
 				E94781D41B11FA6600FDD1FC /* img_btn_back@2x.png in Resources */,
 				E94781DA1B11FD3F00FDD1FC /* AVH_logo@3x.png in Resources */,
 				2E636E721B249804006F5FA9 /* menu_7@3x.png in Resources */,
-				2E636E761B249804006F5FA9 /* menu_9@.png in Resources */,
 				2E636E731B249804006F5FA9 /* menu_8.png in Resources */,
 				2EB6989C1AF9077600843341 /* info.png in Resources */,
 				E94781DF1B12179E00FDD1FC /* img_btn_next.png in Resources */,
@@ -1198,6 +1203,7 @@
 				2EB698771AF9077600843341 /* RequestHandler.m in Sources */,
 				E94781C41B11D81200FDD1FC /* AVHConfirmationView.m in Sources */,
 				2E0083BA1B1F3F4A00E8E635 /* AVHPlaceInfoViewController.m in Sources */,
+				2E4AA1BC1B2E6CF900CB1519 /* AVHOfferInfoDetailViewController.m in Sources */,
 				2EB698621AF9077600843341 /* DGhNotificationViewController.m in Sources */,
 				E94781CA1B11D81200FDD1FC /* AVHReviewView.m in Sources */,
 				686982B71B1E1D2900623402 /* AVHEditStayCell.m in Sources */,
@@ -1406,7 +1412,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = AVH;
-				PROVISIONING_PROFILE = "6c0a23fd-5770-4d1c-a98a-4c9db9c4f936";
+				PROVISIONING_PROFILE = "51d3fd94-33fa-4552-93c6-a941192b7193";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "../** Folder/iOS/Projects/Tarek/Airpot View Hotel/ABH_0.3/AVH_0.1/AVH/Helpers/MWPhotoBrowser";
 			};
@@ -1427,7 +1433,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = AVH;
-				PROVISIONING_PROFILE = "6c0a23fd-5770-4d1c-a98a-4c9db9c4f936";
+				PROVISIONING_PROFILE = "51d3fd94-33fa-4552-93c6-a941192b7193";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "../** Folder/iOS/Projects/Tarek/Airpot View Hotel/ABH_0.3/AVH_0.1/AVH/Helpers/MWPhotoBrowser";
 			};

@@ -7,6 +7,8 @@
 //
 
 #import "AVHOfferInfoListViewController.h"
+#import "AVHOfferInfoDetailViewController.h"
+
 #import "HelperClass.h"
 #import "AppDelegate.h"
 #import "WebHandler.h"
@@ -112,12 +114,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-//    NSDictionary *infoDict = _hotelInfos[indexPath.row];
-//    
-//    AVHHotelInfoDetailViewController *hotelInfoDetailsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"HotelInfoDetailVC"];
-//    hotelInfoDetailsVC.hotelDetails = infoDict;
-//    
-//    [self.navigationController pushViewController:hotelInfoDetailsVC animated:YES];
+    NSDictionary *infoDict = _offers[indexPath.row];
+    
+    AVHOfferInfoDetailViewController *offerInfoDetailsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"OfferInfoDetailVC"];
+    offerInfoDetailsVC.offerDetails = infoDict;
+    
+    [self.navigationController pushViewController:offerInfoDetailsVC animated:YES];
 }
+
 
 @end

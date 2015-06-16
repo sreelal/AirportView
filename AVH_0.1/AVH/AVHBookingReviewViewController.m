@@ -205,10 +205,14 @@
     _bookingDictionary[@"day_phone"] = (_guestDetails[@"phoneno"])?_guestDetails[@"phoneno"]:@"";
     _bookingDictionary[@"mobile_phone"] = (_guestDetails[@"phoneno"])?_guestDetails[@"phoneno"]:@"";
     _bookingDictionary[@"comments"] = (_guestDetails[@"comments"])?_guestDetails[@"comments"]:@"";
-
+    _bookingDictionary[@"status"] = @"PENDING";
+    _bookingDictionary[@"device_type"] = @"iOS";
     
-    [WebHandler bookRoomNowWithDetails:_bookingDictionary andResponseCallback:^(id object, NSError *error) {
+    NSString *deviceToken = [[NSUserDefaults standardUserDefaults] objectForKey:KEY_DEVICE_TOKEN];
+    
+    _bookingDictionary[@"device_token"] = deviceToken;
         
+    [WebHandler bookRoomNowWithDetails:_bookingDictionary andResponseCallback:^(id object, NSError *error) {
         
         dispatch_async(dispatch_get_main_queue(), ^{
             
@@ -294,6 +298,8 @@
 #pragma mark - UIAlert delegates
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    [[AVHDataHandler sharedManager] setBookingDataHolder:nil];
     
     [self.navigationController popToRootViewControllerAnimated:NO];
 }

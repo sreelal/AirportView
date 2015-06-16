@@ -593,7 +593,7 @@
         
         NSLog(@"Service URL : %@", serviceURL);
         
-        NSDictionary *deviceTokenDict = [NSDictionary dictionaryWithObjectsAndKeys:deviceToken, @"deviceId", @"iOS", @"type", nil];
+        NSDictionary *deviceTokenDict = [NSDictionary dictionaryWithObjectsAndKeys:deviceToken, @"token", @"iOS", @"type", nil];
         
         [RequestHandler postRequestWithURL:serviceURL andDictionary:deviceTokenDict withCallback:^(id result, NSError *error) {
             callback(result, error);

@@ -105,11 +105,11 @@
         return;
     }
     
-    [self resignFirstResponder];
+    [activeTextField resignFirstResponder];
     
-    [[AppDelegate instance] showBusyView:@"Loading..."];
+    [[AppDelegate instance] showBusyView:@"Submiting..."];
     
-    NSDictionary *enqDict = [NSDictionary dictionaryWithObjectsAndKeys:nameTxt.text, @"name", emailTxt.text, @"email", phoneTxt.text, @"phone", nil];
+    NSDictionary *enqDict = [NSDictionary dictionaryWithObjectsAndKeys:nameTxt.text, @"name", emailTxt.text, @"email", phoneTxt.text, @"phone", descTxt.text, @"enquiry", nil];
     
     NSLog(@"Subscribe Array : %@", enqDict);
     
@@ -121,7 +121,7 @@
             NSString *message;
             
             if (error == nil) {
-                message = object[@"success"];
+                message = object[@"result"][@"meesage"];
                 
                 nameTxt.text  = @"";
                 emailTxt.text = @"";
@@ -173,7 +173,7 @@
 #pragma mark - UITextView Delegate
 
 - (void)textViewDidBeginEditing:(UITextView *)textView {
-    activeTextField = textView;
+    activeTextField = (UITextField *)textView;
     
     NSLog(@"Offset : %f", scrollView.contentOffset.y);
     

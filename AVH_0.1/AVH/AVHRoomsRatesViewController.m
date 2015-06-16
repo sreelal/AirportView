@@ -115,7 +115,7 @@
         
         [self dismissViewControllerAnimated:YES completion:nil];
     }
-    else{
+    else {
         
         _guestDetailsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"GuestDetailsVC"];
         [self.navigationController pushViewController:_guestDetailsVC animated:YES];
@@ -141,10 +141,8 @@
     static NSString *cellId = @"hotelCell";
     AVHHotelCellTableViewCell *hotelCell = (AVHHotelCellTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
     
-   // hotelCell.selectionStyle = UITableViewCellSelectionStyleNone;
     hotelCell.moreInfoBtn.tag = indexPath.row;
     hotelCell.hotelBookNowBtn.tag = indexPath.row;
-    
  
     NSArray *hotelsList = _hotelDetails[@"packages"];
 
@@ -169,7 +167,10 @@
             [hotelCell.hotelBookNowBtn setUserInteractionEnabled:NO];
             [hotelCell.hotelBookNowBtn setTitle:@"" forState:UIControlStateNormal];
             [hotelCell.hotelBookNowBtn setImage:[UIImage imageNamed:@"tick"] forState:UIControlStateNormal];
-
+        }
+        else {
+            [hotelCell.hotelBookNowBtn setUserInteractionEnabled:YES];
+            [hotelCell.hotelBookNowBtn setImage:[UIImage imageNamed:@"AVH_Book"] forState:UIControlStateNormal];
         }
     }
     
