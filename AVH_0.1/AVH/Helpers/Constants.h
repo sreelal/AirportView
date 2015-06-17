@@ -24,7 +24,7 @@
 #define HOTELS_DETAILS @"http://demo.airportviewhotel.net/package/view/"
 #define HOTELS_BOOKING_URL @"http://demo.airportviewhotel.net/booking/confirm"
 
-#define SERVICE_URL_ROOT     @"http://demo.airportviewhotel.net/"
+#define SERVICE_URL_ROOT     @"http://www.airportviewhotel.net/"
 #define SERVICE_HOTEL_INFO   @"hotel_info/all.json"
 #define SERVICE_PLACES       @"recommendation/all.json"
 #define SERVICE_GALLERY      @"gallery.json"
@@ -41,9 +41,10 @@
 #define SERVICE_FOOTER_TXT   @"status/text"
 
 //#define SERVICE_FACEBOOK_POST   @"https://graph.facebook.com/136288153081650/posts?access_token=1588533571375395%7CM5TnS1YB_lWBsO0EXQs70GVhN6c"
-#define SERVICE_FACEBOOK_POST   @"https://graph.facebook.com/379712298860476/posts?access_token=CAACEdEose0cBAMQ3bLi7jBvwGMSUDX9QfDx55526yccu5J5XkAntZA3lvggul0zSxFOGM0cFkY1lXJEGiZCxqK6ZCEwG1ROwP3yXMCmQXfBZCcYDr1HtQRpyg87TeVLt8Fv2DOrHfv3GOjYCgildLOxldD6htwmv16giwREPp7111L21JvvmMwZAD791XQLCjYBcrdV8Px1rW74buMcCJ"
+#define SERVICE_FACEBOOK_POST   @"https://graph.facebook.com/379712298860476/posts?access_token=CAACEdEose0cBAM2sR7k7ZB8lKYTMfEOe1698GOyqGwHMZC4586DrZAMsY1bYHkP6QA1hYWfHcPEx6OZBityYWZA57ZBpS5OdyNmSBk4ZCmPqmMZA5SZCCuRcnZC0XBpOp7i5STummyAdjeNpL4XHAJb8B2qKHqW8jBjsCYJZBWyWhBbgHqDV7ZCogHAghttkZBdnxIEcePoVEulr3yFcO5FplFz2h"
 #define SERVICE_FACEBOOK_PROF   @"https://graph.facebook.com/379712298860476"
 #define SERVICE_FB_PAGE_IMG_URL @"https://graph.facebook.com/379712298860476/picture"
+#define SERVICE_TA_REVIEWS      @"http://api.tripadvisor.com/api/partner/2.0/location/628036?key=3b3231dd42374bb5abc5fa46d55218e4"
 //--------------------------------------------------
 
 //------------------Dictionary Keys-----------------

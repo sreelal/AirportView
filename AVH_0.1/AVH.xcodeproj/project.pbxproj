@@ -37,6 +37,9 @@
 		2E2EACC71B268597007F0890 /* menu_0@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2EACC41B268597007F0890 /* menu_0@3x.png */; };
 		2E320A1E1B1B788600D88FAA /* AVHOfferCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E320A1D1B1B788600D88FAA /* AVHOfferCell.m */; };
 		2E4AA1BC1B2E6CF900CB1519 /* AVHOfferInfoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4AA1BB1B2E6CF900CB1519 /* AVHOfferInfoDetailViewController.m */; };
+		2E4E6C0D1B310886004F4448 /* AVHTripAdvisorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4E6C0C1B310886004F4448 /* AVHTripAdvisorViewController.m */; };
+		2E4E6C0F1B310B3B004F4448 /* s4.0-27591-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E4E6C0E1B310B3B004F4448 /* s4.0-27591-5.png */; };
+		2E4E6C121B31101F004F4448 /* TripAdvisorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4E6C111B31101F004F4448 /* TripAdvisorCell.m */; };
 		2E636E411B249615006F5FA9 /* UtilClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E636E401B249615006F5FA9 /* UtilClass.m */; };
 		2E636E5E1B249804006F5FA9 /* menu_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E636E431B249804006F5FA9 /* menu_1.png */; };
 		2E636E5F1B249804006F5FA9 /* menu_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E636E441B249804006F5FA9 /* menu_1@2x.png */; };
@@ -262,6 +265,11 @@
 		2E320A1D1B1B788600D88FAA /* AVHOfferCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHOfferCell.m; sourceTree = "<group>"; };
 		2E4AA1BA1B2E6CF900CB1519 /* AVHOfferInfoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHOfferInfoDetailViewController.h; sourceTree = "<group>"; };
 		2E4AA1BB1B2E6CF900CB1519 /* AVHOfferInfoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHOfferInfoDetailViewController.m; sourceTree = "<group>"; };
+		2E4E6C0B1B310886004F4448 /* AVHTripAdvisorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVHTripAdvisorViewController.h; sourceTree = "<group>"; };
+		2E4E6C0C1B310886004F4448 /* AVHTripAdvisorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVHTripAdvisorViewController.m; sourceTree = "<group>"; };
+		2E4E6C0E1B310B3B004F4448 /* s4.0-27591-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "s4.0-27591-5.png"; sourceTree = "<group>"; };
+		2E4E6C101B31101F004F4448 /* TripAdvisorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripAdvisorCell.h; sourceTree = "<group>"; };
+		2E4E6C111B31101F004F4448 /* TripAdvisorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripAdvisorCell.m; sourceTree = "<group>"; };
 		2E636E3F1B249615006F5FA9 /* UtilClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilClass.h; sourceTree = "<group>"; };
 		2E636E401B249615006F5FA9 /* UtilClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilClass.m; sourceTree = "<group>"; };
 		2E636E431B249804006F5FA9 /* menu_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_1.png; sourceTree = "<group>"; };
@@ -669,6 +677,7 @@
 		2EB698141AF9077600843341 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2E4E6C0E1B310B3B004F4448 /* s4.0-27591-5.png */,
 				2E1437091B1E90DA0011186F /* AVH-loc.png */,
 				2E14370A1B1E90DA0011186F /* AVH-loc@2x.png */,
 				2E14370B1B1E90DA0011186F /* AVH-loc@3x.png */,
@@ -781,6 +790,8 @@
 		2EB6984C1AF9077600843341 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				2E4E6C101B31101F004F4448 /* TripAdvisorCell.h */,
+				2E4E6C111B31101F004F4448 /* TripAdvisorCell.m */,
 				2EB6984D1AF9077600843341 /* MenuHeaderCell.h */,
 				2EB6984E1AF9077600843341 /* MenuHeaderCell.m */,
 				2EB6984F1AF9077600843341 /* NotificationCell.h */,
@@ -862,6 +873,8 @@
 				583D1DD61B208C3D00268EB6 /* AVHBookingReviewViewController.m */,
 				2E0083B51B1F3E9900E8E635 /* AVHPlacesListViewController.h */,
 				2E0083B61B1F3E9900E8E635 /* AVHPlacesListViewController.m */,
+				2E4E6C0B1B310886004F4448 /* AVHTripAdvisorViewController.h */,
+				2E4E6C0C1B310886004F4448 /* AVHTripAdvisorViewController.m */,
 				2E129BCC1B22CD0400030220 /* AVHGalleryListViewController.h */,
 				2E129BCD1B22CD0400030220 /* AVHGalleryListViewController.m */,
 				2E0083B81B1F3F4A00E8E635 /* AVHPlaceInfoViewController.h */,
@@ -1077,6 +1090,7 @@
 				2EC9477A1B2DCF43008423EB /* menu_9.png in Resources */,
 				2E17508F1B1DFD0600B271DD /* InputAccessoryBar.xib in Resources */,
 				2E2EACC61B268597007F0890 /* menu_0@2x.png in Resources */,
+				2E4E6C0F1B310B3B004F4448 /* s4.0-27591-5.png in Resources */,
 				2E636E6B1B249804006F5FA9 /* menu_5@2x.png in Resources */,
 				E92BE4B31B03875F00AE6B2E /* NavigationBg.png in Resources */,
 				2EB6988D1AF9077600843341 /* menu_3_bg.png in Resources */,
@@ -1240,6 +1254,7 @@
 				2EB698A01AF9077600843341 /* Notification.m in Sources */,
 				2EB6986D1AF9077600843341 /* RESideMenu.m in Sources */,
 				2EB6985D1AF9077600843341 /* DGHContentViewController.m in Sources */,
+				2E4E6C121B31101F004F4448 /* TripAdvisorCell.m in Sources */,
 				2EB698641AF9077600843341 /* DGHProductInfoViewController.m in Sources */,
 				E9B194721B133E6D00F59171 /* PickerComponent.m in Sources */,
 				2EB698671AF9077600843341 /* CacheManager.m in Sources */,
@@ -1269,6 +1284,7 @@
 				2EF640BF1B19BBFD002741B4 /* AVHHotelInfoListCell.m in Sources */,
 				68A737491B13867C00E0C100 /* AVHHotelCellTableViewCell.m in Sources */,
 				2EB698AB1AF9077600843341 /* ViewController.m in Sources */,
+				2E4E6C0D1B310886004F4448 /* AVHTripAdvisorViewController.m in Sources */,
 				2EB698551AF9077600843341 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1402,8 +1418,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: sreelash bruce (EWV4EX7QX6)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: sreelash bruce (EWV4EX7QX6)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: EZCOM (6P32L7S8RB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: EZCOM (6P32L7S8RB)";
 				INFOPLIST_FILE = AVH/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1412,7 +1428,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = AVH;
-				PROVISIONING_PROFILE = "51d3fd94-33fa-4552-93c6-a941192b7193";
+				PROVISIONING_PROFILE = "d5864ff7-94d1-477c-8057-b08ff9822ee3";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "../** Folder/iOS/Projects/Tarek/Airpot View Hotel/ABH_0.3/AVH_0.1/AVH/Helpers/MWPhotoBrowser";
 			};
@@ -1423,8 +1439,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: sreelash bruce (EWV4EX7QX6)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: sreelash bruce (EWV4EX7QX6)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: EZCOM (6P32L7S8RB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: EZCOM (6P32L7S8RB)";
 				INFOPLIST_FILE = AVH/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1433,7 +1449,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = AVH;
-				PROVISIONING_PROFILE = "51d3fd94-33fa-4552-93c6-a941192b7193";
+				PROVISIONING_PROFILE = "d5864ff7-94d1-477c-8057-b08ff9822ee3";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "../** Folder/iOS/Projects/Tarek/Airpot View Hotel/ABH_0.3/AVH_0.1/AVH/Helpers/MWPhotoBrowser";
 			};

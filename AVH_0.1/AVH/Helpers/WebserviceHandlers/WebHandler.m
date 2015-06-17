@@ -834,6 +834,15 @@
                          }];
 }
 
++ (void)getTripAdvisorReviewswithCallback:(ResponseCallback)callback {
+    
+    [RequestHandler getRequestWithURL:SERVICE_TA_REVIEWS
+                         withCallback:^(id result, NSError *error) {
+                             
+                             callback(result,error);
+                         }];
+}
+
 + (void)showAlertWithMessage:(NSString *)message {
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:message delegate:nil cancelButtonTitle:ALERT_OK otherButtonTitles:nil, nil];

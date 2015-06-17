@@ -15,6 +15,7 @@
 #import "AVHPlacesListViewController.h"
 #import "AVHContactUsViewController.h"
 #import "AVHFaceBookViewController.h"
+#import "AVHTripAdvisorViewController.h"
 
 #import "ProductCategory.h"
 #import "Constants.h"
@@ -151,6 +152,15 @@
             [self.sideMenuViewController hideMenuViewController];
         }
         break;
+        case 7: {
+            UINavigationController *taNavVC = [self.storyboard instantiateViewControllerWithIdentifier:@"TripAdvisorNav"];
+            AVHTripAdvisorViewController *taVC= [taNavVC.viewControllers firstObject];
+            taVC.isFromMenu = YES;
+            
+            [self.sideMenuViewController setContentViewController:taNavVC];
+            [self.sideMenuViewController hideMenuViewController];
+        }
+            break;
         case 8: {
             UINavigationController *fbNavVC = [self.storyboard instantiateViewControllerWithIdentifier:@"fbNav"];
             AVHFaceBookViewController *fbVC= [fbNavVC.viewControllers firstObject];
