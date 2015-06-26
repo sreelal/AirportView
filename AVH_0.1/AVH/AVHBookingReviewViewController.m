@@ -210,7 +210,7 @@
     
     NSString *deviceToken = [[NSUserDefaults standardUserDefaults] objectForKey:KEY_DEVICE_TOKEN];
     
-    _bookingDictionary[@"device_token"] = deviceToken;
+    if (deviceToken != nil) _bookingDictionary[@"device_token"] = deviceToken;
         
     [WebHandler bookRoomNowWithDetails:_bookingDictionary andResponseCallback:^(id object, NSError *error) {
         

@@ -20,10 +20,11 @@
 #define FLIGHT_INFO_API   @"airport/status/ACC"
 #define WEATHER_PRODUCT @"metar"
 #define WEATHER_AIRPORT @"ACC"
-#define HOTELS_LIST @"http://demo.airportviewhotel.net/package.json"
-#define HOTELS_DETAILS @"http://demo.airportviewhotel.net/package/view/"
-#define HOTELS_BOOKING_URL @"http://demo.airportviewhotel.net/booking/confirm"
 
+
+#define HOTELS_LIST          @"http://www.airportviewhotel.net/package.json"
+#define HOTELS_DETAILS       @"http://www.airportviewhotel.net/package/view/"
+#define HOTELS_BOOKING_URL   @"http://www.airportviewhotel.net/booking/confirm"
 #define SERVICE_URL_ROOT     @"http://www.airportviewhotel.net/"
 #define SERVICE_HOTEL_INFO   @"hotel_info/all.json"
 #define SERVICE_PLACES       @"recommendation/all.json"
@@ -40,9 +41,8 @@
 #define SEARCH_PRODUCT       @"product/search&search="
 #define SERVICE_FOOTER_TXT   @"status/text"
 
-//#define SERVICE_FACEBOOK_POST   @"https://graph.facebook.com/136288153081650/posts?access_token=1588533571375395%7CM5TnS1YB_lWBsO0EXQs70GVhN6c"
-#define SERVICE_FACEBOOK_POST   @"https://graph.facebook.com/379712298860476/posts?access_token=CAACEdEose0cBAM2sR7k7ZB8lKYTMfEOe1698GOyqGwHMZC4586DrZAMsY1bYHkP6QA1hYWfHcPEx6OZBityYWZA57ZBpS5OdyNmSBk4ZCmPqmMZA5SZCCuRcnZC0XBpOp7i5STummyAdjeNpL4XHAJb8B2qKHqW8jBjsCYJZBWyWhBbgHqDV7ZCogHAghttkZBdnxIEcePoVEulr3yFcO5FplFz2h"
-#define SERVICE_FACEBOOK_PROF   @"https://graph.facebook.com/379712298860476"
+#define SERVICE_FACEBOOK_POST   @"https://graph.facebook.com/379712298860476/posts?access_token=CAAW130Rdz50BAPFGQMDKTlyZAqsOZA20dRqbvwRPZC2rVqjhXZCOpo3XDVPzxsOcz3IaXqq6kFlJZC5itIRv2uwEWpPQUmXZBRmrJfSf03C3UeKq7NRAVKCSKvdAN5sVjYI1HLyVFDd9shcJ8z0mUerisUhLDWc8sT7Ixq2ePS3rI6ldEgsuLJqvlLcv350vvA2rScOqAGSrz2V9vrGJWf"
+#define SERVICE_FACEBOOK_PROF   @"https://graph.facebook.com/379712298860476?access_token=CAAW130Rdz50BAPFGQMDKTlyZAqsOZA20dRqbvwRPZC2rVqjhXZCOpo3XDVPzxsOcz3IaXqq6kFlJZC5itIRv2uwEWpPQUmXZBRmrJfSf03C3UeKq7NRAVKCSKvdAN5sVjYI1HLyVFDd9shcJ8z0mUerisUhLDWc8sT7Ixq2ePS3rI6ldEgsuLJqvlLcv350vvA2rScOqAGSrz2V9vrGJWf"
 #define SERVICE_FB_PAGE_IMG_URL @"https://graph.facebook.com/379712298860476/picture"
 #define SERVICE_TA_REVIEWS      @"http://api.tripadvisor.com/api/partner/2.0/location/628036?key=3b3231dd42374bb5abc5fa46d55218e4"
 //--------------------------------------------------
@@ -61,7 +61,6 @@
 //-----------------Soryboard Ids--------------------
 #define STORYBOARD_ID_MENUVC @"leftMenuViewController"
 //--------------------------------------------------
-
 
 //-----------------Notification Names---------------
 #define NOTIFICATION_REFRESH_MENU @"refresh left menu"
@@ -113,4 +112,3 @@
 #define YOUR_STAY_INFO        @"yourstayinformation"
 #define ROOM_RATES_INFO       @"roomratesinformation"
 #define GUEST_DETAILS         @"guestinformation"
-

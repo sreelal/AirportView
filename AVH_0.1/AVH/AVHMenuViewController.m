@@ -51,7 +51,7 @@
     [self.view layoutIfNeeded];
     /////////////////////////////////////
     
-    self.menus = [[NSMutableArray alloc] initWithObjects:@"Home", @"Booking", @"Hotel Info", @"Offers", @"Gallery", @"Places To Visit", @"Weather", @"Trip Advisor", @"Facebook", @"Contact", nil];
+    self.menus = [[NSMutableArray alloc] initWithObjects:@"Home", @"Booking", @"Hotel Info", @"Offers", @"Gallery", @"Places To Visit", @"Weather", @"Trip Advisor", @"Facebook", @"Contact", @"Call", nil];
     
     self.menuTableView.delegate = self;
     self.menuTableView.dataSource = self;
@@ -177,6 +177,25 @@
             
             [self.sideMenuViewController setContentViewController:contactNavVC];
             [self.sideMenuViewController hideMenuViewController];
+        }
+        break;
+        case 10: {
+            //NSString *phNo = @"+919876543210";
+            //NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt:%@",phNo]];
+            //NSURL *url = [NSURL URLWithString:@"telprompt://030-7070-701"];
+            //[[UIApplication  sharedApplication] openURL:url];
+            NSURL *phoneUrl = [NSURL URLWithString:@"telprompt://+233-020-2252-244"];
+            //NSURL *phoneUrl = [NSURL URLWithString:@"tel://+233 0202252244"];
+            
+            //[[UIApplication sharedApplication] openURL:phoneUrl];
+            
+            if ([[UIApplication sharedApplication] canOpenURL:phoneUrl]) {
+                [[UIApplication sharedApplication] openURL:phoneUrl];
+            } else
+            {
+                UIAlertView *calert = [[UIAlertView alloc]initWithTitle:@"Alert" message:@"Call facility is not available!!!" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
+                [calert show];
+            }
         }
         break;
         default: {
